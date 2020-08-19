@@ -1,6 +1,13 @@
 html {
     height: 100%;
 }
+body {
+    background: url('/media/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #fafafa;
+    font-family: 'Ubunto', sans-serif;
+}
 /* from Bulma */
 .icon {
     align-items: center;
