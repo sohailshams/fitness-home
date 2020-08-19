@@ -4,7 +4,6 @@ html {
 body {
     background: url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
     color: #fafafa;
     font-family: 'Ubunto', sans-serif;
 }
@@ -21,12 +20,6 @@ body {
 }
 .font-ubunto {
     font-family: 'Ubunto', sans-serif
-}
-.nav-bg-color {
-    color: #fafafa !important;
-}
-.color-black {
-    color: #000 !important;
 }
 .border-black {
     border: 1px solid black !important;
