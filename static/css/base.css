@@ -24,3 +24,30 @@ body {
 .border-black {
     border: 1px solid black !important;
 }
+.header-container {
+        padding-top: 170px;
+    }
+.slogan-width {
+    max-width: 600px;
+}
+.buy-button {
+    background-color: #e84610 !important;
+}
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 250px;
+    }
+    .slogan-font-size {
+        font-size: 1.8rem;
+        padding: 0 .5rem 0 .7rem;
+    }
+    .buy-button {
+    margin-left: .7rem;
+}
+    .mobile-font-size {
+    font-size: 1.4rem;
+    }
+    .nav-link {
+        padding: 0.15rem;
+    }
+}
