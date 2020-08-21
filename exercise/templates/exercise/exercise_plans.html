@@ -2,20 +2,40 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-    <div class="row">
-        <div class="col">
-        </div>
-    </div>
-</div> 
+<div class="container header-container">
+	<div class="row">
+		<div class="col">
+		</div>
+	</div>
+</div>
 {% endblock %}
 
 {% block content %}
-<div class="container text-center">
-    <div class="row">
-        <div class="col">
-        {{ exercises }}
-        </div>
-    </div>
+<div class="container-fluid text-center">
+	<div class="row">
+		<div class="col">
+			<h2 class="font-do-hyeon">Exercise Plans</h2>
+			<hr class="bg-light">
+		</div>
+	</div>
+	<div class="row">
+		{%for exercise in exercises %}
+		<div class="col-sm-6 col-md-4 my-3">
+			<div class="card">
+				<div class="card-header text-secondary">
+					<h3> {{ exercise.name }} </h3>
+				</div>
+				<ul class="list-group list-group-flush text-secondary">
+					<li class="list-group-item">{{ exercise.timing }}</li>
+					<li class="list-group-item">{{ exercise.access }}</li>
+					<li class="list-group-item">{{ exercise.free_offer }}</li>
+					<li class="list-group-item">{{ exercise.accompanied_guest }}</li>
+					<li class="list-group-item">€ {{ exercise.price }}</li>
+				</ul>
+			</div>
+
+		</div>
+		{% endfor %}
+	</div>
 </div>
 {% endblock %}
