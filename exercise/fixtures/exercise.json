@@ -1,0 +1,38 @@
+[
+    {
+      "pk": 1,
+      "model": "exercise.exerciseplans",
+      "fields": {
+        "name": "Basic",
+        "timing": "07:00 til 14:00",
+        "access": "Access to Steam Souna",
+        "free_offer": "Free Kit Bag",
+        "accompanied_guest": "1 times per month a guest is allowed for training.",
+        "price": 15
+      }
+    },
+    {
+      "pk": 2,
+      "model": "exercise.exerciseplans",
+      "fields": {
+        "name": "Standard",
+        "timing": "05:00 til 17:00",
+        "access": "Access to Steam Souna",
+        "free_offer": "Free Kit Bag & once a week personal coaching",
+        "accompanied_guest": "2 times per month a guest is allowed for training.",
+        "price": 20
+      }
+    },
+    {
+      "pk": 3,
+      "model": "exercise.exerciseplans",
+      "fields": {
+        "name": "Premium",
+        "timing": "24/7 Access",
+        "access": "Access to Steam Souna & Yoga",
+        "free_offer": "Free Kit Bag, four times a week personal coaching & Diet Plans",
+        "accompanied_guest": "4 times per month a guest is allowed for training.",
+        "price": 25
+      }
+    }
+  ]
