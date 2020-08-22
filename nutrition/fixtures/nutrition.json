@@ -1,0 +1,41 @@
+[
+    {
+      "pk": 1,
+      "model": "nutrition.nutritionplans",
+      "fields": {
+        "name": "Mantra",
+        "purpose": "30 Days Weight Loss Plan",
+        "meal_plan": "Customized Meal Plans",
+        "grocery_list": "Complete Grocery List",
+        "message": "Unlimited Messaging",
+        "coaching": "Two hours Weekly Private Coaching",
+        "price": 150
+      }
+    },
+    {
+      "pk": 2,
+      "model": "nutrition.nutritionplans",
+      "fields": {
+        "name": "Motapa",
+        "purpose": "30 Days Weight Gain Plan",
+        "meal_plan": "Customized Meal Plans",
+        "grocery_list": "Complete Grocery List",
+        "message": "Unlimited Messaging",
+        "coaching": "Two hours Weekly Private Coaching",
+        "price": 150
+      }
+    },
+    {
+      "pk": 3,
+      "model": "nutrition.nutritionplans",
+      "fields": {
+        "name": "Ayurveda",
+        "purpose": "30 Days Healthy Life Plan",
+        "meal_plan": "Customized Meal Plans",
+        "grocery_list": "Complete Grocery List",
+        "message": "Unlimited Messaging",
+        "coaching": "30 minute Daily Private Coaching",
+        "price": 250
+      }
+    }
+  ]
