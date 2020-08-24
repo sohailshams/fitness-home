@@ -1,0 +1,26 @@
+[
+    {
+      "pk": 1,
+      "model": "merchandise.category",
+      "fields": {
+        "name": "mens_wear",
+        "friendly_name": "Men"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "merchandise.category",
+      "fields": {
+        "name": "womens_wear",
+        "friendly_name": "Women"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "merchandise.category",
+      "fields": {
+        "name": "exercise_accessories",
+        "friendly_name": "Accessories"
+      }
+    }
+]

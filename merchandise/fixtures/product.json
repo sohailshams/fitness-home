@@ -1,0 +1,336 @@
+[
+    {
+      "pk": 1,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201234",
+        "name": "Nike Muscle Fit T-Shirt - Black",
+        "description": "Short Sleeved muscle fit comfortable and look great too. 70% Polyester 30% Cotton. Logo detail to chest.",
+        "price": 20.00,
+        "category": 1,
+        "image": "image001.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201235",
+        "name": "Nike Training T-Shirt - Black",
+        "description": "Full Sleeves slim fit comfortable and look great too. 80% Polyester 20% Cotton. Logo detail to chest.",
+        "price": 22.00,
+        "category": 1,
+        "image": "image002.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201236",
+        "name": "FH Regular Fit T-Shirt - Red",
+        "description": "Half Sleeves crew neck plain t-shirt. Very comfortable and look great too. 100% Cotton.",
+        "price": 18.00,
+        "category": 1,
+        "image": "image003.jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201237",
+        "name": "Nike Regular Fit T-Shirt - Grey",
+        "description": "Short Sleeves regular fit comfortable and look great too. 100% Polyester. Logo detail to the chest.",
+        "price": 23.00,
+        "category": 1,
+        "image": "image004.jpg" 
+        }
+    },
+    {
+      "pk": 5,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201238",
+        "name": "Addidas Training Top - Black",
+        "description": "Sleeves Less slim fit comfortable and look great too. 95% Polyester and 5% Elastane. Logo detail to the chest in White.",
+        "price": 22.00,
+        "category": 2,
+        "image": "image005.jpg" 
+      }
+    },
+    {
+      "pk": 6,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201239",
+        "name": "Nike Running T-Shirt - Black",
+        "description": "Short Sleeves slim fit comfortable and look great too. 60% Polyester and 40% Cotton. Logo detail to the chest in White.",
+        "price": 20.00,
+        "category": 2,
+        "image": "image006.jpg" 
+      }
+    },
+    {
+      "pk": 7,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201240",
+        "name": "Nike Training T-Shirt - Sky Blue",
+        "description": "Short Sleeves slim fit comfortable and feel fresh too. 70% polyester and 30% Cotton. Logo detail to the chest.",
+        "price": 22.00,
+        "category": 2,
+        "image": "image007.jpg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201241",
+        "name": "FH Running T-Shirt - White",
+        "description": "Short Sleeves slim fit comfortable and feel fresh too. 90% polyester and 10% Elastane. Image detail to the chest.",
+        "price": 19.00,
+        "category": 2,
+        "image": "image008.jpg"     
+     }
+    },
+    {
+      "pk": 9,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201242",
+        "name": "FH Training Tights - Fusion ",
+        "description": "Very comfortable and flexiable women training tights. Makes you feel confident. 90% polyester and 10% Elastane.",
+        "price": 24.00,
+        "category": 2,
+        "image": "image009.jpg"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201243",
+        "name": "FH High Waist Tights - White",
+        "description": "Very comfortable and quick drying material. Wide and soft waistband. 85% polyester and 15% Elastane.",
+        "price": 25.00,
+        "category": 2,
+        "image": "image0010.jpg"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201244",
+        "name": "Nike Training Tights - Black",
+        "description": "Provide flexibility and comfort. Soft waistband with internal drawstring. 75% polyester and 25% Elastane.",
+        "price": 25.00,
+        "category": 2,
+        "image": "image0011.jpg"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201245",
+        "name": "Nike Running Tights - Black",
+        "description": "Soft and  flexibile tights. Big Nike text on the right side and logo in the front. Small key pockets. 75% polyester and 25% Elastane.",
+        "price": 25.00,
+        "category": 2,
+        "image": "image0012.jpg"      }
+    },
+    {
+      "pk": 13,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201245",
+        "name": "FH High Waiste Shorts - Fusion White",
+        "description": "Stretchable and comfortable high waist shorts. 100% Nylon.",
+        "price": 18.00,
+        "category": 2,
+        "image": "image0013.jpg"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201247",
+        "name": "FH Wideband Shorts - Multi Color",
+        "description": "Smooth woven material and light weight. Keeps the body fresh and cool. 40% Polyester 60% Cotton.",
+        "price": 21.00,
+        "category": 2,
+        "image": "image0014.jpg"    
+      }
+    },
+    {
+      "pk": 15,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201248",
+        "name": "Nike Running Shorts - White",
+        "description": "Soft waistband with internal drawstring. Smooth and flexiable fabric. Logo detail in black. 80% Polyester 20% Cotton.",
+        "price": 25.00,
+        "category": 2,
+        "image": "image0015.jpg"
+      }
+    },
+    {
+      "pk": 16,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201249",
+        "name": "Addidas Sport Shorts - Black",
+        "description": "Soft waistband with internal drawstring. Nice design with white stripes. Logo detail in white. 80% Polyester 20% Cotton.",
+        "price": 24.00,
+        "category": 1,
+        "image": "image0016.jpg" 
+        }
+    },
+    {
+      "pk": 17,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201250",
+        "name": "Addidas Running Shorts - Black",
+        "description": "Soft waistband with internal drawstring. Nice design with white stripes. Logo detail in white. 80% Polyester 20% Cotton.",
+        "price": 25.00,
+        "category": 1,
+        "image": "image0017.jpg"
+      }
+    },
+    {
+      "pk": 18,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201251",
+        "name": "FH Shorts - Black",
+        "description": "Soft waistband with external drawstring. Soft and comfortable, makes you feel confident. 50% Polyester 50% Cotton.",
+        "price": 17.00,
+        "category": 1,
+        "image": "image0018.jpg"
+      }
+    },
+    {
+      "pk": 19,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201252",
+        "name": "Hummel Track Pant - Black",
+        "description": "Stretchable waistband with internal drawstring. Constrast white stripes and waist pockets. 80% Polyester 20% Elastane.",
+        "price": 26.00,
+        "category": 1,
+        "image": "image0019.jpg"
+      }
+    },
+    {
+      "pk": 20,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201253",
+        "name": "Puma Training Trouser - Black",
+        "description": "Stretchable waistband with internal drawstring. Side pockets and logo detail in white. 88% Polyester 12% Elastane.",
+        "price": 28.00,
+        "category": 1,
+        "image": "image0020.jpg"
+      }
+    },
+    {
+      "pk": 21,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201254",
+        "name": "Hummel Fitness Trouser - Black",
+        "description": "Stretchable waistband with external drawstring. Side pockets and logo detail in white. 88% Polyester 12% Elastane.",
+        "price": 30.00,
+        "category": 1,
+        "image": "image0021.jpg"      }
+    },
+    {
+      "pk": 22,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201255",
+        "name": "FH Dumbbells - Black",
+        "description": "5 pairs of dumbbells with secure grip in 1-kg, 2-kg, 3-kg, 4-kg and 5kg",
+        "price": 40.00,
+        "category": 3,
+        "image": "image0022.jpg"
+      }
+    },
+    {
+      "pk": 23,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201256",
+        "name": "FH Kettlebell - Black",
+        "description": "3 pieces of kettlebbells with secure grip in 2-kg, 5-kg, 10-kg.",
+        "price": 50.00,
+        "category": 3,
+        "image": "image0023.jpg"
+      }
+    },
+    {
+      "pk": 24,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201257",
+        "name": "FH Barbells - Multi Color",
+        "description": "3 pairs of discs in 2-kg, 5-kg, 10-kg. Discs are made of metel with rubber coating.",
+        "price": 55.00,
+        "category": 3,
+        "image": "image0024.jpg"
+      }
+    },
+    {
+      "pk": 25,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201258",
+        "name": "FH Exercise Mar - Thick & Black",
+        "description": "Soft, comfortable and perfect for floor exercises. Length 200 cm Width 65 cm Thick 2 cm",
+        "price": 55.00,
+        "category": 3,
+        "image": "image0025.jpg"
+      }
+    },
+    {
+      "pk": 26,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201259",
+        "name": "FH Protein",
+        "description": "Provide energy to the body and strengthen the muscles. 1800 g packing",
+        "price": 30.00,
+        "category": 3,
+        "image": "image0026.jpg"
+      }
+    },
+    {
+      "pk": 27,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201260",
+        "name": "Hand Grip - Black",
+        "description": "A powerfull tool to stimulate hand muscles. Very comfortable and long lasting grip.",
+        "price": 10.00,
+        "category": 3,
+        "image": "image0027.jpg"
+      }
+    },
+    {
+      "pk": 28,
+      "model": "merchandise.product",
+      "fields": {
+        "sku": "fh20201261",
+        "name": "FH Exercise Tube - Black",
+        "description": "Highly light weight, simple and elastic tool for training any where you want. Secure grip.",
+        "price": 15.00,
+        "category": 3,
+        "image": "image0028.jpg"
+      }
+    }
+]
