@@ -37,6 +37,10 @@ body {
 .buy-button {
     background-color: #e84610 !important;
 }
+.card-img, .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
 /*---------------------------footer*/
 footer {
     position: relative;
