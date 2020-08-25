@@ -1,38 +1,63 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% load static %}
 
 {% block page_header %}
 <div class="container header-container">
-	<div class="row">
-		<div class="col">
-		</div>
-	</div>
+    <div class="row">
+        <div class="col"></div>
+    </div>
 </div>
-{% endblock %}
+{% endblock %} 
 
 {% block content %}
 <div class="container-fluid text-center">
-	<div class="row">
-		<div class="col">
-			<h2 class="font-do-hyeon">Products</h2>
-			<hr class="bg-light">
-		</div>
-	</div>
+    <div class="row">
+        <div class="col">
+            <h2 class="font-do-hyeon">Products</h2>
+            <hr class="bg-light" />
+        </div>
+    </div>
     <div class="row">
         <div class="col">
             <div class="my-3">
-                    <a href="" class="font-do-hyeon text-white p-2 mx-2 text-decoration-none">
-                        Men
-                    </a>
-                    <a href="" class="font-do-hyeon text-white p-2 mx-2 text-decoration-none">
-                        Women
-                    </a>
-                    <a href="" class="font-do-hyeon text-white p-2 mx-2 text-decoration-none">
-                        Accessories
-                    </a>
+                <a href="" class="font-do-hyeon text-white p-2 mx-2 text-decoration-none">
+                    Men
+                </a>
+                <a href="" class="font-do-hyeon text-white p-2 mx-2 text-decoration-none">
+                    Women
+                </a>
+                <a href="" class="font-do-hyeon text-white p-2 mx-2 text-decoration-none">
+                    Accessories
+                </a>
             </div>
         </div>
     </div>
-	
+    <div class="row">
+        {%for merchandise in products %}
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <div class="card h-50 border-0">
+                {% if merchandise.image %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ merchandise.image.url }}" alt="{{ merchandise.name }}" />
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ merchandise.name }}" />
+                </a>
+                {% endif %}
+                <div class="card-body text-left">
+                    <p class="text-white">{{ merchandise.name }}</p>
+                </div>
+                <div class="card-footer border-0 text-left">
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead font-weight-bold text-left text-white pt-3">${{ merchandise.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
