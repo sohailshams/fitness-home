@@ -22,6 +22,9 @@ body {
 .font-ubunto {
     font-family: 'Ubunto', sans-serif
 }
+.text-black {
+    color: #000 !important;
+}
 .border-black {
     border: 1px solid black !important;
 }
