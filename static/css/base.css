@@ -25,6 +25,9 @@ body {
 .text-black {
     color: #000 !important;
 }
+.text-red {
+    color: #e84610 !important;
+}
 .border-black {
     border: 1px solid black !important;
 }
@@ -83,4 +86,9 @@ footer {
         padding-top: 110px;
     }
     
+}
+@media (max-width: 768px) {
+    .individual-image {
+        margin: 8px !important;
+    }
 }
