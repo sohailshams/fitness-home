@@ -25,6 +25,9 @@ body {
 .text-black {
     color: #000 !important;
 }
+.bg-black {
+    background-color: #000 !important;
+}
 .text-red {
     color: #e84610 !important;
 }
@@ -43,6 +46,10 @@ body {
 .card-img, .card-img-top {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+select:not(:first-child), .input-group>.form-control:not(:first-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 /*---------------------------footer*/
 footer {
