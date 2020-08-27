@@ -10,27 +10,28 @@
 {% endblock %} 
 
 {% block content %}
-<div class="container-fluid text-center">
+<div class="container-fluid">
     <div class="row">
-        <div class="col">
+        <div class="col text-center">
             <h2 class="font-do-hyeon">Products</h2>
             <hr class="bg-light" />
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <div class="my-3">
-                <a href="" class="font-do-hyeon text-white p-2 mx-2 text-decoration-none">
+        <div class="col-12 col-sm-6 d-flex md-justify-content-end">
+            <div class="my-3 ml-auto category-btn">
+                <a href="{% url 'products' %}?category=mens_wear" class="font-do-hyeon text-white md-p-2 mx-2 text-decoration-none category-btn">
                     Men
                 </a>
-                <a href="" class="font-do-hyeon text-white p-2 mx-2 text-decoration-none">
+                <a href="{% url 'products' %}?category=womens_wear" class="font-do-hyeon text-white md-p-2 mx-2 text-decoration-none category-btn">
                     Women
                 </a>
-                <a href="" class="font-do-hyeon text-white p-2 mx-2 text-decoration-none">
+                <a href="{% url 'products' %}?category=exercise_accessories" class="font-do-hyeon text-white md-p-2 mx-2 text-decoration-none category-btn">
                     Accessories
                 </a>
             </div>
         </div>
+        
     </div>
     <div class="row">
         {% for merchandise in products %}
