@@ -99,3 +99,8 @@ footer {
         margin: 8px !important;
     }
 }
+@media (max-width: 425px) {
+    .category-btn {
+        margin-left: 0px !important; 
+    }
+}

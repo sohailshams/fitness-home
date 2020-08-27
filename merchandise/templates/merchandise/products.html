@@ -32,6 +32,17 @@
             </div>
         </div>
         
+            <div class="col-12 col-sm-6">   
+                <div class="w-50 my-3">
+                    <select id="sort-select" class="custom-select custom-select-sm rounded-0 border border-{% if sorting != 'None_None' %}info{% else %}black{% endif %}">
+                        <option value="reser" {% if sorting == 'name_asc' %}selected{% endif %}>Sort by...</option>
+                        <option value="price_asc" {% if sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                        <option value="price_desc" {% if sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                    </select>
+                </div>
+            </div>       
     </div>
     <div class="row">
         {% for merchandise in products %}
@@ -62,3 +73,4 @@
     </div>
 </div>
 {% endblock %}
+
