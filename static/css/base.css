@@ -113,4 +113,10 @@ footer {
     .category-btn {
         margin-left: 0px !important; 
     }
+    .size-on-small {
+            font-size: 50%;
+        }
+        .img-size {
+            height: 40%;
+        }
 }
