@@ -39,6 +39,7 @@
                 {% csrf_token %}
                 <button class="btn bg-white text-black rounded-0 text-uppercase mt-3" type="submit" name="quantity" value="1">Add to cart</button>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                <input type="hidden" name="product_type" value="nutrition_plan" >
                 </form>
             </div>
 		</div>
