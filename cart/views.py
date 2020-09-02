@@ -41,6 +41,5 @@ def add_cart(request, item_id):
         else:
             cart['nutrition_plans'][item_id] = quantity
 
-    print(cart)
     request.session['cart'] = cart
     return redirect(redirect_url)
