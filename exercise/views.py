@@ -4,8 +4,8 @@ from .models import ExercisePlans
 # Create your views here.
 
 
-def exerxise_plans(request):
-    """ A view to show exerxise plans """
+def exercise_plans(request):
+    """ A view to show exercise plans """
 
     exercises = ExercisePlans.objects.all()
 
