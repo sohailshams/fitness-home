@@ -14,32 +14,28 @@ def add_cart(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     product_type = request.POST.get('product_type')
+    print(f"Product type in add_cart: {product_type}")
     cart = request.session.get('cart', {
-        'merchandise': {},
-        'excercise_plans': {},
-        'nutrition_plans': {},
+        'merchandise_dic': {},
+        'excercise_plans_dic': {},
+        'nutrition_plans_dic': {},
     })
 
-    item_in_cart = any([
-        item_id in cart['merchandise'].keys(),
-        item_id in cart['excercise_plans'].keys(),
-        item_id in cart['nutrition_plans'].keys(),
-    ])
-
-    if item_in_cart:
-        if product_type == 'merchandise':
-            cart['merchandise'][item_id] += quantity
-        elif product_type == 'excercise_plan':
-            cart['excercise_plans'][item_id] += quantity
+    if product_type == 'merchandise':
+        if item_id in cart['merchandise_dic'].keys():
+            cart['merchandise_dic'][item_id] += quantity
         else:
-            cart['nutrition_plans'][item_id] += quantity
+            cart['merchandise_dic'][item_id] = quantity
+    elif product_type == 'excercise_plan':
+        if item_id in cart['excercise_plans_dic'].keys():
+            cart['excercise_plans_dic'][item_id] += quantity
+        else:
+            cart['excercise_plans_dic'][item_id] = quantity
     else:
-        if product_type == 'merchandise':
-            cart['merchandise'][item_id] = quantity
-        elif product_type == 'excercise_plan':
-            cart['excercise_plans'][item_id] = quantity
+        if item_id in cart['nutrition_plans_dic'].keys():
+            cart['nutrition_plans_dic'][item_id] += quantity
         else:
-            cart['nutrition_plans'][item_id] = quantity
+            cart['nutrition_plans_dic'][item_id] = quantity
 
     request.session['cart'] = cart
     return redirect(redirect_url)
