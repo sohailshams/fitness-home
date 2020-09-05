@@ -14,7 +14,6 @@ def add_cart(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     product_type = request.POST.get('product_type')
-    print(f"Product type in add_cart: {product_type}")
     cart = request.session.get('cart', {
         'merchandise_dic': {},
         'excercise_plans_dic': {},
