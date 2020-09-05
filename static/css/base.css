@@ -126,4 +126,8 @@ footer {
           height: 25px;
           font-size: 12px;
       }
+      .font-size-plans {
+          font-size: 10px;
+          font-weight: bold;
+      }
 }
