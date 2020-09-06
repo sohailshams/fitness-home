@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col text-center">
             <h2 class="font-do-hyeon">Shopping Cart</h2>
-            <hr class="bg-light" />
+            <hr class="bg-light"/>
         </div>
     </div>
     <div class="row size-on-small">
@@ -94,7 +94,10 @@
                     </tr>
                     {% endfor %}
                 </table>
-                <hr class="bg-light" />
+                <hr class="bg-light"/>
+                <div class="text-right">
+                    <h6 class="text-white grand-total my-4"><strong>Grand Total: €{{ total|floatformat:2 }}</strong></h6>
+                </div>
             </div>
             {% else %}
             <div class="text-center mt-5">
