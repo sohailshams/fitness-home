@@ -117,4 +117,16 @@
 </div>
 {% endblock %}
 
+{% block postloadjs %}
+<script>
+    // Jquery taken from CI Boutique ado video lessons
+    //Quantity update on click
+    $('.update-item').click(function(e) {
+        var form = $(this).prev('.update-item-form');
+        form.submit();
+    })
+</script>
+{% endblock %}
+
+
 
