@@ -42,7 +42,7 @@
                             <div class="my-0">
                                 <p class="text-left mb-1 text-white"><strong>Quantity</strong></p>
                             </div>
-                            <form class="form update-item-form" action="" method="POST">
+                            <form class="form update-item-form" action="{% url 'update_cart' item.item_id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="form-group w-50">
                                     <div class="input-group input-quantity">
