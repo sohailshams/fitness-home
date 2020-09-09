@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 
 # Create your views here.
 
@@ -38,3 +38,25 @@ def add_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
+
+
+def update_cart(request, item_id):
+    """ Update the quantity of specified product in the shopping cart """
+    quantity = int(request.POST.get('quantity'))
+    cart = request.session.get('cart', {
+        'merchandise_dic': {},
+        'excercise_plans_dic': {},
+        'nutrition_plans_dic': {},
+    })
+    if item_id in cart['merchandise_dic'].keys():
+        if quantity > 0:
+            cart['merchandise_dic'][item_id] = quantity
+        else:
+            cart['merchandise_dic'].pop(item_id)
+    else:
+        cart['merchandise_dic'].pop(item_id)
+
+    request.session['cart'] = cart
+    return redirect(reverse('view_cart'))
+
+
