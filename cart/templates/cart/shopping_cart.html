@@ -42,16 +42,20 @@
                             <div class="my-0">
                                 <p class="text-left mb-1 text-white"><strong>Quantity</strong></p>
                             </div>
+                            <!--Quantity input-update form for merchandise-->
                             <form class="form update-item-form" action="{% url 'update_cart' item.item_id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="form-group w-50">
                                     <div class="input-group input-quantity">
                                         <input class="ml-0 border-0 rounded-0 form-control" type="number" name="quantity" value="{{ item.quantity }}" min="0" max="99"/>
                                     </div>
-                                </div>
-                            </form>                             
+                                </div>                                
+                            </form>    
+                            <!--Quantity update button & delete item button for merchandise-->                         
                             <a class="update-item pl-3 ml-3 text-white"><small>Update</small></a>
-                            <a class="delete-item pl-3 ml-5 text-white"><small>Delete</small></a>                         
+                            <a class="delete-item pl-3 ml-5 text-white" name="remove_{{item.item_id}}" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
+                                <small>Delete</small>
+                            </a>                     
                         </td>
                         <td>
                             <p class="text-white">€{{ item.product.price }}</p>
@@ -69,6 +73,10 @@
                         </td>
                         <td>
                             <p class="text-white">{{ item.quantity }} x {{ item.exercise.name }}</p>
+                            <!--Exercise plan delete button-->
+                            <a class="delete-item-exercise text-white" name="remove_{{item.item_id}}" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
+                                <small>Delete</small>
+                            </a>
                         </td>
                         <td>
                             <p class="text-white">€{{ item.exercise.price }}</p>
@@ -86,6 +94,10 @@
                         </td>
                         <td>
                             <p class="text-white">{{ item.quantity }} x {{ item.nutrition.name }}</p>
+                            <!--Nutrition plan delete button -->
+                            <a class="delete-item-nutrition text-white" name="remove_{{item.item_id}}" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
+                                <small>Delete</small>
+                            </a>
                         </td>
                         <td>
                             <p class="text-white">€{{ item.nutrition.price }}</p>
@@ -125,6 +137,48 @@
         var form = $(this).prev('.update-item-form');
         form.submit();
     })
+
+    // Jquery taken from CI Boutique ado video lessons and changed accordingly
+    // Remove the merchandise item from shopping cart and reload the page on click
+     $('.delete-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('name').split('remove_')[1];
+        var url = `/cart/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};      
+        
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+
+    // Remove the exercise plan from shopping cart and reload the page on click
+    $('.delete-item-exercise').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('name').split('remove_')[1];
+        var url = `/cart/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'exercise_plan': exercise_plan};      
+        
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+
+    // Remove the nutrition plan from shopping cart and reload the page on click
+    $('.delete-item-nutrition').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('name').split('remove_')[1];
+        var category = $(this).attr('value')
+        var url = `/cart/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'nutrition_plan': nutrition_plan};      
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+
 </script>
 {% endblock %}
 
