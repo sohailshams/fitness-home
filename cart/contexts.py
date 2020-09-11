@@ -39,6 +39,7 @@ def cart_contents(request):
                     'quantity': quantity,
                     'product': product,
                     'product_price': product_price,
+                    'product_type': product_type,
                     })
         elif product_type == 'nutrition_plans_dic':
             for item_id, quantity in dic.items():
@@ -51,6 +52,7 @@ def cart_contents(request):
                     'quantity': quantity,
                     'nutrition': nutrition,
                     'nutrition_price': nutrition_price,
+                    'product_type': product_type,
                     })
         else:
             for item_id, quantity in dic.items():
@@ -63,6 +65,7 @@ def cart_contents(request):
                     'quantity': quantity,
                     'exercise': exercise,
                     'exercise_price': exercise_price,
+                    'product_type': product_type,
                     })
 
     total = total_merchandise + total_exercise + total_nutrition
