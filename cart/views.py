@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from merchandise.models import Product
 
 # Create your views here.
 
@@ -60,3 +61,23 @@ def update_cart(request, item_id):
     return redirect(reverse('view_cart'))
 
 
+def remove_from_cart(request, category, item_id):
+    """ Delete the specified item from the shopping cart """
+    cart = request.session.get('cart', {
+        'merchandise_dic': {},
+        'excercise_plans_dic': {},
+        'nutrition_plans_dic': {},
+    })
+
+    if category == 'merchandise_dic':
+        if item_id in cart['merchandise_dic'].keys():
+            cart['merchandise_dic'].pop(item_id)
+    elif category == 'excercise_plans_dic':
+        if item_id in cart['excercise_plans_dic'].keys():
+            cart['excercise_plans_dic'].pop(item_id)
+    elif category == 'nutrition_plans_dic':
+        if item_id in cart['nutrition_plans_dic'].keys():
+            cart['nutrition_plans_dic'].pop(item_id)
+
+    request.session['cart'] = cart
+    return redirect(reverse('view_cart'))
