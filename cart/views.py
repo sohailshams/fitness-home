@@ -1,5 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
-from merchandise.models import Product
+from django.shortcuts import render, redirect, reverse
 
 # Create your views here.
 
