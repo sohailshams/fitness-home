@@ -68,6 +68,13 @@ select:not(:first-child), .input-group>.form-control:not(:first-child) {
 .delete-item {
     cursor: pointer;
 }
+/*---------------------------toasts messages*/
+.toasts-message-container {
+    position: fixed;
+    top: 68px;
+    right: 15px;
+    z-index: 99999999999;
+}
 /*---------------------------footer*/
 footer {
     position: relative;
