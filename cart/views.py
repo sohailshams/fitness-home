@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from merchandise.models import Product
 
 # Create your views here.
 
@@ -11,6 +13,7 @@ def view_cart(request):
 def add_cart(request, item_id):
     """ Add quantity of specified product to the shopping cart """
 
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     product_type = request.POST.get('product_type')
@@ -23,8 +26,10 @@ def add_cart(request, item_id):
     if product_type == 'merchandise':
         if item_id in cart['merchandise_dic'].keys():
             cart['merchandise_dic'][item_id] += quantity
+            messages.success(request, f'{product.name} added to cart')
         else:
             cart['merchandise_dic'][item_id] = quantity
+            messages.success(request, f'{product.name} added to cart')
     elif product_type == 'excercise_plan':
         if item_id in cart['excercise_plans_dic'].keys():
             cart['excercise_plans_dic'][item_id] += quantity
