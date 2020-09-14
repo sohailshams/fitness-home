@@ -56,6 +56,7 @@ def add_cart(request, item_id):
 def update_cart(request, item_id):
     """ Update the quantity of specified product in the shopping cart """
     quantity = int(request.POST.get('quantity'))
+    product = get_object_or_404(Product, pk=item_id)
     cart = request.session.get('cart', {
         'merchandise_dic': {},
         'excercise_plans_dic': {},
@@ -64,10 +65,13 @@ def update_cart(request, item_id):
     if item_id in cart['merchandise_dic'].keys():
         if quantity > 0:
             cart['merchandise_dic'][item_id] = quantity
+            messages.success(request, f'Updated {product.name} Quantity: {cart["merchandise_dic"][item_id]}')
         else:
             cart['merchandise_dic'].pop(item_id)
+            messages.success(request, f'Removed {product.name} from cart')
     else:
         cart['merchandise_dic'].pop(item_id)
+        messages.success(request, f'Removed {product.name} from cart')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
