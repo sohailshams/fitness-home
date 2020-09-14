@@ -14,10 +14,6 @@ def view_cart(request):
 
 def add_cart(request, item_id):
     """ Add quantity of specified product to the shopping cart """
-
-    product = get_object_or_404(Product, pk=item_id)
-    exercise = get_object_or_404(ExercisePlans, pk=item_id)
-    nutrition = get_object_or_404(NutritionPlans, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     product_type = request.POST.get('product_type')
@@ -28,6 +24,7 @@ def add_cart(request, item_id):
     })
 
     if product_type == 'merchandise':
+        product = get_object_or_404(Product, pk=item_id)
         if item_id in cart['merchandise_dic'].keys():
             cart['merchandise_dic'][item_id] += quantity
             messages.success(request, f'{product.name} added to cart')
@@ -35,6 +32,7 @@ def add_cart(request, item_id):
             cart['merchandise_dic'][item_id] = quantity
             messages.success(request, f'{product.name} added to cart')
     elif product_type == 'excercise_plan':
+        exercise = get_object_or_404(ExercisePlans, pk=item_id)
         if item_id in cart['excercise_plans_dic'].keys():
             cart['excercise_plans_dic'][item_id] += quantity
             messages.success(request, f'{exercise.name} exercise plan added to cart')
@@ -42,6 +40,7 @@ def add_cart(request, item_id):
             cart['excercise_plans_dic'][item_id] = quantity
             messages.success(request, f'{exercise.name} exercise plan added to cart')
     else:
+        nutrition = get_object_or_404(NutritionPlans, pk=item_id)
         if item_id in cart['nutrition_plans_dic'].keys():
             cart['nutrition_plans_dic'][item_id] += quantity
             messages.success(request, f'{nutrition.name} nutrition plan added to cart')
