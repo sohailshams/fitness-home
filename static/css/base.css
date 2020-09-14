@@ -75,6 +75,9 @@ select:not(:first-child), .input-group>.form-control:not(:first-child) {
     right: 15px;
     z-index: 99999999999;
 }
+.toast-cap {
+    height: 2px;
+}
 /*---------------------------footer*/
 footer {
     position: relative;
