@@ -83,16 +83,22 @@ def remove_from_cart(request, category, item_id):
         'excercise_plans_dic': {},
         'nutrition_plans_dic': {},
     })
-
+    
     if category == 'merchandise_dic':
+        product = get_object_or_404(Product, pk=item_id)
         if item_id in cart['merchandise_dic'].keys():
             cart['merchandise_dic'].pop(item_id)
+            messages.success(request, f'Removed {product.name} from cart')
     elif category == 'excercise_plans_dic':
+        exercise = get_object_or_404(ExercisePlans, pk=item_id)
         if item_id in cart['excercise_plans_dic'].keys():
             cart['excercise_plans_dic'].pop(item_id)
+            messages.success(request, f'Removed {exercise.name} exercise plan from cart')
     elif category == 'nutrition_plans_dic':
+        nutrition = get_object_or_404(NutritionPlans, pk=item_id)
         if item_id in cart['nutrition_plans_dic'].keys():
             cart['nutrition_plans_dic'].pop(item_id)
+            messages.success(request, f'Removed {nutrition.name} nutrition plan from cart')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
