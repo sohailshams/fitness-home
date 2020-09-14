@@ -41,6 +41,19 @@ def cart_contents(request):
                     'product_price': product_price,
                     'product_type': product_type,
                     })
+        elif product_type == 'excercise_plans_dic':
+            for item_id, quantity in dic.items():
+                exercise = get_object_or_404(ExercisePlans, pk=item_id)
+                total_exercise += quantity * exercise.price
+                exercise_count += quantity
+                exercise_price = quantity * exercise.price
+                cart_items['exercise_items'].append({
+                    'item_id': item_id,
+                    'quantity': quantity,
+                    'exercise': exercise,
+                    'exercise_price': exercise_price,
+                    'product_type': product_type,
+                    })
         elif product_type == 'nutrition_plans_dic':
             for item_id, quantity in dic.items():
                 nutrition = get_object_or_404(NutritionPlans, pk=item_id)
@@ -52,19 +65,6 @@ def cart_contents(request):
                     'quantity': quantity,
                     'nutrition': nutrition,
                     'nutrition_price': nutrition_price,
-                    'product_type': product_type,
-                    })
-        else:
-            for item_id, quantity in dic.items():
-                exercise = get_object_or_404(ExercisePlans, pk=item_id)
-                total_exercise += quantity * exercise.price
-                exercise_count += quantity
-                exercise_price = quantity * exercise.price
-                cart_items['exercise_items'].append({
-                    'item_id': item_id,
-                    'quantity': quantity,
-                    'exercise': exercise,
-                    'exercise_price': exercise_price,
                     'product_type': product_type,
                     })
 
