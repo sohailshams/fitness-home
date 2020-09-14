@@ -111,6 +111,13 @@
         </nav>
     </div>
 	</header>
+    {% if messages %}
+    <div class="toasts-message-container">
+    {% for message in messages %}
+        
+    {% endfor %}
+    </div>
+    {% endif %}
 	{% block page_header %}
 	{% endblock %}
 
@@ -147,6 +154,9 @@
         </footer>
 
 	{% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+        </script>
 	{% endblock %}
 
 </body>
