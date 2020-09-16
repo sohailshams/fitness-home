@@ -36,6 +36,9 @@ def all_products(request):
             products = products.filter(category__name__in=all_categories)
         if 'q' in request.GET:
             search_query = request.GET['q']
+            if not search_query:
+                messages.info(
+                    request, "You didn't enter any search criteria! Here are some products")
 
             search_queries_products = Q(name__icontains=search_query) | Q(
                 description__icontains=search_query)
