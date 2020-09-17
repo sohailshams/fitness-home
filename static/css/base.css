@@ -40,8 +40,9 @@ body {
 .header-container {
        padding-top: 160px;
     }
-.slogan-width {
+.slogan-container {
     max-width: 600px;
+    margin-top: 70px;
 }
 .buy-button {
     background-color: #e84610 !important;
