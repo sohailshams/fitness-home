@@ -1,16 +1,35 @@
 from django.contrib import admin
-from .models import Order, OrderLineItem
+from .models import Order, ProductLineItem, ExerciseLineItem, NutritionLineItem
 
 
 """
-Inline admin class OrderLineItemAdminInline
+Inline admin class ProductLineItemAdminInline
 """
 
 
-class OrderLineItemAdminInline(admin.TabularInline):
-    model = OrderLineItem
-    readonly_fields = ('product_lineitem_total', 'exercise_lineitem_total',
-                       'nutrition_lineitem_total',)
+class ProductLineItemAdminInline(admin.TabularInline):
+    model = ProductLineItem
+    readonly_fields = ('lineitem_total',)
+
+
+"""
+Inline admin class ExerciseLineItemAdminInline
+"""
+
+
+class ExerciseLineItemAdminInline(admin.TabularInline):
+    model = ExerciseLineItem
+    readonly_fields = ('lineitem_total',)
+
+
+"""
+Inline admin class NutritionLineItemAdminInline
+"""
+
+
+class NutritionLineItemAdminInline(admin.TabularInline):
+    model = NutritionLineItem
+    readonly_fields = ('lineitem_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
@@ -19,7 +38,8 @@ class OrderAdmin(admin.ModelAdmin):
     This inline item allow us to add and edit line items in the admin
     right from inside the order model.
     """
-    inlines = (OrderLineItemAdminInline,)
+    inlines = (ProductLineItemAdminInline, ExerciseLineItemAdminInline,
+               NutritionLineItemAdminInline,)
     readonly_fields = ('order_number', 'date',
                        'order_total')
 
@@ -34,4 +54,8 @@ class OrderAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Order, OrderAdmin)
+admin.site.register(ProductLineItem)
+admin.site.register(ExerciseLineItem)
+admin.site.register(NutritionLineItem)
+
 
