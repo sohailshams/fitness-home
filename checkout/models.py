@@ -3,7 +3,6 @@ import uuid
 from django.db.models import Sum
 from django.db import models
 
-#from django_countries.fields import CountryField
 
 from merchandise.models import Product
 from exercise.models import ExercisePlans
@@ -39,10 +38,8 @@ class Order(models.Model):
         Update total each time a line item is added
         """
         self.order_total = self.lineitems.aggregate(Sum
-                                                    ('product_lineitem_total',
-                                                     'exercise_lineitem_total',
-                                                     'nutrition_lineitem_total'
-                                                     ))['lineitem_total__sum']
+                                                    ('lineitem_total')
+                                                    )['lineitem_total__sum']
         self.save()
 
     def save(self, *args, **kwargs):
@@ -59,45 +56,43 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False,
-                              blank=False, on_delete=models.CASCADE,
-                              related_name='lineitems')
-    product = models.ForeignKey(Product,
-                                null=False, blank=False,
-                                on_delete=models.CASCADE)
-    product_quantity = models.IntegerField(null=False, blank=False, default=0)
-    product_lineitem_total = models.DecimalField(max_digits=6,
-                                                 decimal_places=2, null=False,
-                                                 blank=False, editable=False)
-    exercise = models.ForeignKey(ExercisePlans,
-                                 null=False, blank=False,
-                                 on_delete=models.CASCADE)
-    exercise_quantity = models.IntegerField(null=False, blank=False, default=0)
-    exercise_lineitem_total = models.DecimalField(max_digits=6,
-                                                  decimal_places=2, null=False,
-                                                  blank=False, editable=False)
-    nutrition = models.ForeignKey(NutritionPlans,
-                                  null=False, blank=False,
-                                  on_delete=models.CASCADE)
-    nutrition_quantity = models.IntegerField(null=False,
-                                             blank=False, default=0)
-    nutrition_lineitem_total = models.DecimalField(max_digits=6,
-                                                   decimal_places=2,
-                                                   null=False,
-                                                   blank=False, editable=False)
+    class Meta:
+        abstract = True
+
+    order = models.ForeignKey(Order, null=False, blank=False,
+                              on_delete=models.CASCADE)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
+                                         null=False, blank=False,
+                                         editable=False)
 
     def save(self, *args, **kwargs):
         """
-        override the original save method to set the
-        lineitem total and update the order total
+        Override the original save method to set the lineitem total
+        and update the order total.
         """
-
-        self.product_lineitem_total = self.product.price * self.quantity
-        self.exercise_lineitem_total = self.exercise.price * self.quantity
-        self.nutrition_lineitem_total = self.nutrition.price * self.quantity
+        self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.product.sku} on order {self.order.order_number}, NAME {self.exercise.name} on order {self.order.order_number}, NAME {self.nutrition.name} on order {self.order.order_number}'
+        return f'NAME {self.product.name} on order {self.order.order_number}'
+
+
+class ProductLineItem(OrderLineItem):
+    product = models.ForeignKey(Product, null=False, blank=False,
+                                on_delete=models.CASCADE,
+                                related_name='lineitems')
+
+
+class ExerciseLineItem(OrderLineItem):
+    product = models.ForeignKey(ExercisePlans, null=False, blank=False,
+                                on_delete=models.CASCADE,
+                                related_name='lineitems')
+
+
+class NutritionLineItem(OrderLineItem):
+    product = models.ForeignKey(NutritionPlans, null=False, blank=False,
+                                on_delete=models.CASCADE,
+                                related_name='lineitems')
 
 
