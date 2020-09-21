@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+
+{% load static %} 
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="font-do-hyeon">Checkout</h2>
+            <hr class="bg-light"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 order-2 order-md-1">
+            <p class="font-ubunto">Please fill out the form to complete the order</p>
+        </div>
+        <div class="col-sm-12 col-md-6 order-md-last order-1 order-md-2">
+            <h4 class="font-ubunto"><strong>Order Summary</strong></h4>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+{% endblock %}
+
+
+
