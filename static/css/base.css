@@ -172,4 +172,7 @@ footer {
         padding-left: 2px !important;
         margin-left: 2px !important;
     }
+    .btn-small {
+        font-size: 99%;
+    }
 }
