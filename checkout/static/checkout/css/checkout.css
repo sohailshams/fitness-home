@@ -2,9 +2,13 @@
     .order-form-text {
         font-size: 75%;
     }
+    .order-form-btn {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        font-size: 75%;
+    }
 }
 #order-payment-form .form-control {
     border-radius: 0px !important;
     border: 1px solid #000;
-    
 }
