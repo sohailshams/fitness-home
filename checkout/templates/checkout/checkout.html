@@ -113,8 +113,20 @@
                         </div>
                     </div>
                 {% endfor %}
-
-                
+                {% for item in cart_items.nutrition_items %}
+                    <div class="row my-1">
+                        <div class="col-3 mb-1">
+                        <p class="text-black">Nutrition Plan</p>    
+                        </div>
+                        <div class="col-6">
+                            <p class="my-0 text-black"><strong>{{ item.nutrition.name }}</strong></p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                        <div class="col-3 text-black ">
+                        <p>€{{ item.nutrition_price }}</p>
+                        </div>
+                    </div>
+                {% endfor %}                
             </div>
             
         </div>
