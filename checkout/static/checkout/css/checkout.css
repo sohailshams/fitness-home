@@ -2,13 +2,24 @@
     .order-form-text {
         font-size: 75%;
     }
+    .order-summary {
+        font-size: 70%;
+    }
     .order-form-btn {
         padding-left: 6px !important;
         padding-right: 6px !important;
         font-size: 75%;
     }
 }
+.order-summary {
+    max-height:400px;
+    overflow-x:hidden;
+    overflow-y: auto;
+} 
 #order-payment-form .form-control {
     border-radius: 0px !important;
     border: 1px solid #000;
+}
+.order-summary-item {
+    padding-left: 45px;
 }
