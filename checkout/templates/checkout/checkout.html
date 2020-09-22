@@ -32,7 +32,15 @@
                         {{ order_form.email | as_crispy_field }}                
                 </fieldset>
                 <fieldset class="pr-3 mb-3">
-                    <legend class="fieldset-label w-auto text-black"></legend></fieldset>
+                    <legend class="fieldset-label w-auto text-black"><h5>Delivery Details</h5></legend>
+                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.street_address1 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                </fieldset>
                 <fieldset class="px-3 rounded"></fieldset>
             
             </form>
