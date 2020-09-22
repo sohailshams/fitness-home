@@ -50,6 +50,16 @@
                         <!-- Following div will be used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                 </fieldset>
+                <div class="mt-5 mb-3 pr-3 text-right">
+                <a href="{% url 'view_cart' %}" class="order-form-btn btn text-black bg-light border-line rounded-0">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>Adjust Cart</a>
+                <button class="order-form-btn btn bg-black text-white rounded-0">
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>Complete Order</button>
+                </div>
             
             </form>
         </div>
