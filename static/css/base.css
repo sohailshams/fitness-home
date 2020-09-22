@@ -11,6 +11,16 @@ body {
 .wrapper {
     min-height: 100%;
 }
+/*---------------------------overlay to cover backgoroun image*/
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background:white;
+	z-index: -1;
+}
 /* from Bulma */
 .icon {
     align-items: center;
