@@ -99,6 +99,21 @@
                             </div>
                         </div>
                 {% endfor %}
+                {% for item in cart_items.exercise_items %}
+                    <div class="row my-1">
+                        <div class="col-3 mb-1">
+                        <p class="text-black">Exercise Plan</p>    
+                        </div>
+                        <div class="col-6">
+                            <p class="my-0 text-black"><strong>{{ item.exercise.name }}</strong></p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                        <div class="col-3 text-black ">
+                        <p>€{{ item.exercise_price }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+
                 
             </div>
             
