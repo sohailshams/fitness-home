@@ -59,8 +59,13 @@
                     <span class="icon">
                         <i class="fas fa-lock"></i>
                     </span>Complete Order</button>
+                    <p class="small text-danger my-0">
+                        <span class="icon">
+                            <i class="fas fa-info-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>€{{ total|floatformat:2 }}</strong></span>
+					</p>
                 </div>
-            
             </form>
         </div>
         <div class="col-sm-12 col-md-6 order-md-last order-1 order-md-2">
