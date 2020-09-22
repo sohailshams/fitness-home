@@ -70,6 +70,38 @@
         </div>
         <div class="col-sm-12 col-md-6 order-md-last order-1 order-md-2">
             <h4 class="font-ubunto text-black"><strong>Order Summary</strong></h4>
+            <div>
+                <div class="row">
+                    <div class="col-6 offset-3 text-black">
+                        <p class="mt-1">Items</p>
+                    </div>
+                    <div class="col-3 pl-0 text-black">
+                        <p class="mt-1">Subtotal</p>
+                    </div>
+                </div>
+                {% for item in cart_items.merchandise_items %}
+                        <div class="row my-1">
+                            <div class="col-3 mb-1">
+                                <a href="{% url 'product_detail' item.product.id %}">
+                                    {% if item.product.image %}
+                                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                    {% else %}
+                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <p class="my-0 text-black"><strong>{{ item.product.name }}</strong></p>
+                                <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            </div>
+                            <div class="col-3 text-black ">
+                            <p>€{{ item.product_price }}</p>
+                            </div>
+                        </div>
+                {% endfor %}
+                
+            </div>
+            
         </div>
     </div>
 </div>
