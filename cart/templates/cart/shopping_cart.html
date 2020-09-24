@@ -53,9 +53,9 @@
                                 </div>                                
                             </form>    
                             <!--Quantity update button & delete item button for merchandise-->                         
-                            <a class="update-item pl-3 ml-3 text-black"><small>Update</small></a>
+                            <a class="update-item pl-3 ml-3 text-black"><small><i class="fas fa-plus-square"> Update</i></small></a>
                             <a class="delete-item pl-3 ml-5 text-black" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
-                                <small>Delete</small>
+                                <small class="text-red"><i class="fas fa-window-close"></i></small>
                             </a>                     
                         </td>
                         <td>
@@ -76,7 +76,7 @@
                             <p class="text-black">{{ item.quantity }} x {{ item.exercise.name }}</p>
                             <!--Exercise plan delete button-->
                             <a class="delete-item-exercise text-black" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
-                                <small>Delete</small>
+                                <small class="text-red"><i class="fas fa-window-close"></i></small>
                             </a>
                         </td>
                         <td>
@@ -97,7 +97,7 @@
                             <p class="text-black">{{ item.quantity }} x {{ item.nutrition.name }}</p>
                             <!--Nutrition plan delete button -->
                             <a class="delete-item-nutrition text-black" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
-                                <small>Delete</small>
+                                <small class="text-red"><i class="fas fa-window-close"></i></small>
                             </a>
                         </td>
                         <td>
@@ -135,7 +135,7 @@
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="text-uppercase">Home</span>
+                    <span>Home</span>
                 </a>
             </div>
             {% endif %}
