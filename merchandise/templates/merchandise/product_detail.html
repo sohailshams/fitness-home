@@ -10,10 +10,11 @@
 {% endblock %} 
 
 {% block content %}
+<div class="overlay"></div>
 <div class="container-fluid text-center">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container individual-image my-5 ">
+                <div class="image-container individual-image my-5 border">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -26,30 +27,30 @@
                 </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-             <div class="product-details-container individual-image mt-md-5">
+             <div class="product-details-container individual-image mt-md-5 text-black">
                     <p class="font-weight-bold text-left">{{ product.name }}</p>
                     <p class="lead text-left">{{ product.description }}</p>
-                    <p class="lead text-left font-weight-bold text-red">€ {{ product.price }}</p>
+                    <p class="lead text-left font-weight-bold">€ {{ product.price }}</p>
              </div>  
             <form class="form" action="{% url 'add_cart' product.id %}" method="POST">
             {% csrf_token %}
             <div class="form-group w-50">
-                <div class="input-group">
+                <div class="input-group text-black">
                     <div class="input-group-prepend">
                         <p class="mt-2 text-left"><strong>Quantity</strong></p>
                     </div>
-                    <input class="ml-3 border-0 form-control" type="number"
+                    <input class="ml-3 border-black form-control" type="number"
                         name="quantity" value="1" min="1" max="99">   
                 </div>
             </div>
             <div class="text-left mb-3">
-             <a href="{% url 'products' %}" class="btn rounded-0 mt-3 pl-0 bg-white text-black">
+             <a href="{% url 'products' %}" class="btn rounded-0 mt-3 pl-0 bg-black text-white">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="text-uppercase">Go Back</span>
+                    <span>Go Back</span>
                 </a>
-                <input type="submit" class="btn bg-white text-black rounded-0 text-uppercase mt-3" value="Add to Cart">
+                <input type="submit" class="btn bg-black text-white rounded-0 mt-3" value="Add to Cart">
             </div>
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
             <input type="hidden" name="product_type" value="merchandise" >
