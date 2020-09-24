@@ -10,23 +10,24 @@
 {% endblock %} 
 
 {% block content %}
+<div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center">
-            <h2 class="font-do-hyeon">Products</h2>
+            <h2 class="font-do-hyeon text-black">Products</h2>
             <hr class="bg-light" />
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-sm-6 d-flex md-justify-content-end">
             <div class="my-3 ml-auto category-btn">
-                <a href="{% url 'products' %}?category=mens_wear" class="font-do-hyeon text-white md-p-2 mx-2 text-decoration-none category-btn">
+                <a href="{% url 'products' %}?category=mens_wear" class="font-do-hyeon text-black md-p-2 mx-2 text-decoration-none category-btn">
                     Men
                 </a>
-                <a href="{% url 'products' %}?category=womens_wear" class="font-do-hyeon text-white md-p-2 mx-2 text-decoration-none category-btn">
+                <a href="{% url 'products' %}?category=womens_wear" class="font-do-hyeon text-black md-p-2 mx-2 text-decoration-none category-btn">
                     Women
                 </a>
-                <a href="{% url 'products' %}?category=exercise_accessories" class="font-do-hyeon text-white md-p-2 mx-2 text-decoration-none category-btn">
+                <a href="{% url 'products' %}?category=exercise_accessories" class="font-do-hyeon text-black md-p-2 mx-2 text-decoration-none category-btn">
                     Accessories
                 </a>
             </div>
@@ -46,8 +47,8 @@
     </div>
     <div class="row">
         {% for merchandise in products %}
-        <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="card h-50 border-0">
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+            <div class="card h-100 border rounded-0">
                 {% if merchandise.image %}
                 <a href="{% url 'product_detail' merchandise.id %}">
                     <img class="card-img-top img-fluid" src="{{ merchandise.image.url }}" alt="{{ merchandise.name }}" />
@@ -57,13 +58,14 @@
                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ merchandise.name }}" />
                 </a>
                 {% endif %}
-                <div class="card-body text-left">
-                    <p class="text-white">{{ merchandise.name }}</p>
+                <div class="card-body text-left pb-0 mb-0">
+                    <p class="text-black">{{ merchandise.name }}</p>
                 </div>
-                <div class="card-footer border-0 text-left">
+                <div class="card-footer bg-white border-0 text-left">
                     <div class="row">
                         <div class="col">
-                            <p class="lead font-weight-bold text-left text-white pt-3">${{ merchandise.price }}</p>
+                            <p class="text-left text-black pt-3"><span class="font-weight-bold lead">${{ merchandise.price }}</span>
+                            <a class=" px-3 py-1 btn rounded-0 float-right border text-white bg-black" href="{% url 'product_detail' merchandise.id %}">Details</a></p>
                         </div>
                     </div>
                 </div>
