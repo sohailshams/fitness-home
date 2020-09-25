@@ -31,3 +31,19 @@ var style = {
 var card = elements.create('card', {style: style});
 // Mounted card element to checkout.html div
 card.mount('#card-element');
+
+// Handling realtime validation errors on the card element
+card.addEventListener('change', function (event) {
+    var errorMessage = document.getElementById('card-errors');
+    if (event.error) {
+        var html = `
+            <span class="icon" role="alert">
+                <i class="far fa-window-close"></i>
+            </span>
+            <span>${event.error.message}</span>
+        `;
+        $(errorMessage).html(html);
+    } else {
+        errorDiv.textContent = '';
+    }
+});
