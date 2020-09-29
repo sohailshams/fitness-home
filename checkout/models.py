@@ -23,7 +23,7 @@ class Order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     order_total = models.DecimalField(max_digits=10, decimal_places=2,
                                       null=False, default=0)
-    original_bag = models.TextField(null=False, blank=False, default='')
+    original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False,
                                   blank=False, default='')
 
@@ -37,9 +37,10 @@ class Order(models.Model):
         """
         Update total each time a line item is added
         """
-        self.order_total = self.lineitems.aggregate(Sum
-                                                    ('lineitem_total')
-                                                    )['lineitem_total__sum']
+        product_total = self.productlineitem_set.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        exercise_total = self.exerciselineitem_set.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        nutrition_total = self.nutritionlineitem_set.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.order_total = product_total + exercise_total + nutrition_total
         self.save()
 
     def save(self, *args, **kwargs):
@@ -81,18 +82,18 @@ class OrderLineItem(models.Model):
 class ProductLineItem(OrderLineItem):
     product = models.ForeignKey(Product, null=False, blank=False,
                                 on_delete=models.CASCADE,
-                                related_name='lineitems')
+                                )
 
 
 class ExerciseLineItem(OrderLineItem):
     product = models.ForeignKey(ExercisePlans, null=False, blank=False,
                                 on_delete=models.CASCADE,
-                                related_name='lineitems')
+                                )
 
 
 class NutritionLineItem(OrderLineItem):
     product = models.ForeignKey(NutritionPlans, null=False, blank=False,
                                 on_delete=models.CASCADE,
-                                related_name='lineitems')
+                                )
 
 
