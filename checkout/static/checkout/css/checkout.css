@@ -36,6 +36,9 @@
         padding-right: 6px !important;
         font-size: 75%;
     }
+    .order-font {
+        font-size: 85%;
+    }
 }
 .order-summary {
     max-height:400px;
