@@ -81,19 +81,19 @@ class OrderLineItem(models.Model):
 
 class ProductLineItem(OrderLineItem):
     product = models.ForeignKey(Product, null=False, blank=False,
-                                on_delete=models.CASCADE,
+                                on_delete=models.CASCADE
                                 )
 
 
 class ExerciseLineItem(OrderLineItem):
     product = models.ForeignKey(ExercisePlans, null=False, blank=False,
-                                on_delete=models.CASCADE,
+                                on_delete=models.CASCADE
                                 )
 
 
 class NutritionLineItem(OrderLineItem):
     product = models.ForeignKey(NutritionPlans, null=False, blank=False,
-                                on_delete=models.CASCADE,
+                                on_delete=models.CASCADE
                                 )
 
 
