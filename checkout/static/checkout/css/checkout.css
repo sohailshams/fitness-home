@@ -1,6 +1,5 @@
 /*
-    Source for the following css is: https://stripe.com/docs/stripe-js
-    It is to style the 
+    Source for the following css is: https://stripe.com/docs/stripe-js 
 */
 .StripeElement,
 #card-element {
@@ -51,4 +50,25 @@
 }
 .order-summary-item {
     padding-left: 45px;
+}
+/*----------------------loading overlay & spinner icon
+Source: Boutique ado project
+*/
+#loader-overlay {
+	display: none;
+	position: fixed;
+    background: rgba(39, 40, 41, 0.85);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+}
+
+.icon-spinner {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
 }
