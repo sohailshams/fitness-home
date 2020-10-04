@@ -41,6 +41,10 @@
                         {{ order_form.county | as_crispy_field }}
                         {{ order_form.postcode | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
+                        <div class="form-check">
+                        <label class="form-check-label text-black" for="id-save-info">Save this delivery information to my profile</label>
+                        <input class="form-check-input ml-3" type="checkbox" id="id-save-info" name="save-info" checked>
+                        </div>
                 </fieldset>
                 <fieldset class="pr-3">
                     <legend class="fieldset-label w-auto text-black"><h5>Payment</h5></legend>
