@@ -112,6 +112,14 @@ footer {
   padding-left: 0;
   text-align: center;
 }
+/*---------------------------login*/
+.form-control, .login {
+    max-width: 450px;
+    margin: 0 auto !important;
+}
+.signup-text { 
+    text-align: center;
+}    
 
 /*---------------------------media query*/
 @media (max-width: 991px) {
