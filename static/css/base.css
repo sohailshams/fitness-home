@@ -117,7 +117,7 @@ footer {
     color: #000 !important;
     padding: 10px 0 !important;
 }
-.form-control, .login, .signup, .logout, 
+.allauth-form-inner-content .form-control, .login, .signup, .logout, 
 .add_email, .buttonHolder, .allauth-heading, 
 .confirm_email, .password_change, 
 .password_reset, .change_password {
