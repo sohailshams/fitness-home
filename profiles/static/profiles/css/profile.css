@@ -2,4 +2,19 @@
     border-radius: 0 !important;
     border: solid 1px #000 !important;
 }
+.profile-order-card {
+    border-radius: 0 !important;
+}
+img.order-history-image {
+    width: 50% !important;
+}
+@media (max-width: 425px) {
+    img.order-history-image {
+        width: 200% !important;
+        padding-right: 5px;
+    }
+    .order-number {
+        font-size: 88%;
+    }
+}
 
