@@ -9,13 +9,20 @@ img.order-history-image {
     width: 50% !important;
 }
 .order-detail .btn {
-    padding-top: 5px;
-    font-size: 12px;
+    padding: 5px 8px; 
+}
+.order-list {
+    max-height:300px;
+    overflow-x:hidden;
+    overflow-y: auto;
 }
 @media (max-width: 425px) {
     img.order-history-image {
         width: 200% !important;
         padding-right: 10px;
+    }
+    .line-line-image {
+        width: 150%;
     }
     .order-number {
         font-size: 88%;
