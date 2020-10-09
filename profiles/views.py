@@ -28,6 +28,8 @@ def order_history(request):
     profile = get_object_or_404(UserProfile, user=request.user)
     orders = profile.orders.all().order_by('-date')
 
+    messages.info(request, ('Here you can see the history of your purchases.'))
+
     template = 'profiles/order_history.html'
     context = {
         'orders': orders,
