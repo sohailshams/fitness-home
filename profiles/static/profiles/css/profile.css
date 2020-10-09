@@ -8,13 +8,23 @@
 img.order-history-image {
     width: 50% !important;
 }
+.order-detail .btn {
+    padding-top: 5px;
+    font-size: 12px;
+}
 @media (max-width: 425px) {
     img.order-history-image {
         width: 200% !important;
-        padding-right: 5px;
+        padding-right: 10px;
     }
     .order-number {
         font-size: 88%;
+    }
+    .product-name {
+        font-size: 75%;
+    }
+    .grand-total {
+        font-size: 70%;
     }
 }
 
