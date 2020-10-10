@@ -11,18 +11,35 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100 slogan-container">
-    <div class="row h-100">
-        <div class="my-auto">
-            <h2 class="display-4 text-white slogan-font-size">
-                Take care of your body. It's the only place you have to live!
-            </h2>
-            <div class="my-5">
-                <h4>
-                    <a href="" class="buy-button btn btn-lg rouded-0 text-uppercase py-3 text-white">Subscribe Now</a>
-                </h4>
-            </div>
+<div class="container slogan-container">
+    <div class="row">
+        <div class="col">
+            <h2 class="display-4 text-white slogan-font-size blink mt-5">
+                Take care of your body. It's the only place you have to live!  
+            </h2>        
         </div>
     </div>
+    <div class="row mt-3">
+    <div class="col">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active font-weight-bold text-white" aria-current="page">Free Membership!</li>
+            </ol>
+        </nav>
+    </div>
+   </div>           
+   
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+ setInterval(function() {
+   $('.blink').fadeOut('slow', function () {
+        $(this).fadeIn('slow', function () {
+    });
+    });
+}, 2000);
+</script>
 {% endblock %}

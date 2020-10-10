@@ -58,8 +58,10 @@ body {
     max-width: 600px;
     margin-top: 70px;
 }
-.buy-button {
-    background-color: #e84610 !important;
+.breadcrumb {
+    max-width: 180px;
+    background-color: #e84610;
+    border-radius: 0; 
 }
 .card-img, .card-img-top {
     border-top-left-radius: 0;
