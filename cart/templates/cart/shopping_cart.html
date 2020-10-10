@@ -36,7 +36,7 @@
                     {% for item in cart_items.merchandise_items %}
                     <tr>
                         <td class="w-25">
-                            <img class="image-fluid img-size border" src="{{ item.product.image.url }}" alt="" />
+                            <img class="image-fluid img-size border" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />
                         </td>
                         <td>
                             <p class="text-black mb-0">{{ item.product.name }}</p>
@@ -70,7 +70,7 @@
                     {% for item in cart_items.exercise_items %}
                     <tr>
                         <td class="w-25">
-                            <h3 class="text-black font-size-plans">Fitness Plan</h3>
+                            <img class="image-fluid img-size border" src="{{ item.exercise.image.url }}" alt="{{ item.exercise.name }}" />
                         </td>
                         <td>
                             <p class="text-black">{{ item.quantity }} x {{ item.exercise.name }}</p>
