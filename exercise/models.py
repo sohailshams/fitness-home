@@ -14,6 +14,7 @@ class ExercisePlans(models.Model):
     free_offer = models.CharField(max_length=500)
     accompanied_guest = models.CharField(max_length=220)
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    image = models.ImageField(null=True, blank=True)
     product_type = models.CharField(max_length=254, default='exercise_plan')
 
     def __str__(self):
