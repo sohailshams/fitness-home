@@ -93,6 +93,9 @@ select:not(:first-child), .input-group>.form-control:not(:first-child) {
 .toast-cap {
     height: 2px;
 }
+.list-group-item {
+    padding: 2px 2px;
+}
 /*---------------------------footer*/
 footer {
     position: relative;
