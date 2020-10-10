@@ -125,7 +125,11 @@
                 {% for item in cart_items.nutrition_items %}
                     <div class="row my-1">
                         <div class="col-3 mb-1">
-                        <p class="text-black">Nutrition Plan</p>    
+                        {% if item.nutrition.image %}
+                            <img class="w-100" src="{{ item.nutrition.image.url }}" alt="{{ item.nutrition.name }}">
+                        {% else %}
+                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.nutrition.name }}">
+                            {% endif %}
                         </div>
                         <div class="col-6">
                             <p class="my-0 text-black"><strong>{{ item.nutrition.name }}</strong></p>
