@@ -107,7 +107,11 @@
                 {% for item in cart_items.exercise_items %}
                     <div class="row my-1">
                         <div class="col-3 mb-1">
-                        <p class="text-black">Exercise Plan</p>    
+                            {% if item.exercise.image %}
+                                <img class="w-100" src="{{ item.exercise.image.url }}" alt="{{ item.exercise.name }}">
+                            {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.exercise.name }}">
+                            {% endif %}
                         </div>
                         <div class="col-6">
                             <p class="my-0 text-black"><strong>{{ item.exercise.name }}</strong></p>
