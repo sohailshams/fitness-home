@@ -23,6 +23,17 @@
 		{%for nutrition in nutritions %}
 		<div class="col-sm-6 col-md-4 my-3">
 			<div class="card rounded-0">
+            <div>
+            {% if nutrition.image %}
+                <a href="" >
+                    <img class="card-img-top img-fluid bg-light" src="{{ nutrition.image.url }}" alt="{{ nutrition.name }}" />
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ nutrition.name }}" />
+                </a>
+                {% endif %}
+            </div>
 				<div class="card-header text-black">
 					<h3> {{ nutrition.name }} </h3>
 				</div>
