@@ -77,9 +77,9 @@
                     <div class="row my-1">
                         <div class="col-3 mb-1">
                         {% if item.product.image %}
-                            <img class="order-history-image" src="{{ item.product.image.url }}" alt="{{ item.exercise.name }}">
+                            <img class="order-history-image" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                         {% else %}
-                            <img class="order-history-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.exercise.name }}">
+                            <img class="order-history-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                         {% endif %}
                         <hr class="bg-light w-75 line-line-image">    
                         </div>
@@ -95,7 +95,11 @@
                 {% for item in order.nutritionlineitem_set.all %}
                     <div class="row my-1">
                         <div class="col-3 mb-1">
-                        <p class="text-black">Nutrition Plan</p>
+                        {% if item.product.image %}
+                            <img class="order-history-image" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                        {% else %}
+                            <img class="order-history-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                        {% endif %}
                         <hr class="bg-light w-75 line-line-image">    
                         </div>
                         <div class="col-6">
