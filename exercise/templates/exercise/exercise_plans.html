@@ -23,16 +23,27 @@
 		{%for exercise in exercises %}
 		<div class="col-sm-6 col-md-4 my-3">
 			<div class="card rounded-0">
-				<div class="card-header text-black">
-					<h3> {{ exercise.name }} </h3>
-				</div>
-				<ul class="list-group list-group-flush text-black">
-					<li class="list-group-item">{{ exercise.timing }}</li>
-					<li class="list-group-item">{{ exercise.access }}</li>
-					<li class="list-group-item">{{ exercise.free_offer }}</li>
-					<li class="list-group-item">{{ exercise.accompanied_guest }}</li>
-					<li class="list-group-item">€ {{ exercise.price }}/month</li>
-				</ul>
+				{% if exercise.image %}
+                <a href="" >
+                    <img class="card-img-top img-fluid bg-light" src="{{ exercise.image.url }}" alt="{{ exercise.name }}" />
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ exercise.name }}" />
+                </a>
+                {% endif %}
+                <div class="card-body">
+                <div class="card-header text-black">
+                    <h4 class="font-do-hyeon"> {{ exercise.name }} </h4>
+                </div>
+                    <ul class="list-group list-group-flush text-black pt-3">
+                        <li class="list-group-item">{{ exercise.timing }}</li>
+                        <li class="list-group-item">{{ exercise.access }}</li>
+                        <li class="list-group-item">{{ exercise.free_offer }}</li>
+                        <li class="list-group-item">{{ exercise.accompanied_guest }}</li>
+                        <li class="list-group-item">€ {{ exercise.price }}/month</li>
+                    </ul>
+                </div>
 			</div>
             <div class="my-3">
             <form action="{% url 'add_cart' exercise.id %}" method="POST">
