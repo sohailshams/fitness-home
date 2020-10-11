@@ -3,6 +3,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.contrib import messages
 from .models import Product
+from .forms import ProductForm
 
 
 # Create your views here.
@@ -38,7 +39,8 @@ def all_products(request):
             search_query = request.GET['q']
             if not search_query:
                 messages.info(
-                    request, "You didn't enter any search criteria! Here are some products")
+                    request, "You didn't enter any search criteria! \
+                     Here are some products")
 
             search_queries_products = Q(name__icontains=search_query) | Q(
                 description__icontains=search_query)
@@ -67,3 +69,14 @@ def product_detail(request, product_id):
         'product': product,
     }
     return render(request, 'merchandise/product_detail.html', context)
+
+
+def add_product(request):
+    """ A view to add a product to the store """
+    form = ProductForm()
+    template = 'merchandise/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
