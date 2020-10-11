@@ -150,6 +150,11 @@ footer {
     padding: .375rem .75rem;
     border-radius: 0;
 }
+/*---------------------------product add form*/
+.product-add-form {
+    max-width: 450px;
+    margin: 0 auto; 
+}
 /*---------------------------media query*/
 @media (max-width: 991px) {
     .header-container {
@@ -225,5 +230,8 @@ footer {
     }
     .btn-small {
         font-size: 99%;
+    }
+    .product-add-form .form-control {
+        height: 30px;
     }
 }
