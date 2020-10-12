@@ -27,11 +27,19 @@
                 </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-             <div class="product-details-container individual-image mt-md-5 text-black">
-                    <p class="font-weight-bold text-left">{{ product.name }}</p>
-                    <p class="lead text-left">{{ product.description }}</p>
-                    <p class="lead text-left font-weight-bold">€ {{ product.price }}</p>
-             </div>  
+            <div class="product-details-container individual-image mt-md-5 text-black">
+                <p class="font-weight-bold text-left">{{ product.name }}</p>
+                <p class="lead text-left">{{ product.description }}</p>
+                <p class="lead text-left font-weight-bold">€ {{ product.price }}</p>
+                <div class=" py-0 mb-2 text-left">
+                {% if request.user.is_superuser %}
+                    <small>
+                        <a class="text-primary" href="{% url 'edit_product' product.id %}">Edit</a> <span class="text-black">|</span> 
+                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                    </small>
+                {% endif %}
+            </div>
+        </div>     
             <form class="form" action="{% url 'add_cart' product.id %}" method="POST">
             {% csrf_token %}
             <div class="form-group w-50">
@@ -54,8 +62,7 @@
             </div>
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
             <input type="hidden" name="product_type" value="merchandise" >
-            </form>
-            
+            </form>            
         </div>                     
     </div>
 </div>

@@ -61,6 +61,16 @@
                 <div class="card-body text-left pb-0 mb-0">
                     <p class="text-black">{{ merchandise.name }}</p>
                 </div>
+                <div class="row card-body py-0 my-0">
+                <div class="col">
+                    {% if request.user.is_superuser %}
+                        <small class="">
+                            <a class="text-primary" href="{% url 'edit_product' merchandise.id %}">Edit</a> <span class="text-black">|</span> 
+                            <a class="text-danger" href="{% url 'delete_product' merchandise.id %}">Delete</a>
+                        </small>
+                    {% endif %}
+                </div>
+                </div>
                 <div class="card-footer bg-white border-0 text-left">
                     <div class="row">
                         <div class="col">
