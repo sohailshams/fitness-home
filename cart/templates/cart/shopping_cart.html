@@ -74,7 +74,11 @@
                     {% for item in cart_items.exercise_items %}
                     <tr>
                         <td class="w-25">
+                        {% if item.exercise.image %}
                             <img class="image-fluid img-size border" src="{{ item.exercise.image.url }}" alt="{{ item.exercise.name }}" />
+                        {% else %}
+                            <img class="img-fluid img-size border" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.exercise.name }}">
+                        {% endif %}
                         </td>
                         <td>
                             <p class="text-black">{{ item.quantity }} x {{ item.exercise.name }}</p>
