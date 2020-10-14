@@ -53,6 +53,24 @@
             <input type="hidden" name="product_type" value="excercise_plan">
             </form>
             </div>
+            {% if request.user.is_superuser %}
+                        <small class="">
+                        <a class="text-primary text-decoration-none" href="{% url 'edit_exercise' exercise.id %}">Edit</a> <span class="text-black">|</span> 
+                        <a class="text-red text-decoration-none" href="" data-toggle="modal" data-target="#{{ exercise.sku }}">Delete</a>
+                        </small>
+                         <!--this modal pops up when store owner click on delete button to confirm the deletion of the product-->
+                        <div class="modal fade bd-example-modal-sm" id="{{ exercise.sku }}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content bg-light border-black rounded-0 text-center">
+                                <h6 class="text-black pt-2">Are you sure you want to delete!</h6>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a class="text-red font-weight-bold text-decoration-none" href="{% url 'delete_exercise' exercise.id %}">Yes</a></li>
+                                    <li class="list-inline-item"><a class="text-black font-weight-bold text-decoration-none" href="">Cancel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
 		</div>
 		{% endfor %}
 	</div>
