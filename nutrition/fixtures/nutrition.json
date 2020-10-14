@@ -3,39 +3,48 @@
       "pk": 1,
       "model": "nutrition.nutritionplans",
       "fields": {
+        "sku": "np20201234",
         "name": "Mantra",
         "purpose": "30 Days Weight Loss Plan",
         "meal_plan": "Customized Meal Plans",
         "grocery_list": "Complete Grocery List",
         "message": "Unlimited Messaging",
         "coaching": "Two hours Weekly Private Coaching",
-        "price": 150
+        "price": 150,
+        "product_type": "nutrition_plan",
+        "image": "nutrition1.jpg"
       }
     },
     {
       "pk": 2,
       "model": "nutrition.nutritionplans",
       "fields": {
+        "sku": "np20201235",
         "name": "Motapa",
         "purpose": "30 Days Weight Gain Plan",
         "meal_plan": "Customized Meal Plans",
         "grocery_list": "Complete Grocery List",
         "message": "Unlimited Messaging",
         "coaching": "Two hours Weekly Private Coaching",
-        "price": 150
+        "price": 150,
+        "product_type": "nutrition_plan",
+        "image": "nutrition2.jpg"
       }
     },
     {
       "pk": 3,
       "model": "nutrition.nutritionplans",
       "fields": {
+        "sku": "np20201236",
         "name": "Ayurveda",
         "purpose": "30 Days Healthy Life Plan",
         "meal_plan": "Customized Meal Plans",
         "grocery_list": "Complete Grocery List",
         "message": "Unlimited Messaging",
         "coaching": "30 minute Daily Private Coaching",
-        "price": 250
+        "price": 250,
+        "product_type": "nutrition_plan",
+        "image": "nutrition3.jpg"
       }
     }
   ]
