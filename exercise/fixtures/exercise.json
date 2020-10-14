@@ -3,36 +3,45 @@
       "pk": 1,
       "model": "exercise.exerciseplans",
       "fields": {
+        "sku": "ep20201234",
         "name": "Basic",
         "timing": "07:00 til 14:00",
-        "access": "Access to Steam Souna",
+        "access": "Access to Steam Sauna",
         "free_offer": "Free Kit Bag",
         "accompanied_guest": "1 times per month a guest is allowed for training.",
-        "price": 15
+        "price": 15,
+        "product_type": "exercise_plan",
+        "image": "basic.jpg"
       }
     },
     {
       "pk": 2,
       "model": "exercise.exerciseplans",
       "fields": {
+        "sku": "ep20201235",
         "name": "Standard",
         "timing": "05:00 til 17:00",
-        "access": "Access to Steam Souna",
-        "free_offer": "Free Kit Bag & once a week personal coaching",
+        "access": "Access to Steam Sauna",
+        "free_offer": "Free Kit Bag & Personal coaching",
         "accompanied_guest": "2 times per month a guest is allowed for training.",
-        "price": 20
+        "price": 20,
+        "product_type": "exercise_plan",
+        "image": "standard.jpg"
       }
     },
     {
       "pk": 3,
       "model": "exercise.exerciseplans",
       "fields": {
+        "sku": "ep20201236",
         "name": "Premium",
         "timing": "24/7 Access",
-        "access": "Access to Steam Souna & Yoga",
-        "free_offer": "Free Kit Bag, four times a week personal coaching & Diet Plans",
+        "access": "Access to Steam Sauna & Yoga",
+        "free_offer": "Youga Personal coaching & Diet Plans.",
         "accompanied_guest": "4 times per month a guest is allowed for training.",
-        "price": 25
+        "price": 25,
+        "product_type": "exercise_plan",
+        "image": "premium.jpg"
       }
     }
   ]
