@@ -89,3 +89,17 @@ def edit_exercise(request, exercise_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_exercise(request, exercise_id):
+    """ Aview to delete an exercise plan from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access it.')
+        return redirect(reverse('home'))
+
+    exercise = get_object_or_404(ExercisePlans, pk=exercise_id)
+    exercise.delete()
+    messages.success(request, f'Exercise Plan {exercise.name} \
+                                deleted successfully!')
+    return redirect(reverse('exercises'))
