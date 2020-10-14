@@ -155,6 +155,9 @@ footer {
     max-width: 450px;
     margin: 0 auto; 
 }
+.management-form .form-control {
+    border: 1px solid #000;
+}
 /*---------------------------media query*/
 @media (max-width: 991px) {
     .header-container {
