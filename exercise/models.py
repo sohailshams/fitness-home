@@ -8,6 +8,7 @@ class ExercisePlans(models.Model):
     class Meta:
         verbose_name_plural = 'Exercise Plans'
 
+    sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=80)
     timing = models.CharField(max_length=120)
     access = models.CharField(max_length=254)
