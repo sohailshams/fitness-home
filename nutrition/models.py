@@ -8,6 +8,7 @@ class NutritionPlans(models.Model):
     class Meta:
         verbose_name_plural = 'Nutrition Plans'
 
+    sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=80)
     purpose = models.CharField(max_length=120)
     meal_plan = models.CharField(max_length=120)
