@@ -1,0 +1,49 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="font-do-hyeon text-black">Nutririon Plans Management</h2>
+            <h4 class="text-black">Add a Nutririon Plan</h4>
+            <hr class="bg-light"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 ">
+            <form method="POST" action="{% url 'add_nutrition' %}" class="form mb-2 text-black product-add-form management-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="mb-3">
+                    <a class="btn bg-black text-white rounded-0" href="{% url 'nutritions' %}">
+                        <span class="icon">
+                            <i class="far fa-times-circle"></i>
+                        </span>
+                        <span>Cancel</span>
+                    </a>
+                    <button class="btn bg-black text-white rounded-0" type="submit">
+                        <span class="icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </span>
+                        <span>Add</span>
+                    </button>                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
