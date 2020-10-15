@@ -2,7 +2,8 @@ html {
     height: 100%;
 }
 body {
-    background: url('/media/background.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)
+  ), url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fafafa;
     font-family: 'Ubunto', sans-serif;
@@ -15,6 +16,11 @@ body {
 .border-line {
     border: 1px solid #000;
 }
+/*---------------------------navbar*/
+.menu-items {
+    margin: 0 auto !important;
+}
+
 /*---------------------------overlay to cover backgoroun image*/
 .overlay {
 	height: 100%;
@@ -56,7 +62,7 @@ body {
     }
 .slogan-container {
     max-width: 600px;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 .breadcrumb {
     max-width: 180px;
@@ -212,13 +218,9 @@ footer {
         .img-size {
             height: 45%;
         }
-        .total-font-size {
-            font-size: 70%;
+        .mobile-font-size {
+            font-size: 80%;
         }
-      .form-control {
-          height: 25px;
-          font-size: 12px;
-      }
       .font-size-plans {
           font-size: 10px;
           font-weight: bold;
@@ -237,4 +239,7 @@ footer {
     .product-add-form .form-control {
         height: 30px;
     }
+    .main-logo {
+    font-size: 99% !important;
+}
 }
