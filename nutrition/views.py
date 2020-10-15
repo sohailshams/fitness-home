@@ -89,3 +89,17 @@ def edit_nutrition(request, nutrition_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_nutrition(request, nutrition_id):
+    """ A view to delete a nutrition plan from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can access it.')
+        return redirect(reverse('home'))
+
+    nutrition = get_object_or_404(NutritionPlans, pk=nutrition_id)
+    nutrition.delete()
+    messages.success(request, f'Nutrition Plan {nutrition.name} \
+                                deleted successfully!')
+    return redirect(reverse('nutritions'))
