@@ -67,8 +67,8 @@
                         <div class="modal-content bg-light border-black rounded-0 text-center">
                             <h6 class="text-black pt-2">Are you sure you want to delete!</h6>
                             <ul class="list-inline">
-                                <li class="list-inline-item"><a class="text-red font-weight-bold text-decoration-none" href="">Yes</a></li>
-                                <li class="list-inline-item"><a class="text-black font-weight-bold text-decoration-none" href="">Cancel</a></li>
+                                <li class="list-inline-item"><a class="text-red font-weight-bold text-decoration-none" href="{% url 'delete_nutrition' nutrition.id %}">Yes</a></li>
+                                <li class="list-inline-item"><a class="text-black font-weight-bold text-decoration-none" href="{% url 'nutritions' %}">Cancel</a></li>
                             </ul>
                         </div>
                     </div>
