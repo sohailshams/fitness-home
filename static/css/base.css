@@ -164,6 +164,9 @@ footer {
 .management-form .form-control {
     border: 1px solid #000;
 }
+.account-items {
+    padding: 0 10px;
+}
 /*---------------------------media query*/
 @media (max-width: 991px) {
     .header-container {
