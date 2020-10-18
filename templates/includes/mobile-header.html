@@ -30,7 +30,9 @@
     <div class="dropdown-menu border-0 bg-light mobile-font-size" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <a href="" class="dropdown-item total-font-size">Product Management</a>
+                <a href="{% url 'add_product' %}" class="dropdown-item">Merchandise Admin</a>
+                <a href="{% url 'add_exercise' %}" class="dropdown-item">Exercise Admin</a>
+                <a href="{% url 'add_nutrition' %}" class="dropdown-item">Nutrition Admin</a>
             {% endif %}
             <a href="" class="dropdown-item">My Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
