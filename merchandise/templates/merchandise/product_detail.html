@@ -65,13 +65,19 @@
                 </div>
             </div>
             <div class="text-left mb-3">
-             <a href="{% url 'products' %}" class="btn rounded-0 mt-3 pl-0 bg-black text-white">
+             <a href="{% url 'products' %}" class="btn btn-small rounded-0 mt-3 pl-0 bg-black text-white">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
                     <span>Go Back</span>
                 </a>
-                <input type="submit" class="btn bg-black text-white rounded-0 mt-3" value="Add to Cart">
+                       
+                <button class="btn btn-small bg-black text-white rounded-0 mt-3" type="submit" name="quantity" value="1">
+                    <span class="icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </span>
+                    <span>Add to Cart</span>
+                </button>
             </div>
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
             <input type="hidden" name="product_type" value="merchandise" >
