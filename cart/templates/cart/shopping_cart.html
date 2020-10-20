@@ -125,13 +125,13 @@
                 <div class="text-right">
                     <h6 class="text-blue grand-total my-4"><strong>Grand Total: €{{ total|floatformat:2 }}</strong></h6>
                      <div class="mb-3">
-                     <a href="{% url 'home' %}" class="btn rounded-0 mt-3 bg-blue text-white btn-small">
+                     <a href="{% url 'home' %}" class="btn rounded-0 mt-3 bg-blue text-white btn-small hover-red">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
                     <span>Home</span>
                 </a>
-                 <a href="{% url 'checkout' %}" class="btn rounded-0 mt-3 bg-blue text-white btn-small">
+                 <a href="{% url 'checkout' %}" class="btn rounded-0 mt-3 bg-blue text-white btn-small hover-red">
                     <span class="icon">
                         <i class="fas fa-lock"></i>
                     </span>
@@ -142,8 +142,8 @@
             </div>
             {% else %}
             <div class="text-center mt-5">
-                <h5>Shopping Cart is Empty</h5>
-                <a href="{% url 'home' %}" class="btn rounded-0 mt-3 mb-5 bg-white text-blue">
+                <h5 class="text-blue">Shopping Cart is Empty</h5>
+                <a href="{% url 'home' %}" class="btn rounded-0 mt-3 mb-5 bg-blue text-white hover-red">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>

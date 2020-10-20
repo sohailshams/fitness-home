@@ -12,6 +12,9 @@ body {
 .wrapper {
     min-height: 100%;
 }
+.hover-red:hover {
+    background-color: #e84610 !important;
+}
 /*---------------------------border line*/
 .border-line {
     border: 1px solid #12375a;
@@ -46,11 +49,11 @@ body {
     font-family: 'Ubunto', sans-serif
 }
 .text-blue {
-    /*color: #000 !important;*/
+    /*color: #12375a !important;*/
     color:  #12375a !important;;
 }
 .bg-blue {
-    /*background-color: #000 !important;*/
+    /*background-color: #12375a !important;*/
     background-color: #12375a !important;
 }
 .text-red {
@@ -137,7 +140,10 @@ footer {
 .password_reset, .change_password {
     max-width: 450px;
     margin: 0 auto !important;
-}   
+}  
+.allauth-form-inner-content .form-check-label {
+    color:  #12375a !important;
+} 
 .allauth-form-inner-content p {
     color: #12375a !important;
     margin: 10px auto !important;
@@ -150,14 +156,20 @@ footer {
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
+.allauth-form-inner-content input[type='submit']:hover {
+    background-color: #e84610 !important;
+}
+.allauth-form-inner-content button:hover {
+    background-color: #e84610 !important;
+}
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
     color: #fafafa;
     background-color: #12375a;
-    border: 1px solid #12375a;
-    padding: .375rem .75rem;
+    padding: .375rem .5rem;
     border-radius: 0;
+    border: 0px !important;
 }
 /*---------------------------product add form*/
 .product-add-form {

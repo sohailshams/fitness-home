@@ -51,7 +51,7 @@
              <div class="my-3">
                 <form action="{% url 'add_cart' nutrition.id %}" method="POST">
                 {% csrf_token %}
-                <button class="btn bg-blue text-white rounded-0 mt-3" type="submit" name="quantity" value="1">
+                <button class="btn bg-blue text-white rounded-0 mt-3 hover-red" type="submit" name="quantity" value="1">
                     <span class="icon">
                         <i class="fas fa-plus-circle"></i>
                     </span>
