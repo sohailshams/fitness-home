@@ -75,3 +75,11 @@ This project is suitable to make purchases online;
 #### Attribute
 
 - The target_blank value is given to the social links in the footer so that they will open in a new tab / window on click.
+
+#### Colors
+
+The color scheme of the website is kept fairly simple to make it attractive for and appealing for the users. 
+- Dark blue color **#12375a** is used for headings, text and button background in the website.
+- Light grey color **#f8f9fa** is used as a background color of navbar and footer to make navigation links and buttons prominenet. 
+- White color **fafafa** is used as a background color of the rest of the page so that products and the information can be displayed clearly.
+- Red color **#e84610** is used in the breadcrum on landing page and in the delete button.    
