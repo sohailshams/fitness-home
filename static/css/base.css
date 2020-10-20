@@ -1,3 +1,8 @@
+/*-------------------Removed outline border*/
+*:focus {
+    outline: 0 !important;
+}
+/*-------------------body*/
 html {
     height: 100%;
 }
@@ -11,9 +16,6 @@ body {
 }
 .wrapper {
     min-height: 100%;
-}
-.hover-red:hover {
-    background-color: #e84610 !important;
 }
 /*---------------------------border line*/
 .border-line {
@@ -41,6 +43,10 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+/*---------------------------general syling like color, bg-color, hover, padding, padding, width, border*/
+.hover-red:hover {
+    background-color: #e84610 !important;
 }
 .font-do-hyeon {
     font-family: 'Do Hyeon', sans-serif
