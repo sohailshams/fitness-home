@@ -14,20 +14,20 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center">
-            <h2 class="font-do-hyeon text-black">Products</h2>
+            <h2 class="font-do-hyeon text-blue">Products</h2>
             <hr class="bg-light" />
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-sm-6 d-flex md-justify-content-end">
             <div class="my-3 ml-auto category-btn">
-                <a href="{% url 'products' %}?category=mens_wear" class="font-do-hyeon text-black md-p-2 mx-2 text-decoration-none category-btn">
+                <a href="{% url 'products' %}?category=mens_wear" class="font-do-hyeon text-blue md-p-2 mx-2 text-decoration-none category-btn">
                     Men
                 </a>
-                <a href="{% url 'products' %}?category=womens_wear" class="font-do-hyeon text-black md-p-2 mx-2 text-decoration-none category-btn">
+                <a href="{% url 'products' %}?category=womens_wear" class="font-do-hyeon text-blue md-p-2 mx-2 text-decoration-none category-btn">
                     Women
                 </a>
-                <a href="{% url 'products' %}?category=exercise_accessories" class="font-do-hyeon text-black md-p-2 mx-2 text-decoration-none category-btn">
+                <a href="{% url 'products' %}?category=exercise_accessories" class="font-do-hyeon text-blue md-p-2 mx-2 text-decoration-none category-btn">
                     Accessories
                 </a>
             </div>
@@ -59,23 +59,23 @@
                 </a>
                 {% endif %}
                 <div class="card-body text-left pb-0 mb-0">
-                    <p class="text-black">{{ product.name }}</p>
+                    <p class="text-blue">{{ product.name }}</p>
                 </div>
                 <div class="row card-body py-0 my-0">
                 <div class="col">
                     {% if request.user.is_superuser %}
                         <small class="">
-                        <a class="text-primary text-decoration-none" href="{% url 'edit_product' product.id %}">Edit</a> <span class="text-black">|</span> 
+                        <a class="text-blue text-decoration-none" href="{% url 'edit_product' product.id %}">Edit</a> <span class="text-blue">|</span> 
                         <a class="text-red text-decoration-none" href="#" data-toggle="modal" data-target="#{{ product.sku }}">Delete</a>
                         </small>
                         <!--this modal pops up when store owner click on delete button to confirm the deletion of the product-->
                         <div class="modal fade bd-example-modal-sm" id="{{ product.sku }}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-sm">
-                                <div class="modal-content bg-light border-black rounded-0 text-center">
-                                    <h6 class="text-black pt-2">Are you sure you want to delete!</h6>
+                                <div class="modal-content bg-light border-blue rounded-0 text-center">
+                                    <h6 class="text-blue pt-2">Are you sure you want to delete!</h6>
                                     <ul class="list-inline">
                                         <li class="list-inline-item"><a class="text-red font-weight-bold text-decoration-none" href="{% url 'delete_product' product.id %}">Yes</a></li>
-                                        <li class="list-inline-item"><a class="text-black font-weight-bold text-decoration-none" href="{% url 'products' %}">Cancel</a></li>
+                                        <li class="list-inline-item"><a class="text-blue font-weight-bold text-decoration-none" href="{% url 'products' %}">Cancel</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -86,8 +86,8 @@
                 <div class="card-footer bg-white border-0 text-left">
                     <div class="row">
                         <div class="col">
-                            <p class="text-left text-black pt-3"><span class="font-weight-bold lead">€{{ product.price }}</span>
-                                <a class="px-lg-2 py-1 btn rounded-0 float-right border text-white bg-black" href="{% url 'product_detail' product.id %}">
+                            <p class="text-left text-blue pt-3"><span class="font-weight-bold lead">€{{ product.price }}</span>
+                                <a class="px-lg-2 py-1 btn rounded-0 float-right border text-white bg-blue" href="{% url 'product_detail' product.id %}">
                                     <span class="icon">
                                         <i class="fas fa-info-circle"></i>
                                     </span>
@@ -103,7 +103,7 @@
     </div>
 </div>
 
-<button class="btn rounded-0 bg-black text-white font-do-hyeon" onclick="topFunction()" id="btn-top" title="Go to top">Top</button>
+<button class="btn rounded-0 bg-blue text-white font-do-hyeon" onclick="topFunction()" id="btn-top" title="Go to top">Top</button>
 {% endblock %}
 
 {% block postloadjs %}

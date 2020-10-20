@@ -58,5 +58,20 @@ This project is suitable to make purchases online;
 11. As a user, I want to receive a confirmation email after the checkout.
 
 
-  
+## Design
 
+ The website design is simple and responsive which allows the user to navigate easily through the website form mobile, tablet 
+ or laptop and make purchases. The design inspiration is taken from the **Code Institute's Boutique Ado Project**.
+
+#### Fonts
+
+-  Google fonts **Do Hyeon** is used in navbar and in headings. 
+-  Where as google fonts **Ubunto** is used in rest of the text.
+
+#### Icons
+
+- To make design appealing font awesome icons are widely used in the website.
+
+#### Attribute
+
+- The target_blank value is given to the social links in the footer so that they will open in a new tab / window on click.

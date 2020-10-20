@@ -6,7 +6,7 @@
   box-sizing: border-box;
   height: 40px;
   padding: 10px 12px;
-  border: 1px solid #000;
+  border: 1px solid #12375a;
   background-color: white;
   box-shadow: 0 1px 3px 0 #e6ebf1;
   -webkit-transition: box-shadow 150ms ease;
@@ -16,7 +16,7 @@
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #000;
+  box-shadow: 0  0 0 0.2rem rgba(0,123,255,.25);
 }
 
 .StripeElement--webkit-autofill {
@@ -46,7 +46,7 @@
 } 
 #order-payment-form .form-control {
     border-radius: 0px !important;
-    border: 1px solid #000;
+    border: 1px solid #12375a;;
 }
 .order-summary-item {
     padding-left: 45px;

@@ -14,24 +14,24 @@
 <div class="container">
     <div class="row">
         <div class="col text-center">
-            <h2 class="font-do-hyeon text-black">Exercise Plans Management</h2>
-            <h4 class="text-black">Add an Exercise Plan</h4>
+            <h2 class="font-do-hyeon text-blue">Exercise Plans Management</h2>
+            <h4 class="text-blue">Add an Exercise Plan</h4>
             <hr class="bg-light"/>
         </div>
     </div>
     <div class="row">
         <div class="col-12 ">
-            <form method="POST" action="{% url 'add_exercise' %}" class="form mb-2 text-black product-add-form management-form" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'add_exercise' %}" class="form mb-2 text-blue product-add-form management-form" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="mb-3">
-                    <a class="btn bg-black text-white rounded-0" href="{% url 'exercises' %}">
+                    <a class="btn bg-blue text-white rounded-0" href="{% url 'exercises' %}">
                         <span class="icon">
                             <i class="far fa-times-circle"></i>
                         </span>
                         <span>Cancel</span>
                     </a>
-                    <button class="btn bg-black text-white rounded-0" type="submit">
+                    <button class="btn bg-blue text-white rounded-0" type="submit">
                         <span class="icon">
                             <i class="fas fa-plus-circle"></i>
                         </span>

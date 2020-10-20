@@ -15,7 +15,7 @@
 <div class="container-fluid text-center">
 	<div class="row">
 		<div class="col">
-			<h2 class="font-do-hyeon text-black">Nutrition Plans</h2>
+			<h2 class="font-do-hyeon text-blue">Nutrition Plans</h2>
 			<hr class="bg-light">
 		</div>
 	</div>
@@ -35,10 +35,10 @@
                 {% endif %}
             </div>
             <div class="card-body">
-                <div class="card-header text-black">
+                <div class="card-header text-blue">
                     <h4 class="font-do-hyeon"> {{ nutrition.name }}</h4>
                 </div>
-                <ul class="list-group list-group-flush text-black">
+                <ul class="list-group list-group-flush text-blue">
                     <li class="list-group-item">{{ nutrition.purpose }}</li>
                     <li class="list-group-item">{{ nutrition.meal_plan }}</li>
                     <li class="list-group-item">{{ nutrition.grocery_list }}</li>
@@ -51,7 +51,7 @@
              <div class="my-3">
                 <form action="{% url 'add_cart' nutrition.id %}" method="POST">
                 {% csrf_token %}
-                <button class="btn bg-black text-white rounded-0 mt-3" type="submit" name="quantity" value="1">
+                <button class="btn bg-blue text-white rounded-0 mt-3" type="submit" name="quantity" value="1">
                     <span class="icon">
                         <i class="fas fa-plus-circle"></i>
                     </span>
@@ -63,17 +63,17 @@
             </div>
             {% if request.user.is_superuser %}
                 <small class="">
-                    <a class="text-primary text-decoration-none" href="{% url 'edit_nutrition' nutrition.id %}">Edit</a> <span class="text-black">|</span> 
+                    <a class="text-blue text-decoration-none" href="{% url 'edit_nutrition' nutrition.id %}">Edit</a> <span class="text-blue">|</span> 
                     <a class="text-red text-decoration-none" href="" data-toggle="modal" data-target="#{{ nutrition.sku }}">Delete</a>
                 </small>
                     <!--this modal pops up when store owner click on delete button to confirm the deletion of the product-->
                 <div class="modal fade bd-example-modal-sm" id="{{ nutrition.sku }}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-sm">
-                        <div class="modal-content bg-light border-black rounded-0 text-center">
-                            <h6 class="text-black pt-2">Are you sure you want to delete!</h6>
+                        <div class="modal-content bg-light border-blue rounded-0 text-center">
+                            <h6 class="text-blue pt-2">Are you sure you want to delete!</h6>
                             <ul class="list-inline">
                                 <li class="list-inline-item"><a class="text-red font-weight-bold text-decoration-none" href="{% url 'delete_nutrition' nutrition.id %}">Yes</a></li>
-                                <li class="list-inline-item"><a class="text-black font-weight-bold text-decoration-none" href="{% url 'nutritions' %}">Cancel</a></li>
+                                <li class="list-inline-item"><a class="text-blue font-weight-bold text-decoration-none" href="{% url 'nutritions' %}">Cancel</a></li>
                             </ul>
                         </div>
                     </div>

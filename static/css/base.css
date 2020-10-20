@@ -14,7 +14,7 @@ body {
 }
 /*---------------------------border line*/
 .border-line {
-    border: 1px solid #000;
+    border: 1px solid #12375a;
 }
 /*---------------------------navbar*/
 .menu-items {
@@ -45,17 +45,20 @@ body {
 .font-ubunto {
     font-family: 'Ubunto', sans-serif
 }
-.text-black {
-    color: #000 !important;
+.text-blue {
+    /*color: #000 !important;*/
+    color:  #12375a !important;;
 }
-.bg-black {
-    background-color: #000 !important;
+.bg-blue {
+    /*background-color: #000 !important;*/
+    background-color: #12375a !important;
 }
 .text-red {
     color: #e84610 !important;
 }
-.border-black {
-    border: 1px solid black !important;
+.border-blue {
+    /*border: 1px solid black !important;*/
+    border: 1px solid #12375a !important;
 }
 .header-container {
        padding-top: 160px;
@@ -125,7 +128,7 @@ footer {
 }
 /*---------------------------allauth templates*/
 .allauth-heading {
-    color: #000 !important;
+    color: #12375a !important;
     padding: 10px 0 !important;
 }
 .allauth-form-inner-content .form-control, .login, .signup, .logout, 
@@ -136,12 +139,12 @@ footer {
     margin: 0 auto !important;
 }   
 .allauth-form-inner-content p {
-    color: #000 !important;
+    color: #12375a !important;
     margin: 10px auto !important;
     max-width: 450px;
 }
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: #12375a;
     border-radius: 0;
 }
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -151,8 +154,8 @@ footer {
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
     color: #fafafa;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #12375a;
+    border: 1px solid #12375a;
     padding: .375rem .75rem;
     border-radius: 0;
 }
@@ -161,8 +164,11 @@ footer {
     max-width: 450px;
     margin: 0 auto; 
 }
+.product-add-form .form-control {
+        border: 1px solid #12375a;
+    }
 .management-form .form-control {
-    border: 1px solid #000;
+    border: 1px solid  #12375a;
 }
 .account-items {
     padding: 0 10px;
