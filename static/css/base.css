@@ -191,6 +191,7 @@ footer {
 .account-items {
     padding: 0 10px;
 }
+
 /*---------------------------media query*/
 @media (max-width: 991px) {
     .header-container {
@@ -227,17 +228,20 @@ footer {
         padding-left: 5px !important;
         margin-left: 5px !important;
     }
-    .delete-item {
+    .delete-item, 
+    .delete-item-exercise,
+    .delete-item-nutrition {
         padding-left: 10px !important;
         margin-left: 10px !important;
     }
 }
+
 @media (max-width: 425px) {
     .category-btn {
         margin-left: 0px !important; 
     }
     .size-on-small {
-            font-size: 55%;
+            font-size: 70%;
         }
         .img-size {
             height: 45%;
@@ -249,21 +253,43 @@ footer {
           font-size: 10px;
           font-weight: bold;
       }
-      .update-item {
+      .delete-item, 
+      .delete-item-exercise,
+      .delete-item-nutrition {
         padding-left: 0px !important;
         margin-left: 0px !important;
     }
-    .delete-item {
-        padding-left: 2px !important;
-        margin-left: 2px !important;
+    .update-item {
+        padding-left: 5px !important;
+        margin-left: 5px !important;
     }
-    .btn-small {
-        font-size: 99%;
+    .btn-size {
+        font-size: 15px;
     }
     .product-add-form .form-control {
         height: 30px;
     }
     .main-logo {
     font-size: 99% !important;
+    }
+
+    .input-group>.custom-file, 
+    .input-group>.custom-select, 
+    .input-group>.form-control, 
+    .input-group>.form-control-plaintext {
+    min-width: 50px !important;
+    height: 25px;
+    font-size: 12px;
+    padding: 5px 5px;
+    }
 }
+
+@media (max-width: 320px) {
+    .update-item {
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+    }
+    .size-on-small {
+            font-size: 60%;
+        }
 }

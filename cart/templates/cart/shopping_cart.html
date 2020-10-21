@@ -57,10 +57,11 @@
                                 </div>                                
                             </form>    
                             <!--Quantity update button & delete item button for merchandise-->                         
-                            <a class="update-item pl-3 ml-3 text-blue"><small><i class="fas fa-plus-square"> Update</i></small></a>
-                            <a class="delete-item pl-3 ml-5 text-blue" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
-                                <small class="text-red"><i class="fas fa-window-close"></i></small>
-                            </a>                     
+                            
+                            <a class="delete-item pl-3 ml-3 text-blue" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
+                                <small class="text-red"><i class="fas fa-window-close"> Delete</i></small>
+                            </a>   
+                            <a class="update-item pl-3 ml-3 text-blue"><small><i class="fas fa-plus-square"> Update</i></small></a>                  
                         </td>
                         <td>
                             <p class="text-blue">€{{ item.product.price }}</p>
@@ -83,8 +84,8 @@
                         <td>
                             <p class="text-blue">{{ item.quantity }} x {{ item.exercise.name }}</p>
                             <!--Exercise plan delete button-->
-                            <a class="delete-item-exercise text-blue" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
-                                <small class="text-red"><i class="fas fa-window-close"></i></small>
+                            <a class="delete-item-exercise text-blue pl-3 ml-3" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
+                                <small class="text-red"><i class="fas fa-window-close"> Delete</i></small>
                             </a>
                         </td>
                         <td>
@@ -106,11 +107,11 @@
                         {% endif %}
                         </td>
                         <td>
-                            <p class="text-blue">{{ item.quantity }} x {{ item.nutrition.name }}</p>
+                            <a class="text-blue">{{ item.quantity }} x {{ item.nutrition.name }}</a>
                             <!--Nutrition plan delete button -->
-                            <a class="delete-item-nutrition text-blue" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
-                                <small class="text-red"><i class="fas fa-window-close"></i></small>
-                            </a>
+                            <p class="delete-item-nutrition text-blue pl-3 ml-3" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
+                                <small class="text-red"><i class="fas fa-window-close"> Delete</i></small>
+                            </p>
                         </td>
                         <td>
                             <p class="text-blue">€{{ item.nutrition.price }}</p>
@@ -125,13 +126,13 @@
                 <div class="text-right">
                     <h6 class="text-blue grand-total my-4"><strong>Grand Total: €{{ total|floatformat:2 }}</strong></h6>
                      <div class="mb-3">
-                     <a href="{% url 'home' %}" class="btn rounded-0 mt-3 bg-blue text-white btn-small hover-red">
+                     <a href="{% url 'home' %}" class="btn rounded-0 mt-3 bg-blue text-white btn-size hover-red">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
                     <span>Home</span>
                 </a>
-                 <a href="{% url 'checkout' %}" class="btn rounded-0 mt-3 bg-blue text-white btn-small hover-red">
+                 <a href="{% url 'checkout' %}" class="btn rounded-0 mt-3 bg-blue text-white btn-size hover-red">
                     <span class="icon">
                         <i class="fas fa-lock"></i>
                     </span>
