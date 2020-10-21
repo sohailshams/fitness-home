@@ -29,7 +29,7 @@
                             <th scope="col"></th>
                             <th scope="col">Name</th>
                             <th scope="col">Price</th>
-                            <th scope="col">Subtotal</th>
+                            <th scope="col" class="pl-0">Subtotal</th>
                         </tr>
                     </thead>
 
@@ -67,7 +67,7 @@
                             <p class="text-blue">€{{ item.product.price }}</p>
                         </td>
                         <td>
-                            <p class="text-blue pl-3">€{{ item.product_price }}</p>
+                            <p class="text-blue pl-0">€{{ item.product_price }}</p>
                         </td>
                     </tr>
                     {% endfor %} 
