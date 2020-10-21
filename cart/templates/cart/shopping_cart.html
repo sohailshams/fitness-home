@@ -57,11 +57,11 @@
                                 </div>                                
                             </form>    
                             <!--Quantity update button & delete item button for merchandise-->                         
-                            
+                            <a class="update-item pl-3 ml-3 text-blue"><small><i class="fas fa-plus-square"> Update</i></small></a>                  
                             <a class="delete-item pl-3 ml-3 text-blue text-decoration-none" href="{% url 'remove_from_cart' category=item.product_type item_id=item.item_id  %}">
                                 <small class="text-red"><i class="fas fa-window-close"> Delete</i></small>
                             </a>   
-                            <a class="update-item pl-3 ml-3 text-blue"><small><i class="fas fa-plus-square"> Update</i></small></a>                  
+                            
                         </td>
                         <td>
                             <p class="text-blue">€{{ item.product.price }}</p>
