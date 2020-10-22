@@ -16,6 +16,12 @@ img.order-history-image {
     overflow-x:hidden;
     overflow-y: auto;
 }
+
+@media (min-width: 991px) {
+.order-detail {
+    padding-right: 65px;
+}
+}
 /*-----------------------media queries*/
 @media (max-width: 768px) {
     .user-info {
