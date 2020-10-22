@@ -72,3 +72,15 @@ Source: Boutique ado project
     height: 100%;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .save-info-size {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 320px) {
+    .save-info-size {
+        font-size: 70%;
+    }
+}
