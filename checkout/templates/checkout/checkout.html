@@ -41,9 +41,16 @@
                         {{ order_form.county | as_crispy_field }}
                         {{ order_form.postcode | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
-                        <div class="form-check">
-                        <label class="form-check-label text-blue" for="id-save-info">Save this delivery information to my profile</label>
-                        <input class="form-check-input ml-3" type="checkbox" id="id-save-info" name="save-info" checked>
+                        <div class="form-check pl-0">
+                            {% if user.is_authenticated %}
+                                <label class="form-check-label text-blue save-info-size" for="id-save-info">Save this delivery information to my profile</label>
+                                <input class="form-check-input ml-1 ml-md-2" type="checkbox" id="id-save-info" name="save-info" checked>
+                            {% else %}
+								<label class="form-check-label" for="id-save-info">
+                                    <a class="text-info text-red text-decoration-none" href="{% url 'account_signup' %}">Create an account</a> <span class="text-blue">or</span> 
+                                    <a class="text-info text-red text-decoration-none" href="{% url 'account_login' %}">login</a> <span class="text-blue">to save this information</span>
+                                </label>
+							{% endif %}
                         </div>
                 </fieldset>
                 <fieldset class="pr-3">
@@ -143,7 +150,7 @@
             </div>
             <div class="row text-right my-3">
                 <div class="col">
-                    <p class="text-blue"><strong>Grand Total:</strong> €{{ total|floatformat:2 }}</p>
+                    <p class="text-blue"><strong>Grand Total: €{{ total|floatformat:2 }}</strong></p>
                 </div>
             </div>            
         </div>
