@@ -114,21 +114,23 @@
             </div>
             <div class="row text-right my-3">
                  <div class="col-sm-5 pr-3 order-sm-2">
-                    <p class="text-blue grand-total"><strong>Grand Total:</strong> €{{ order.order_total|floatformat:2 }}</p>
+                    <p class="text-blue grand-total"><strong>Grand Total: €{{ order.order_total|floatformat:2 }}</strong></p>
                 </div>   
                 <div class="col-sm-7 order-detail text-right order-sm-1">
-                    <a href="{% url 'order_history_detail' order.order_number %}" class="btn rounded-0 bg-blue text-white hover-red">
+                    <a href="{% url 'order_history_detail' order.order_number %}" class="btn rounded-0 bg-blue text-white hover-red update-btn">
+                    <span class="icon">
+                        <i class="fas fa-info-circle"></i>
+                    </span>
                     <span>Order Detail</span>
                     </a> 
                 </div> 
             </div>   
-             <div class="row">
-                    <div class="col-12">
-                        <hr class="bg-light">
-                    </div>
-                </div>         
-        </div>
-        
+            <div class="row">
+                <div class="col-12">
+                    <hr class="bg-light">
+                </div>
+            </div>         
+        </div> 
     </div>
     {% endfor %}
 </div>
