@@ -61,5 +61,9 @@ img.order-history-image {
     .update-btn {
         font-size: 85%;
     }
+
+    .order-date {
+        font-size: 90%;
+    }
 }
 

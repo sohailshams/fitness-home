@@ -40,14 +40,14 @@
     <div class="row text-center">
         <div class="col">
             <p class="font-ubunto text-blue"><strong>Order No:</strong><span class="order-number"> {{ order.order_number }}<span></p>
-            <p class="text-blue"><strong>Order Date</strong> {{ order.date }}</p>
+            <p class="text-blue order-date"><strong>Order Date</strong> {{ order.date }}</p>
             <hr class="bg-light w-25 text-center">
             <div class=" pl-3 pr-3 mb-3 order-list">
                 <div class="row">
-                    <div class="col-6 offset-3 text-blue">
+                    <div class="col-5 offset-3 text-blue">
                         <p class="mt-1">Items</p>
                     </div>
-                    <div class="col-3 pl-0 text-blue">
+                    <div class="col-4 pl-0 text-blue">
                         <p class="mt-1">Subtotal</p>
                     </div>
                 </div>
@@ -64,11 +64,11 @@
                                  <hr class="bg-light w-75 line-line-image">
                             </div>
                             
-                            <div class="col-6">
+                            <div class="col-5">
                                 <p class="my-0 product-name text-blue"><strong>{{ item.product.name }}</strong></p>
                                 <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                             </div>
-                            <div class="col-3 text-blue">
+                            <div class="col-4 text-blue">
                             <p>€{{ item.product.price }}</p>
                             </div>
                         </div>
@@ -83,11 +83,11 @@
                         {% endif %}
                         <hr class="bg-light w-75 line-line-image">    
                         </div>
-                        <div class="col-6">
-                            <p class="my-0 text-blue"><strong>{{ item.exercise.name }}</strong></p>
+                        <div class="col-5">
+                            <p class="my-0 text-blue"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
-                        <div class="col-3 text-blue">
+                        <div class="col-4 text-blue">
                         <p>€{{ item.product.price }}</p>
                         </div>
                     </div>
@@ -102,11 +102,11 @@
                         {% endif %}
                         <hr class="bg-light w-75 line-line-image">    
                         </div>
-                        <div class="col-6">
-                            <p class="my-0 text-blue"><strong>{{ item.nutrition.name }}</strong></p>
+                        <div class="col-5">
+                            <p class="my-0 text-blue"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
-                        <div class="col-3 text-blue">
+                        <div class="col-4 text-blue">
                         <p>€{{ item.product.price }}</p>
                         </div>
                     </div>
