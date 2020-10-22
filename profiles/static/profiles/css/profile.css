@@ -45,4 +45,7 @@ img.order-history-image {
     .user-info {
         font-size: 100%;
     }
+    .update-btn {
+        font-size: 85%;
+    }
 }
