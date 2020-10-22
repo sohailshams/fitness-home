@@ -35,3 +35,14 @@ img.order-history-image {
     }
 }
 
+@media (max-width: 768px) {
+    .user-info {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 425px) {
+    .user-info {
+        font-size: 100%;
+    }
+}

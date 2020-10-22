@@ -28,8 +28,8 @@
         <div class="card profile-order-card">
             <h5 class="card-header font-weight-bold"><i class="far fa-user" aria-hidden="true"></i> User Info</h5>
             <div class="card-body">
-                <p class="card-text"><strong>User Name:</strong> {{ user.username }}</p>
-                <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+                <p class="card-text user-info"><strong>User Name:</strong> {{ user.username }}</p>
+                <p class="card-text user-info"><strong>Email:</strong> {{ user.email }}</p>
                 {% if orders %}
                 <a href="{% url 'order_history' %}" class="btn profile-order-btn border rounded-0 bg-blue text-white hover-red"><i class="fa fa-shopping-basket" aria-hidden="true"></i> My Orders</a>
                 {% endif %}
