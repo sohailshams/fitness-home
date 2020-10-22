@@ -107,8 +107,9 @@ select:not(:first-child), .input-group>.form-control:not(:first-child) {
 .toasts-message-container {
     position: fixed;
     top: 80px;
-    right: 15px;
+    right: 10px;
     z-index: 99999999999;
+    max-width: 300px;
 }
 .toast-cap {
     height: 2px;
