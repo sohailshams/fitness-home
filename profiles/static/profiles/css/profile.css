@@ -33,6 +33,19 @@ img.order-history-image {
     .grand-total {
         font-size: 70%;
     }
+    .my-profile-form {
+        padding-left: 15px !important;
+        padding-right: 15px !important;        
+    }
+
+    .my-profile-user {
+        padding-left: 30px !important;
+        padding-right: 30px !important;     
+    }
+
+    .delivery-heading {
+        padding-left: 15px !important;
+    }
 }
 
 @media (max-width: 768px) {
