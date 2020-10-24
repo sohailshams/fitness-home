@@ -193,6 +193,10 @@ footer {
     padding: 0 10px;
 }
 
+/*---------------------------review add form*/
+.review-input-form, textarea.form-control {
+    min-height: 200px !important;
+}
 /*---------------------------media query*/
 @media (max-width: 991px) {
     .header-container {
