@@ -81,6 +81,10 @@ body {
     background-color: #e84610;
     border-radius: 0; 
 }
+.reviews-btn {
+    background-color: #e84610;
+    padding: 12px 17px !important;
+}
 .card-img, .card-img-top {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
