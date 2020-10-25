@@ -16,6 +16,7 @@ def all_reviews(request):
 
 
 def add_review(request):
+    """ A view add a review """
 
     if request.method == 'POST':
         """
@@ -45,8 +46,7 @@ def add_review(request):
 
 
 def edit_review(request, review_id):
-    """ A view to edit a review in the store
-    """
+    """ A view to edit a review """
     review = get_object_or_404(Review, pk=review_id)
     if request.user == review.user:
 
@@ -82,6 +82,20 @@ def edit_review(request, review_id):
         }
 
         return render(request, template, context)
+    else:
+        messages.error(request, 'Sorry, only review owner can access it.')
+        return redirect(reverse('home'))
+
+
+def delete_review(request, review_id):
+    """ A view to delete a review """
+    review = get_object_or_404(Review, pk=review_id)
+    if request.user == review.user:
+        review = get_object_or_404(Review, pk=review_id)
+        review.delete()
+        messages.success(request, 'Review deleted successfully!')
+        return redirect(reverse('reviews'))
+
     else:
         messages.error(request, 'Sorry, only review owner can access it.')
         return redirect(reverse('home'))
