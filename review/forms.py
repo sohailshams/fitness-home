@@ -26,5 +26,5 @@ class ReviewForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'rounded-0 review-input-form'
             field.label = False
-
-
+            self.fields["your_review"].widget.attrs[
+                                        "placeholder"] = "Your Review"
