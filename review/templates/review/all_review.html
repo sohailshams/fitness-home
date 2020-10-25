@@ -26,6 +26,9 @@
                     
                     <p class="text-red text-center mt-3"><strong>{{ review.user }}</strong> - <span class="text-blue">{{ review.date }}</span></p>
                     <p class="text-blue text-center pb-3">" {{ review.your_review }}"</p>
+                    {% if request.user == review.user %}
+                    <a class="text-blue text-decoration-none" href="{% url 'edit_review' review.id %}">Edit</a> <span class="text-blue">|</span> 
+                    {% endif %}
                     <hr class="bg-light">
                 {% endfor %}    
             {% else %}
