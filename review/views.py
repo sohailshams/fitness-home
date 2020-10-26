@@ -61,7 +61,9 @@ def edit_review(request, review_id):
             """
             form = ReviewForm(request.POST, instance=review)
             if form.is_valid():
-                form.save()
+                review = form.save()
+                review.date = review.updated_date
+                review.save()
                 messages.success(request, 'Your review is \
                                   updated successfully!')
                 return redirect(reverse('reviews'))
