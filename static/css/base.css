@@ -77,13 +77,14 @@ body {
     margin-top: 40px;
 }
 .breadcrumb {
-    max-width: 180px;
+    width: 180px;
     background-color: #e84610;
     border-radius: 0; 
 }
 .reviews-btn {
     background-color: #e84610;
-    padding: 12px 17px !important;
+    padding: 11px 17px !important;
+    width: 180px;
 }
 .card-img, .card-img-top {
     border-top-left-radius: 0;
@@ -207,7 +208,7 @@ footer {
         padding-top: 250px;
     }
     .slogan-font-size {
-        font-size: 1.8rem;
+        font-size: 3rem;
         padding: 0 .5rem 0 .7rem;
     }
     .buy-button {
@@ -293,6 +294,10 @@ footer {
     height: 25px;
     font-size: 12px;
     padding: 5px 5px;
+    }
+
+    .slogan-font-size {
+        font-size: 1.8rem;
     }
 }
 
