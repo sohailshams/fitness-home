@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (render, redirect, reverse,
+                              get_object_or_404, HttpResponse)
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
@@ -139,8 +140,10 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
             )
-        
-        # Prefill the checkout form with any info that user maintains in his profile
+        """
+        Prefill the checkout form with any info\
+             that user maintains in his profile
+        """
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -153,7 +156,7 @@ def checkout(request):
                     'town_or_city': profile.default_town_or_city,
                     'county': profile.default_county,
                     'postcode': profile.default_postcode,
-                    'country': profile.default_country,    
+                    'country': profile.default_country,
                 })
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
