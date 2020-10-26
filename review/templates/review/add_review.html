@@ -20,7 +20,7 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <h4 class="text-blue mt-3 text-center">Please write your review</h4>
+            <h4 class="text-blue mt-3 review-heading">Please add a Review</h4>
             <form method="POST" action="{% url 'add_review' %}" class="form mb-2 mt-3 text-blue product-add-form management-form" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}

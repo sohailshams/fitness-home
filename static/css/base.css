@@ -202,6 +202,11 @@ footer {
 .review-input-form, textarea.form-control {
     min-height: 200px !important;
 }
+
+.review-heading {
+    margin: 0 auto;
+    max-width: 450px;
+}
 /*---------------------------media query*/
 @media (max-width: 991px) {
     .header-container {
@@ -308,5 +313,8 @@ footer {
     }
     .size-on-small {
             font-size: 60%;
-        }
+    }
+    .review-heading {
+        font-size: 20px;
+    }
 }
