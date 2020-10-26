@@ -7,7 +7,7 @@ from .forms import ReviewForm
 def all_reviews(request):
     """ A view to show all reviews """
 
-    reviews = Review.objects.all()
+    reviews = Review.objects.all().order_by('-date')
 
     context = {
         'reviews': reviews
