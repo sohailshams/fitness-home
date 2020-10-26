@@ -56,7 +56,7 @@ def edit_review(request, review_id):
         """
         if request.method == 'POST':
             """
-            Instantiated a form using request.post and request.files
+            Instantiated a form using request.post
             and told it the specific instance to be updated
             """
             form = ReviewForm(request.POST, instance=review)
