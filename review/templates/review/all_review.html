@@ -22,13 +22,26 @@
 	<div class="row">
         <div class="col-md-6 offset-md-3">
             {% if reviews %}
-                {% for review in reviews %}
-                    
+                {% for review in reviews %}   
                     <p class="text-red text-center mt-3"><strong>{{ review.user }}</strong> - <span class="text-blue">{{ review.date }}</span></p>
                     <p class="text-blue text-center pb-3">" {{ review.your_review }}"</p>
                     {% if request.user == review.user %}
-                    <a class="text-blue text-decoration-none" href="{% url 'edit_review' review.id %}">Edit</a> <span class="text-blue">|</span> 
-                    <a class="text-red text-decoration-none" href="{% url 'delete_review' review.id %}">Delete</a>
+                    <small>
+                        <a class="text-blue text-decoration-none" href="{% url 'edit_review' review.id %}">Edit</a> <span class="text-blue">|</span> 
+                        <a class="text-red text-decoration-none" href="" data-toggle="modal" data-target="#{{ review.user }}">Delete</a>
+                    </small>
+                    <!--this modal pops up when review owner click on delete button to confirm the deletion of the review-->
+                    <div class="modal fade bd-example-modal-sm" id="{{ review.user }}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content bg-light border-blue rounded-0 text-center">
+                                <h6 class="text-blue pt-2">Are you sure you want to delete!</h6>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><a class="text-red font-weight-bold text-decoration-none" href="{% url 'delete_review' review.id %}">Yes</a></li>
+                                    <li class="list-inline-item"><a class="text-blue font-weight-bold text-decoration-none" href="{% url 'reviews' %}">Cancel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     {% endif %}
                     <hr class="bg-light">
                 {% endfor %}    
