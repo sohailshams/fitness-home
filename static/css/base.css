@@ -129,6 +129,9 @@ select:not(:first-child), .input-group>.form-control:not(:first-child) {
     border-radius: 0 !important;
 }
 
+.thanks-message {
+    margin: 0 auto;
+}
 /*---------------------------footer*/
 footer {
     position: relative;
@@ -332,6 +335,10 @@ footer {
 
     .contact-text {
         padding-left: 8px;
+    }
+
+    .thanks-message {
+    padding-left: 45px;
     }
 }
 
