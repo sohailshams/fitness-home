@@ -18,10 +18,25 @@
             <hr class="bg-light"/>
         </div>
     </div>
+    {% if full_name %}
+    <div class="row mt-5">
+        <div class="col-sm-6 thanks-message">
+            <h5 class="text-blue">Thanks {{ full_name }}!</h5>
+            <p class="text-blue">We have received your email and will respond shortly...</p>
+            <a href="{% url 'home' %}" class="btn rounded-0 mt-3 mb-5 bg-blue text-white hover-red">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span>Home</span>
+            </a>
+        </div>
+    </div>
+    {% else %}
     <div class="row">
+    
     <div class="col-12 col-sm-12 col-md-5 text-blue pl-5 pr-5 pr-sm-0 address-section">
         <div class="card address-card">
-            <h5 class="card-header font-weight-bold"><i class="fas fa-map-marker-alt"></i></i> Address</h5>
+            <h5 class="card-header font-weight-bold"><i class="fas fa-map-marker-alt"></i> Address</h5>
             <div class="card-body">
                 <p class="card-text"><strong>Street:</strong> ABC</p>
                 <p class="card-text"><strong>Phone No:</strong> 11223344</p>
@@ -50,6 +65,7 @@
                 </div>
         </form>
     </div>
+    {% endif %}
 </div>>
 </div>
 {% endblock %}
