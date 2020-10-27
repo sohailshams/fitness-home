@@ -25,13 +25,13 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="mb-3">
-                    <a class="btn bg-blue text-white rounded-0" href="{% url 'reviews' %}">
+                    <a class="btn bg-blue text-white rounded-0 hover-red" href="{% url 'reviews' %}">
                         <span class="icon">
                             <i class="far fa-times-circle"></i>
                         </span>
                         <span>Cancel</span>
                     </a>
-                    <button class="btn bg-blue text-white rounded-0" type="submit">
+                    <button class="btn bg-blue text-white rounded-0 hover-red" type="submit">
                         <span class="icon">
                             <i class="fas fa-plus-circle"></i>
                         </span>
