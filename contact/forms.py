@@ -19,10 +19,10 @@ class ContactForm(forms.Form):
             self.fields[field].label = False 
             self.fields[field].widget.attrs['class'] = 'rounded-0'
             self.fields["full_name"].widget.attrs[
-                                        "placeholder"] = "Name"
+                                        "placeholder"] = "Name *"
             self.fields["email"].widget.attrs[
-                                        "placeholder"] = "Email Address"
+                                        "placeholder"] = "Email Address *"
             self.fields["message"].widget.attrs[
-                                        "placeholder"] = "Your Query"
+                                        "placeholder"] = "Your Query *"
             
        
