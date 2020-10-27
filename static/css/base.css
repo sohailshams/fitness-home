@@ -122,6 +122,13 @@ select:not(:first-child), .input-group>.form-control:not(:first-child) {
 .list-group-item {
     padding: 2px 2px;
 }
+
+/*---------------------------contact*/
+    
+.address-card {
+    border-radius: 0 !important;
+}
+
 /*---------------------------footer*/
 footer {
     position: relative;
@@ -252,6 +259,14 @@ footer {
     .toasts-message-container {
     top: 60px;
     }
+
+    .address-card {
+        font-size: 85%;
+    }
+
+    .contact-text {
+        font-size: 85%;
+    }
 }
 
 @media (max-width: 425px) {
@@ -304,6 +319,20 @@ footer {
     .slogan-font-size {
         font-size: 1.8rem;
     }
+
+    .address-section {
+    padding-left: 12px !important;
+    padding-right: 12px !important; 
+    }
+
+    .contact-form {
+        padding-left: 5px !important;
+        padding-right: 5px !important;        
+    }
+
+    .contact-text {
+        padding-left: 8px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -316,5 +345,9 @@ footer {
     }
     .review-heading {
         font-size: 20px;
+    }
+
+    .contact-text {
+        font-size: 75%;
     }
 }
