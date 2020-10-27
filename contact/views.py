@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
@@ -32,7 +32,10 @@ def contact(request):
                 messages.success(request, 'Your query has been sent successfully!')
             except Exception as e:
                 messages.error(request, f"Your query could not be sent,Error! {e}")
-            return redirect(reverse('contact'))
+            """
+            passed full_name in context to use it in contact_us.html
+            """
+            return render(request, 'contact/contact_us.html', {'full_name': full_name})
         else:
             messages.error(request,
                            'Sorry something went wrong, please make sure all fields are correctly filled out')
