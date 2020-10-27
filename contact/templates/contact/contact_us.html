@@ -35,7 +35,7 @@
             {% csrf_token %}
             {{ form|crispy }}   
             <div class="mb-3">
-                    <a class="btn bg-blue text-white rounded-0 hover-red" href="">
+                    <a class="btn bg-blue text-white rounded-0 hover-red" href="{% url 'home' %}">
                         <span class="icon">
                             <i class="far fa-times-circle"></i>
                         </span>
