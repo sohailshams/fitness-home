@@ -142,7 +142,8 @@
                 </div>
             </div>
             {% else %}
-            <div class="text-center mt-5">
+            <div class=" mt-5">
+            <div class="col-sm-6 empty-cart">
                 <h5 class="text-blue">Shopping Cart is Empty</h5>
                 <a href="{% url 'home' %}" class="btn rounded-0 mt-3 mb-5 bg-blue text-white hover-red">
                     <span class="icon">
@@ -150,6 +151,7 @@
                     </span>
                     <span>Home</span>
                 </a>
+            </div>
             </div>
             {% endif %}
         </div>

@@ -213,6 +213,10 @@ footer {
     min-height: 200px !important;
 }
 
+.empty-cart {
+    margin: 0 auto;
+    max-width: 450px;
+}
 .review-heading {
     margin: 0 auto;
     max-width: 450px;
@@ -269,6 +273,10 @@ footer {
 
     .contact-text {
         font-size: 85%;
+    }
+
+    .empty-cart {
+        padding-left: 45px;
     }
 }
 
@@ -357,4 +365,10 @@ footer {
     .contact-text {
         font-size: 75%;
     }
+
+    .empty-cart {
+        padding-left: 10px;
+    }
+}
+
 }
