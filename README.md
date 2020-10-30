@@ -78,8 +78,17 @@ This project is suitable to make purchases online;
 
 #### Colors
 
-The color scheme of the website is kept fairly simple to make it attractive for and appealing for the users. 
+The color scheme of the website is kept fairly simple to make it attractive and appealing for the users. 
 - Dark blue color **#12375a** is used for headings, text and button background in the website.
 - Light grey color **#f8f9fa** is used as a background color of navbar and footer to make navigation links and buttons prominenet. 
 - White color **fafafa** is used as a background color of the rest of the page so that products and the information can be displayed clearly.
-- Red color **#e84610** is used in the breadcrum on landing page and in the delete button.    
+- Red color **#e84610** is used in the breadcrum on landing page, in the delete button and in hover effect.    
+
+#### Animation
+
+- Animate in scroll library is also used you give nice effect on merchandise, exercise plans and nutrition plans.
+
+#### Hover Effect
+
+- Background color changes to red color **#e84610** when hover over the buttons.
+- Cursor also changes to hand pointer when hover over buttons.
