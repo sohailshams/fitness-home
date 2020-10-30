@@ -92,3 +92,11 @@ The color scheme of the website is kept fairly simple to make it attractive and 
 
 - Background color changes to red color **#e84610** when hover over the buttons.
 - Cursor also changes to hand pointer when hover over buttons.
+
+## Wireframes
+
+Wireframes for this project were created by using [Balsamiq](https://balsamiq.com/). It includes wireframes for dektop,
+tablet and mobile screen size.
+
+- [Link to Wireframes](https://balsamiq.cloud/sw0h08w/p7zuf10/r2278) 
+- [Wireframes in PDF](media/wireframes.pdf)
