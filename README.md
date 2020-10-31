@@ -100,3 +100,9 @@ tablet and mobile screen size.
 
 - [Link to Wireframes](https://balsamiq.cloud/sw0h08w/p7zuf10/r2278) 
 - [Wireframes in PDF](media/wireframes.pdf)
+
+## Database & Data Models
+
+**Sqlite3** databse is used in the development which is pre-installed by **Django**
+
+- [Fitness Home Data Models in PDF](media/data-models.pdf)
