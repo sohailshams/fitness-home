@@ -141,3 +141,12 @@ can add new items, update existing items and delete the items from the website.
 - **Deletion Confirmation for super user**- If super user click on delete button, then a modal will pop up to confirm if super user is sure to delete the product/plan or not.
 - **Contact** - If user need any information, user has the possibility to contact the store owner by filling contact us form.
 - **Thank You** - If a user sends an enquiry, a thank you message will be shown to the user afterwards.
+
+### Features Left to Implement
+
+- **Search** - At the moment search is performed only on the merchandise-product because the exercise plans and nutrition plans
+are less in number. Thus as exercise plans and nutrition plans will grow in future, the search functionality will also be added in these sections.
+- **Size** - Right now merchandise on sale has only one size. Thus in future different size will be added and also the 
+functionality for user to select different size will also be added in the website.
+- **Social Media Log In** - Log In through social media functionality will also be added in the future.
+- **Coaching Sessions** -  A system to book session with the coach/trainer will also be added in future.
