@@ -115,7 +115,6 @@ at the top left corner. Navbar also contains links to the merchandise, exercise 
 my account and shopping cart. On screen size less than 992 px navbar design changes as it appears a burger button on the top 
 left corner which contians the logo fitness home, merchandise, exercise plans and nutrition plans. Search bar input field will
 disappear and rest will stay the same. By clicking on search bar the search bar input will appear at the bottom of the navbar.
-left corner. 
 - **Log In/Sign Up** - User can easily log in if already have an account to access the extra features otherwise user has the
 option to create an accout. User will get an email to verify the account when an account is created on fitness home. User can 
 can also recover an account if user has forgotten the password.
@@ -125,19 +124,19 @@ a super user.
 - **Search** - User can search for merchandise in the database either way, without logging in or after logging in the website.
 - **Logout/Sign Out** - Logout allows a user to end the session but user has to confirm it by clicking on **Sign Out** which 
 will bring the user to the home page.
-- **Add to Cart** - User can add the merchandise, exercise plan or nutrition plan to the cart with **Add to Cart** button.
--**Shopping Cart Adjustment** - User can update the quantity of merchandise or delete merchandise, exercise plan or nutrition plan
+- **Add to Cart** - User can add the merchandise, exercise plan or nutrition plan to the shopping cart with **Add to Cart** button.
+- **Shopping Cart Adjustment** - User can update the quantity of merchandise or delete merchandise, exercise plan or nutrition plan
 from the shopping cart.
-**Checkout** - User can checkout and pay by filling out the order form.
-**Order Summary** - On checkout page user will be shown the order Summary and button to adjust the shopping cart.
-**Profile** - Logged in user can save the delivery information in his/her profile.
-**Profile Update** - Logged in user can aslo update his/her delivery information.
-**Autofill** - If user has saved his/her delivery information then the order form will be prefilled on next purchase.
-**Order History & Order Details** Logged in user can see his/her order history and details of particular order
+- **Checkout** - User can checkout and pay by filling out the order form.
+- **Order Summary** - On checkout page user will be shown the order Summary and button to adjust the shopping cart.
+- **Profile** - Logged in user can save the delivery information in his/her profile.
+- **Profile Update** - Logged in user can aslo update his/her delivery information saved in profile.
+- **Autofill** - If user has saved his/her delivery information then the order form will be prefilled on next purchase.
+- **Order History & Order Details** Logged in user can see his/her order history and details of particular order
 by going into the profile page.
-**Add/Update/Delete Review** - Logged in user can also add, update or delete a review if user has purchased something.
+- **Add/Update/Delete Review** - Logged in user can also add, update or delete a review if user has purchased something.
 - **Deletion Confirmation**- If a user click on delete button, then a modal will pop up to confirm if user is sure to delete the review or not.
-- **Add/Update/Delete Product/Plans** - Update and delete buttons will only be showns to the Super User (Store Owner). Super User 
+- **Add/Update/Delete Product/Plans** - Update and delete buttons will only show up to the Super User (Store Owner). Super User 
 can add new items, update existing items and delete the items from the website.
 - **Deletion Confirmation for super user**- If super user click on delete button, then a modal will pop up to confirm if super user is sure to delete the product/plan or not.
 - **Contact** - If user need any information, user has the possibility to contact the store owner by filling contact us form.
