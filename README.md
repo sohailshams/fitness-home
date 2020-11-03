@@ -48,15 +48,17 @@ This project is suitable to make purchases online;
 1. As a user, I expect the website is easy to navigate from one page to another page.
 2. As a user, I expect the website to be responsive so I can use it form any device for example mobile, tablet or laptop.
 3. As a user, I want to be able to see the detailed information about the products and services.
-4. As a user, I want to be able to make purchases anonymously.
-5. As a user, I want to be able to create an account.
-6. As a user, I want to be able to adjust the shopping cart.
-7. As a user, I want to be able to save my profile information.
-8. As a user, I want to be able to make secure payments.
+4. As a user, I want to be able to create an account.
+5. As a user, I want to be able to add items in the shopping cart and adjust the shopping cart.
+6. As a user, I want to be able to save delivery information to my profile.
+7. As a user, I want to be able to make secure payments.
+8. As a user, I want to be able to make purchases anonymously.
 9. As a user, I want to be able to see the order history.
 10. As a user, I want to be able to update the profile information.
 11. As a user, I want to receive a confirmation email after the checkout.
-
+12. As a user, I want to get in touch with the store owner.
+13. As a user, I want to be able to add a review.
+14. As a user, I want to be able edit or delete my review.
 
 ## Design
 
@@ -170,3 +172,131 @@ functionality for user to select different size will also be added in the websit
 - **[Stripe](https://stripe.com/en-dk)** - Used to add secure payment feature in this project.
 - **[HTML Formatter](https://webformatter.com/html)** - Used to format and beautify my code.
 - **[Animate On Scroll](https://michalsnik.github.io/aos/)** - Used to make website visually appealing.
+
+## Testing
+
+Google developers tool has been used form the  beginning to see the the result after adding a feature or after making
+any changes, how do they looks like on different screen sizes. Further I used **print statement** to debug the issues.
+I created my own account and tested all the functions to make sure they work properly. In addition, I aslo asked my family and
+friends to test the project and give their feedback.
+
+### User Stories
+
+User stories from the UX section were tested to see if they all work as intended. 
+
+#### As a store owner
+
+- *As a store owner, I want a simple responsive user friendly website.*
+1. A simple minimalist design is created. 
+2. Go to the **Home** Page and browse through the website to experience the desing.
+3. Right click and go to **inpect** and choose mobile, tablet or desktop screen size test the page responsiveness.
+- *As a store owner, I want to add new products/services in the store.*
+1. Go to the **Home** Page.
+2. Log In as a **super user** and click on **My Account**, a dropdown will open.
+3. Go to **Merchandise Admin**, **Exercise Admin** or **Nutrition Admin**.
+4. Fill out the relevant form and click on **Add**
+5. Item will be added in the store.
+- *As a store owner, I want to update existing products/services in the store.*
+1. Go to the **Home** Page and log in as a **super user**.
+2. Go to **Merchandise, **Exercise** or **Nutrition**.
+3. Under each product/service **Edit** button will show up.
+4. Click on **Edit** button, make changes and click on **Update** button to make updates.
+- *As a store owner, I want to delete a product/service from the store.*
+1. Go to the **Home** Page and log in as a **super user**.
+2. Go to **Merchandise, **Exercise** or **Nutrition**.
+3. Under each product/service **Delete** button will show up.
+4. Click on **Delete** button, a modal will appear to confirm the deletion.
+5. Click on **Yes**, item will be deleted.
+
+#### As a site user
+
+- *As a user, I expect the website is easy to navigate from one page to another page.*
+1. Go to the **Home** Page.
+2. Navbar stays at the top all the time and contains the main navigation links like **Merchandise, **Exercise** and **Nutrition**
+as well as a search bar **My Account** button and **Shopping Cart**.
+3. **Home** button is also added in different placed in the website. Thus user can easily navigate through the website.
+- *As a user, I expect the website to be responsive so I can use it form any device for example mobile, tablet or laptop.*
+1. Go to the **Home** right click and go to **inpect**.
+2. Choose mobile, tablet or desktop screen size you want test the page responsiveness.
+- *As a user, I want to be able to see the detailed information about the products and services.*
+1. Go to the **Home** Page.
+2. For **Merchandise** items detail, go to **Merchandise** and click on **Detials** button.
+3. A new window will open which contains the item detail.
+4. For **Exercise Plns** detail, click on **Exercise**.
+5. A new window will open which contains the **Exercise Plns** and their detail.
+4. For **Nutrition Plns** detail, click on **Nutrition**.
+5. A new window will open which contains the **Nutrition Plns** and their detail.
+- *As a user, I want to be able to create an account.*
+1. Go to the **Home** Page and click on **My Account**.
+2. From the dropdown select **Register**.
+3. Fill in the form and click on **Sign Up**.
+4. Verification email will be sent to provided email address.
+5. Verify your email addess, your account is created.
+- *As a user, I want to be able to add items in the shopping cart and adjust the shopping cart.*
+1. Go to the **Home** Page.
+2. To add **Merchandise** items , go to **Merchandise** and click on **Detials** button.
+3. A new window will open which contains the item detail and **Add to Cart** button.
+4. Click on **Add to Cart** button to add item in the **Shopping Cart**.
+5. To add **Exercise Plns**, click on **Exercise**.
+6. A new window will open which contains the **Exercise Plns**.
+7. Click on **Add to Cart** button to add the **Exercise Plan** in the **Shopping Cart**.
+8. To add **Nutrition Plns**, click on **Nutrition**.
+9. A new window will open which contains the **Nutrition Plns**.
+10. Click on **Add to Cart** button to add the **Nutrition Plan** in the **Shopping Cart**.
+11. To adjust the **Shopping Cart**, click on the **Shopping Cart**.
+12. A new window will open which contain the **Shopping Cart** items.
+13. To update the quantity of the merchandise item change the quantity in the input box.
+14. Clik the **Update** button to adjust the **Shopping Cart**.
+15. To delete any item from the **Shopping Cart** click on **Delete** button.
+- *As a user, I want to be able to save delivery information to my profile.*
+1. Go to the **Home** page and log in.
+2. Add **Merchandise**, **Exercise Plan** or **Nutrition Plan** to **Shopping Cart**.
+3. Click on **Shopping Cart** to view the items and then click on the **Checkout** button.
+4. Fill in the order complete form and check **Save this delivery information to my profile** box.
+- *As a user, I want to be able to make secure payments.*
+1. Go to the **Home** page and log in.
+2. Add **Merchandise**, **Exercise Plan** or **Nutrition Plan** to **Shopping Cart**.
+3. Click on **Shopping Cart** to view the items and then click on the **Checkout** button.
+4. Fill in the order complete form.
+5. Add credit card number, expiry date, cvc, zip and click on **Complete Order** button.
+- *As a user, I want to be able to make purchases anonymously.*
+1. Go to the **Home** page.
+2. Add **Merchandise**, **Exercise Plan** or **Nutrition Plan** to **Shopping Cart**.
+3. Click on **Shopping Cart** to view the items and then click on the **Checkout** button.
+4. Fill in the order complete form.
+5. Add credit card number, expiry date, cvc, zip and click on **Complete Order** button.
+- *As a user, I want to be able to see the order history.*
+1. Go to the **Home** page and log in.
+2. Click on **My Account** and select **My Profile** from the dropdown.
+3. If user has already purchased something then in **User Info** section **My Orders** button will appear.
+4. Click on **My Orders** button to view the order history.
+- *As a user, I want to be able to update the profile information.*
+1. Go to the **Home** page and log in.
+2. Click on **My Account** and select **My Profile** from the dropdown.
+3. A new window will open, which contains the delivery information.
+4. Change any information and click on **Update** button.
+- *As a user, I want to receive a confirmation email after the checkout.*
+1. Go to the **Home** page and log in.
+2. Add **Merchandise**, **Exercise Plan** or **Nutrition Plan** to **Shopping Cart**.
+3. Click on **Shopping Cart** to view the items and then click on the **Checkout** button.
+4. Fill in the order complete form.
+5. Add credit card information and clik on **Complete Order** button.
+6. An order confirmation email has sent to the user.
+- *As a user, I want to get in touch with the store owner.*
+1. Click on contact icon in the footer.
+2. A new window will open which contains **Contact Us** form.
+3. Fill in the form and clik on **Send** button.
+- *As a user, I want to be able to add a review.*
+1. Go to the **Home** page and log in.
+2. Click on **My Account** and select **My Profile** from the dropdown.
+3. If user has already purchased something then in **User Info** section **Add Review** button will appear.
+4. Click on **Add Review** button, a new will window will open which contains **Add Review** form.
+5. Fill in the form and click **Add** button.
+- *14. As a user, I want to be able edit or delete my review.*
+1. Go to the **Home** page and click on **Customer Reviews**.
+2. A new window will open which contains all the reviews.
+3. **Edit** and **Delete** buttons will appear under your added review.
+4. Click on **Edit** button, a new window will open to edit the review.
+5. Make the changes and click on **Update** button.
+6. To delete the review, click on **Delete** button and modal will appear to confirm the deletion.
+7. Click on **Yes** to delete the  review.
