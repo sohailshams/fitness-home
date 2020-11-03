@@ -150,3 +150,23 @@ are less in number. Thus as exercise plans and nutrition plans will grow in futu
 functionality for user to select different size will also be added in the website.
 - **Social Media Log In** - Log In through social media functionality will also be added in the future.
 - **Coaching Sessions** -  A system to book session with the coach/trainer will also be added in future.
+
+## Technologies Used
+
+- **HTML5** - HTML5 is used to create the the structure of the website.
+- **CSS3** - CSS3 is used for custome styling the HTML5 elements. 
+- **JavaScript/JQuery** - is used to make the website interactive. 
+- **[Bootstrap Framework](https://getbootstrap.com/)** - Front-end framework is used to make website responsive.
+- **[Python](https://www.python.org/)** - Python is used as the back-end programming language.
+- **[Django](https://www.djangoproject.com/)** - Python Web framework that encourages rapid development is used to create this project.
+- **[Django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)** - Django crispy forms are used to control the rendering behavior of Django forms.
+- **[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)** - Jinja templating language is used with Django in the HTML5 code.
+- **[Balsamiq](https://balsamiq.com/)** - Balsamiq is used to create wireframes for this project.
+- **[Google Fonts](https://fonts.google.com/)** - Google fonts *Do Hyeon* and *Ubunto* are used in this project.
+- **[Git](https://git-scm.com/)** - Used as a distributed version control system.
+- **[Gitpod](https://www.gitpod.io/)** - Used as a online IDE.
+- **[Github](https://github.com/)** - Used as a remote repository. 
+- **[Heroku](https://www.heroku.com/#)** - It is used as hosting platform to deploy this project.
+- **[Stripe](https://stripe.com/en-dk)** - Used to add secure payment feature in this project.
+- **[HTML Formatter](https://webformatter.com/html)** - Used to format and beautify my code.
+- **[Animate On Scroll](https://michalsnik.github.io/aos/)** - Used to make website visually appealing.
