@@ -47,18 +47,20 @@ This project is suitable to make purchases online;
 - **As a site user:**
 1. As a user, I expect the website is easy to navigate from one page to another page.
 2. As a user, I expect the website to be responsive so I can use it form any device for example mobile, tablet or laptop.
-3. As a user, I want to be able to see the detailed information about the products and services.
-4. As a user, I want to be able to create an account.
-5. As a user, I want to be able to add items in the shopping cart and adjust the shopping cart.
-6. As a user, I want to be able to save delivery information to my profile.
-7. As a user, I want to be able to make secure payments.
-8. As a user, I want to be able to make purchases anonymously.
-9. As a user, I want to be able to see the order history.
-10. As a user, I want to be able to update the profile information.
-11. As a user, I want to receive a confirmation email after the checkout.
-12. As a user, I want to get in touch with the store owner.
-13. As a user, I want to be able to add a review.
-14. As a user, I want to be able edit or delete my review.
+3. As a user, I want to be able to search the items in the store.
+4. As a user, I want to be able to see the detailed information about the products and services.
+5. As a user, I want to be able to create an account.
+6. As a user, I want to be able to add items in the shopping cart and adjust the shopping cart.
+7. As a user, I want to be able to save delivery information to my profile.
+8. As a user, I want to be able to make secure payments.
+9. As a user, I want to be able to make purchases anonymously.
+10. As a user, I want to be able to see the order history.
+11. As a user, I want to be able to update the profile information.
+12. As a user, I want to receive a confirmation email after the checkout.
+13. As a user, I want to get in touch with the store owner.
+14. As a user, I want to be able to add a review.
+15. As a user, I want to be able edit or delete my review.
+
 
 ## Design
 
@@ -188,8 +190,8 @@ User stories from the UX section were tested to see if they all work as intended
 
 - *As a store owner, I want a simple responsive user friendly website.*
 1. A simple minimalist design is created. 
-2. Go to the **Home** Page and browse through the website to experience the desing.
-3. Right click and go to **inpect** and choose mobile, tablet or desktop screen size test the page responsiveness.
+2. Go to the **Home** Page and browse through the website to experience the design.
+3. Right click and go to **inspect** and choose mobile, tablet or desktop screen size to test the page responsiveness.
 - *As a store owner, I want to add new products/services in the store.*
 1. Go to the **Home** Page.
 2. Log In as a **super user** and click on **My Account**, a dropdown will open.
@@ -212,15 +214,18 @@ User stories from the UX section were tested to see if they all work as intended
 
 - *As a user, I expect the website is easy to navigate from one page to another page.*
 1. Go to the **Home** Page.
-2. Navbar stays at the top all the time and contains the main navigation links like **Merchandise, **Exercise** and **Nutrition**
+2. Navbar stays at the top all the time and contains the main navigation links like **Merchandise**, **Exercise** and **Nutrition**
 as well as a search bar **My Account** button and **Shopping Cart**.
 3. **Home** button is also added in different placed in the website. Thus user can easily navigate through the website.
 - *As a user, I expect the website to be responsive so I can use it form any device for example mobile, tablet or laptop.*
-1. Go to the **Home** right click and go to **inpect**.
-2. Choose mobile, tablet or desktop screen size you want test the page responsiveness.
+1. Go to the **Home** right click and go to **inspect**.
+2. Choose mobile, tablet or desktop screen size you want to test the page responsiveness.
+- * As a user, I want to be able to search the items in the store.*
+1. Go to the **Search input box** in the navbar.
+2. Add any search key word and click on search icon.
 - *As a user, I want to be able to see the detailed information about the products and services.*
 1. Go to the **Home** Page.
-2. For **Merchandise** items detail, go to **Merchandise** and click on **Detials** button.
+2. For **Merchandise** item's detail, go to **Merchandise** and click on **Detials** button.
 3. A new window will open which contains the item detail.
 4. For **Exercise Plns** detail, click on **Exercise**.
 5. A new window will open which contains the **Exercise Plns** and their detail.
@@ -290,7 +295,7 @@ as well as a search bar **My Account** button and **Shopping Cart**.
 1. Go to the **Home** page and log in.
 2. Click on **My Account** and select **My Profile** from the dropdown.
 3. If user has already purchased something then in **User Info** section **Add Review** button will appear.
-4. Click on **Add Review** button, a new will window will open which contains **Add Review** form.
+4. Click on **Add Review** button, a new window will open which contains **Add Review** form.
 5. Fill in the form and click **Add** button.
 - *14. As a user, I want to be able edit or delete my review.*
 1. Go to the **Home** page and click on **Customer Reviews**.
@@ -298,5 +303,5 @@ as well as a search bar **My Account** button and **Shopping Cart**.
 3. **Edit** and **Delete** buttons will appear under your added review.
 4. Click on **Edit** button, a new window will open to edit the review.
 5. Make the changes and click on **Update** button.
-6. To delete the review, click on **Delete** button and modal will appear to confirm the deletion.
+6. To delete the review, click on **Delete** button, a modal will appear to confirm the deletion.
 7. Click on **Yes** to delete the  review.
