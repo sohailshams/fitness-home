@@ -23,22 +23,6 @@
   background-color: #fefde5 !important;
 }
 
-@media (max-width: 375px) {
-    .order-form-text {
-        font-size: 75%;
-    }
-    .order-summary {
-        font-size: 70%;
-    }
-    .order-form-btn {
-        padding-left: 6px !important;
-        padding-right: 6px !important;
-        font-size: 75%;
-    }
-    .order-font {
-        font-size: 85%;
-    }
-}
 .order-summary {
     max-height:400px;
     overflow-x:hidden;
@@ -73,8 +57,27 @@ Source: Boutique ado project
     margin: 0;
 }
 
+/*-------------------------media queries*/
+
 @media (max-width: 768px) {
     .save-info-size {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 375px) {
+    .order-form-text {
+        font-size: 75%;
+    }
+    .order-summary {
+        font-size: 70%;
+    }
+    .order-form-btn {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        font-size: 75%;
+    }
+    .order-font {
         font-size: 85%;
     }
 }
