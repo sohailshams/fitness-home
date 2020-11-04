@@ -2,27 +2,33 @@
     border-radius: 0 !important;
     border: 1px solid #12375a;
 }
+
 .profile-order-card {
     border-radius: 0 !important;
 }
+
 img.order-history-image {
     width: 50% !important;
 }
+
 .order-detail .btn {
     padding: 5px 8px; 
 }
+
 .order-list {
     max-height:300px;
     overflow-x:hidden;
     overflow-y: auto;
 }
 
+/*-----------------------media queries*/
+
 @media (min-width: 991px) {
 .order-detail {
     padding-right: 65px;
+    }
 }
-}
-/*-----------------------media queries*/
+
 @media (max-width: 768px) {
     .user-info {
         font-size: 85%;
