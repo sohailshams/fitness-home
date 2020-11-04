@@ -34,6 +34,7 @@ def cart_contents(request):
                 total_merchandise += quantity * product.price
                 product_count += quantity
                 product_price = quantity * product.price
+                # Chris Zielinski helped to write the append() function 
                 cart_items['merchandise_items'].append({
                     'item_id': item_id,
                     'quantity': quantity,

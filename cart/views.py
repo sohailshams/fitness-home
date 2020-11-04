@@ -11,6 +11,8 @@ def view_cart(request):
     """ A view that renders the shopping cart page"""
     return render(request, 'cart/shopping_cart.html')
 
+# Chris Zielinski helped to write the code for following add_cart function
+
 
 def add_cart(request, item_id):
     """ Add quantity of specified product to the shopping cart """
@@ -117,4 +119,3 @@ def remove_from_cart(request, category, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return redirect(reverse('view_cart'))
-
