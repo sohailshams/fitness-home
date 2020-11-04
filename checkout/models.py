@@ -43,9 +43,19 @@ class Order(models.Model):
         """
         Update total each time a line item is added
         """
-        product_total = self.productlineitem_set.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        exercise_total = self.exerciselineitem_set.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        nutrition_total = self.nutritionlineitem_set.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        product_total = self.productlineitem_set.aggregate(Sum
+                                                           ('lineitem_total')
+                                                           )[
+                                                    'lineitem_total__sum'] or 0
+        exercise_total = self.exerciselineitem_set.aggregate(Sum
+                                                             ('lineitem_total')
+                                                             )[
+                                                    'lineitem_total__sum'] or 0
+        nutrition_total = self.nutritionlineitem_set.aggregate(Sum(
+                                                               'lineitem_total'
+                                                               )
+                                                               )[
+                                                    'lineitem_total__sum'] or 0
         self.order_total = product_total + exercise_total + nutrition_total
         self.save()
 
@@ -60,6 +70,8 @@ class Order(models.Model):
 
     def __str__(self):
         return self.order_number
+
+# Chris Zielinski suggested to use abstract model & helped to write this model
 
 
 class OrderLineItem(models.Model):
@@ -101,5 +113,3 @@ class NutritionLineItem(OrderLineItem):
     product = models.ForeignKey(NutritionPlans, null=False, blank=False,
                                 on_delete=models.CASCADE
                                 )
-
-
