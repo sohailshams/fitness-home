@@ -35,10 +35,10 @@
                 {% if request.user.is_superuser %}
                     <small>
                         <a class="text-blue text-decoration-none" href="{% url 'edit_product' product.id %}">Edit</a> <span class="text-blue">|</span> 
-                        <a class="text-red text-decoration-none" href="#" data-toggle="modal" data-target=".bd-example-modal-sm">Delete</a>
+                        <a class="text-red text-decoration-none" href="#" data-toggle="modal" data-target="#{{ product.sku }}">Delete</a>
                     </small>
                     <!--this modal pops up when store owner click on delete button to confirm the deletion of the product-->
-                    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" id="{{ product.sku }}" aria-labelledby="{{ product.sku }}" aria-hidden="true">
                         <div class="modal-dialog modal-sm">
                             <div class="modal-content bg-light border-blue rounded-0 text-center">
                             <h6 class="text-blue pt-2">Are you sure you want to delete!</h6>
