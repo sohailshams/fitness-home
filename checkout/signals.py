@@ -3,6 +3,8 @@ from django.dispatch import receiver
 
 from .models import ProductLineItem, ExerciseLineItem, NutritionLineItem
 
+# Chris Zielinski suggested to write three @receiver
+
 
 @receiver(post_save, sender=ProductLineItem)
 @receiver(post_save, sender=ExerciseLineItem)
