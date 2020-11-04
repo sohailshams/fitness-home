@@ -1,5 +1,6 @@
 from django import forms
 
+
 class ContactForm(forms.Form):
     full_name = forms.CharField(required=True)
     email = forms.EmailField(required=True)
@@ -11,12 +12,12 @@ class ContactForm(forms.Form):
     """
     def __init__(self, *args, **kwargs):
         super(ContactForm, self).__init__(*args, **kwargs)
-        
+
         """
         Remove auto-generated labels & added placeholders
         """
         for field in self.fields:
-            self.fields[field].label = False 
+            self.fields[field].label = False
             self.fields[field].widget.attrs['class'] = 'rounded-0'
             self.fields["full_name"].widget.attrs[
                                         "placeholder"] = "Name *"
@@ -24,5 +25,3 @@ class ContactForm(forms.Form):
                                         "placeholder"] = "Email Address *"
             self.fields["message"].widget.attrs[
                                         "placeholder"] = "Your Query *"
-            
-       
