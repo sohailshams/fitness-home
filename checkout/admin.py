@@ -59,5 +59,3 @@ admin.site.register(Order, OrderAdmin)
 admin.site.register(ProductLineItem)
 admin.site.register(ExerciseLineItem)
 admin.site.register(NutritionLineItem)
-
-
