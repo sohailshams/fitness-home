@@ -19,4 +19,3 @@ class ExercisePlanAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ExercisePlans, ExercisePlanAdmin)
-
