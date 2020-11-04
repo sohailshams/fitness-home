@@ -305,3 +305,21 @@ as well as a search bar **My Account** button and **Shopping Cart**.
 5. Make the changes and click on **Update** button.
 6. To delete the review, click on **Delete** button, a modal will appear to confirm the deletion.
 7. Click on **Yes** to delete the  review.
+
+### Responsiveness on different browsers & Mobiles
+
+The website is tested on following browsers and mobiles, it looks fine and work properly on them.
+- Google Chrome
+- Microsoft Edge
+- Firefox
+- Opera 
+- iPhone 6
+- Huawei P30 lite
+
+### Code Validation
+
+The code has been validated by using;
+
+- [W3C Markup Validation Service for HTML](https://validator.w3.org/)
+- [W3C Markup Validation Service for CSS](https://jigsaw.w3.org/css-validator/)
+- [Pep8 Online for Pyhton](http://pep8online.com/)
