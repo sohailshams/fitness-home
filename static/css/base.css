@@ -1,11 +1,15 @@
 /*-------------------Removed outline border*/
+
 *:focus {
     outline: 0 !important;
 }
+
 /*-------------------body*/
+
 html {
     height: 100%;
 }
+
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)
   ), url('/media/background.jpg') no-repeat center center fixed;
@@ -14,19 +18,29 @@ body {
     font-family: 'Ubunto', sans-serif;
     height: 100%;
 }
+
 .wrapper {
     min-height: 100%;
 }
+
 /*---------------------------border line*/
+
 .border-line {
     border: 1px solid #12375a;
 }
+
 /*---------------------------navbar*/
+
 .menu-items {
     margin: 0 auto !important;
 }
 
+.grand-total {
+    padding-right: 1rem;
+}
+
 /*---------------------------overlay to cover backgoroun image*/
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -36,7 +50,9 @@ body {
 	background:white;
 	z-index: -1;
 }
+
 /* from Bulma */
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -44,57 +60,73 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
+
 /*---------------------------general syling like color, bg-color, hover, padding, padding, width, border*/
+
 .hover-red:hover {
     background-color: #e84610 !important;
 }
+
 .font-do-hyeon {
     font-family: 'Do Hyeon', sans-serif
 }
+
 .font-ubunto {
     font-family: 'Ubunto', sans-serif
 }
+
 .text-blue {
     /*color: #12375a !important;*/
     color:  #12375a !important;;
 }
+
 .bg-blue {
     /*background-color: #12375a !important;*/
     background-color: #12375a !important;
 }
+
 .text-red {
     color: #e84610 !important;
 }
+
 .border-blue {
     /*border: 1px solid black !important;*/
     border: 1px solid #12375a !important;
 }
+
 .header-container {
        padding-top: 160px;
-    }
+}
+
 .slogan-container {
     max-width: 600px;
     margin-top: 40px;
 }
+
 .breadcrumb {
     width: 180px;
     background-color: #e84610;
     border-radius: 0; 
 }
+
 .reviews-btn {
     background-color: #e84610;
     padding: 11px 17px !important;
     width: 180px;
 }
+
 .card-img, .card-img-top {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
 select:not(:first-child), .input-group>.form-control:not(:first-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
+
 /*---------------------------bottom to top button*/
+
 #btn-top {
   display: none;
   position: fixed;
@@ -105,11 +137,14 @@ select:not(:first-child), .input-group>.form-control:not(:first-child) {
   cursor: pointer;
   background-color: transparent;
 }
+
 .update-item,
 .delete-item {
     cursor: pointer;
 }
+
 /*---------------------------toasts messages*/
+
 .toasts-message-container {
     position: fixed;
     top: 80px;
@@ -117,9 +152,11 @@ select:not(:first-child), .input-group>.form-control:not(:first-child) {
     z-index: 99999999999;
     max-width: 310px;
 }
+
 .toast-cap {
     height: 2px;
 }
+
 .list-group-item {
     padding: 2px 2px;
 }
@@ -133,6 +170,7 @@ select:not(:first-child), .input-group>.form-control:not(:first-child) {
 .thanks-message {
     margin: 0 auto;
 }
+
 /*---------------------------footer*/
 footer {
     position: relative;
@@ -140,23 +178,29 @@ footer {
     margin: 0;
     padding: 0;
 }
+
 .footer-items {
     max-height: 150px;
     text-align: center;
     font-size: 20px;
 }
+
 .social-media-links i {
   font-size: 150%;
 }
+
 .footer-links ul {
   padding-left: 0;
   text-align: center;
 }
+
 /*---------------------------allauth templates*/
+
 .allauth-heading {
     color: #12375a !important;
     padding: 10px 0 !important;
 }
+
 .allauth-form-inner-content .form-control, .login, .signup, .logout, 
 .add_email, .buttonHolder, .allauth-heading, 
 .confirm_email, .password_change, 
@@ -164,27 +208,34 @@ footer {
     max-width: 450px;
     margin: 0 auto !important;
 }  
+
 .allauth-form-inner-content .form-check-label {
     color:  #12375a !important;
 } 
+
 .allauth-form-inner-content p {
     color: #12375a !important;
     margin: 10px auto !important;
     max-width: 450px;
 }
+
 .allauth-form-inner-content input {
     border-color: #12375a;
     border-radius: 0;
 }
+
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
+
 .allauth-form-inner-content input[type='submit']:hover {
     background-color: #e84610 !important;
 }
+
 .allauth-form-inner-content button:hover {
     background-color: #e84610 !important;
 }
+
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
@@ -194,22 +245,27 @@ footer {
     border-radius: 0;
     border: 0px !important;
 }
+
 /*---------------------------product add form*/
 .product-add-form {
     max-width: 450px;
     margin: 0 auto; 
 }
+
 .product-add-form .form-control {
         border: 1px solid #12375a;
-    }
+}
+
 .management-form .form-control {
     border: 1px solid  #12375a;
 }
+
 .account-items {
     padding: 0 10px;
 }
 
 /*---------------------------review add form*/
+
 .review-input-form, textarea.form-control {
     min-height: 200px !important;
 }
@@ -218,11 +274,14 @@ footer {
     margin: 0 auto;
     max-width: 450px;
 }
+
 .review-heading {
     margin: 0 auto;
     max-width: 450px;
 }
+
 /*---------------------------media query*/
+
 @media (max-width: 991px) {
     .header-container {
         padding-top: 250px;
@@ -242,9 +301,7 @@ footer {
     }
     
 }
-.grand-total {
-    padding-right: 1rem;
-}
+
 @media (max-width: 768px) {
     .individual-image {
         margin: 8px !important;
@@ -257,8 +314,7 @@ footer {
     .update-item {
         padding-left: 5px !important;
         margin-left: 5px !important;
-    }
- 
+    } 
     .delete-item-exercise,
     .delete-item-nutrition {
         padding-left: 5px !important;
@@ -267,15 +323,12 @@ footer {
     .toasts-message-container {
     top: 60px;
     }
-
     .address-card {
         font-size: 85%;
     }
-
     .contact-text {
         font-size: 85%;
     }
-
     .empty-cart {
         padding-left: 45px;
     }
@@ -287,20 +340,20 @@ footer {
     }
     .size-on-small {
             font-size: 70%;
-        }
-        .img-size {
+    }
+    .img-size {
             height: 45%;
-        }
-        .mobile-font-size {
+    }
+    .mobile-font-size {
             font-size: 80%;
-        }
-      .font-size-plans {
+    }
+    .font-size-plans {
           font-size: 10px;
           font-weight: bold;
-      }
-      .delete-item, 
-      .delete-item-exercise,
-      .delete-item-nutrition {
+    }
+    .delete-item, 
+    .delete-item-exercise,
+    .delete-item-nutrition {
         padding-left: 0px !important;
         margin-left: 0px !important;
     }
@@ -315,37 +368,31 @@ footer {
         height: 30px;
     }
     .main-logo {
-    font-size: 99% !important;
+        font-size: 99% !important;
     }
-
     .input-group>.custom-file, 
     .input-group>.custom-select, 
     .input-group>.form-control, 
     .input-group>.form-control-plaintext {
-    min-width: 50px !important;
-    height: 25px;
-    font-size: 12px;
-    padding: 5px 5px;
+        min-width: 50px !important;
+        height: 25px;
+        font-size: 12px;
+        padding: 5px 5px;
     }
-
     .slogan-font-size {
         font-size: 1.8rem;
     }
-
     .address-section {
-    padding-left: 12px !important;
-    padding-right: 12px !important; 
+        padding-left: 12px !important;
+        padding-right: 12px !important; 
     }
-
     .contact-form {
         padding-left: 5px !important;
         padding-right: 5px !important;        
     }
-
     .contact-text {
         padding-left: 8px;
     }
-
     .thanks-message {
     padding-left: 45px;
     }
@@ -353,23 +400,19 @@ footer {
 
 @media (max-width: 320px) {
     .update-item {
-    padding-left: 0px !important;
-    margin-left: 0px !important;
+        padding-left: 0px !important;
+        margin-left: 0px !important;
     }
     .size-on-small {
-            font-size: 60%;
+        font-size: 60%;
     }
     .review-heading {
         font-size: 20px;
     }
-
     .contact-text {
         font-size: 75%;
     }
-
     .empty-cart {
         padding-left: 10px;
     }
-}
-
 }
