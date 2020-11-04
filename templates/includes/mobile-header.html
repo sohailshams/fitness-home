@@ -21,13 +21,13 @@
     </div>
 </li>
 <li class="list-inline-item dropdown font-do-hyeon">
-    <a class="text-blue nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-blue nav-link d-block d-lg-none" href="#" id="user-option" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="far fa-user" aria-hidden="true"></i></div>
             <p class="my-0 mobile-font-size">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0 bg-light mobile-font-size" aria-labelledby="user-options">
+    <div class="dropdown-menu border-0 bg-light mobile-font-size" aria-labelledby="user-option">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item text-blue">Merchandise Admin</a>
