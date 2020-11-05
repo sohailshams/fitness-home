@@ -323,3 +323,28 @@ The code has been validated by using;
 - [W3C Markup Validation Service for HTML](https://validator.w3.org/)
 - [W3C Markup Validation Service for CSS](https://jigsaw.w3.org/css-validator/)
 - [Pep8 Online for Pyhton](http://pep8online.com/)
+- [JSHint](https://jshint.com/)
+
+### Interesting Bugs / Issue
+
+1. **Modal was not working properly** - I added a modal to make sure that super user really wants to delete the produsts / services, 
+it's not just accessdently **Delete** button is pressed. But I encountered a problem that when I was deleting an item, an other item
+was deleted from the store even though I was using {{ item.id }} as an id and data-target. Some how the it was not working with 
+numbers so with the help of tutor support, a solution was found. Used {{ item.sku }} as an id and data-target and it solved 
+the issue.
+2. **Modal stopped working** - To delete products / services from store super user has to confirm the deletion, as by clicking 
+on **Delete** button a modal pops up but I realized that this modal stopped working. I found out later that it happened after 
+I **added animate on scroll**. To over come this issue I excluded the **Delete** button from **AOS** div and everything start working fine. 
+3. **Image was not showing up** - If a product / service does not have an image associated with it, then a no image shall 
+show up but it was not happening. I made sure that media_url is added in the settings.py and urls.py but I was not getting the desired output. 
+Later I found out that I forgot to add noimage.png in the media folder that is why there was no image to show if an item 
+did not have an image. So I added noimage.png in the media folder and it solved the problem. 
+4. **Local variable 'intent' referenced before assignment** - When I completed checkout/views.py and created an order I start
+getting this error. The initial thought was that it is happening because the **form is not valid** and it is triggering the else block.
+But I tested this with print statement and I could see the **intent** was created in the terminal. The issue was
+actually I was not returning anything if the **form was valid**. I was missing the redirect to **checkout_success** which I had not
+created till this point. So I created checkout success page and redirected to **checkout_success** and got rid of this error. Credit to
+**Chris Zielinski** who helped me to identify this issue.  
+5. **Total was not counted** - I encountered with this issue of total not being counted when I add, delete or save line item.
+The reason found that was causing this problem was I did not include **default_app_config = 'checkout.apps.CheckoutConfig'** in **checkout/__init__.py**.
+
