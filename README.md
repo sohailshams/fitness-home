@@ -350,3 +350,25 @@ created till this point. So I created checkout success page and redirected to **
 5. **Total was not counted** - I encountered with this issue of total not being counted when I add, delete or save line item.
 The reason found that was causing this problem was I did not include **default_app_config = 'checkout.apps.CheckoutConfig'** in **checkout/__init__.py**.
 
+## Credits
+
+### Media
+
+- All pictures are taken from [Google](https://www.google.com/)
+
+### Acknowledgements
+
+1. Code Institute's **Boutique Ado Project** was great source of inspiration. I followed it to design and develop my **Fitness Home** website.
+2. Code for **bottom to top** button is taken from [w3schools.com](https://www.w3schools.com/)
+3. Code Institute's tutor support has been a great help during the whole project, a very special thanks to tutor support team.
+4. **[Bootstrap Framework](https://getbootstrap.com/)** is used in this project.
+5. A very special thanks to **Chris Zielinski** for his support and help to accomplish this project.
+6. I would like to thank my mentor **Owonikoko Oluwaseun** for his valuable feedback during mentoring sessions. 
+7. **[Stack overflow](https://stackoverflow.com/)** was great source of help.
+8. I would like thank my lovely wife Ayesha, my sons Ibrahim and Ismail for their support and motivation.
+9. Used favicon Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> 
+from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+10. [Django Docs](https://docs.djangoproject.com/en/3.1/)
+
+## Disclaimer
+This project is for educational purposes only..
