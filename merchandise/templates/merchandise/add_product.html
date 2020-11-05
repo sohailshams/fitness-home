@@ -7,7 +7,7 @@
         <div class="col"></div>
     </div>
 </div>
-{% endblock %}
+{% endblock %} 
 
 {% block content %}
 <div class="overlay"></div>
@@ -20,10 +20,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 ">
+        <div class="col-12">
             <form method="POST" action="{% url 'add_product' %}" class="form mb-2 text-blue product-add-form management-form" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form | crispy }}
+                {% csrf_token %} {{ form | crispy }}
                 <div class="mb-3">
                     <a class="btn bg-blue text-white rounded-0 hover-red" href="{% url 'products' %}">
                         <span class="icon">
@@ -43,7 +42,3 @@
     </div>
 </div>
 {% endblock %}
-
-
-
-

@@ -1,137 +1,130 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        {% block mete %}
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        {% endblock %} 
+        
+        {% block extra_meta %} 
+        {% endblock %} 
+        
+        {% block corecss %}
+        <!--Added favicon icon to git rid of favicon 404 error icone source flaticon-->
+        <link rel="icon" href="{% static 'favicon/running.ico' %}" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Ubuntu&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        {% endblock%} 
 
-<head>
-	{% block mete %}
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	{% endblock %}
-
-	{% block extra_meta %}
-	{% endblock %}
-
-	{% block corecss %}
-    <!--Added favicon icon to git rid of favicon 404 error icone source flaticon-->
-    <link rel="icon" href="{% static 'favicon/running.ico' %}">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Ubuntu&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	{% endblock%}
-
-	{% block extra_css %}
-	{% endblock %}
-
-	{% block corejs %}
-    <script src="https://kit.fontawesome.com/88ce2b0d97.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
-    <!--stripe.js library-->
-    <script src="https://js.stripe.com/v3/"></script>
-	{% endblock %}
-
-	{% block extra_js %}
-	{% endblock %}
-	<title>Fitness Home {% block extra_title %}{% endblock %}</title>
-</head>
-<body>
-    <div class="container wrapper">
-        <header class="container-fluid fixed-top bg-light">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <button class="navbar-toggler nav-link rounded-0" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <ul class="list-inline">
-                    {% include 'includes/mobile-header.html' %}
-                </ul>
-                <div class="collapse navbar-collapse" id="main-nav">
-                    <div class="col-12 col-lg-1 pt-1 py-lg-0 text-center text-lg-left">
-                        <a href="{% url 'home' %}" class="nav-link text-blue text-left">
-                            <h2 class="my-0 main-logo">
-                                <strong><span class="font-do-hyeon">Fitness</span></strong> <span class="font-ubunto">Home</span>
-                            </h2>
-                        </a>
-                    </div>
-                    <div class="col-12 col-lg-8 pb-1 py-lg-0 menu-items">
-                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 list-inline">
-                            <li class="nav-item ml-1">
-                                <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item" href="{% url 'products' %}">Merchandise</a>
-                            </li>
-                            <li class="nav-item ml-1">
-                                <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item" href="{% url 'exercises' %}">Fitness</a>
-                            </li>
-                            <li class="nav-item ml-1">
-                                <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item" href="{% url 'nutritions' %}"><p>Nutrition</p></a>
-                            </li>
-                            <li class="nav-item ml-1 d-none d-lg-block">
-                                <form method="GET" action="{% url 'products' %}" class="font-do-hyeon nav-link text-blue mt-2 list-inline-item">
-                                    <div class="input-group">
-                                        <input class="form-control border rounded-0 border-blue" type="text" name="q" placeholder="Search" />
-                                        <div class="input-group-append">
-                                            <button class="form-control btn bg-light border text-blue rounded-0 border-blue" type="submit">
-                                                <span class="icon">
-                                                    <i class="fas fa-search" aria-hidden="true"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 nav-link account-items d-none d-lg-block">
-                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                        <li class="list-inline-item dropdown">
-                            <a class="nav-link text-blue" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center">
-                                    <div><i class="far fa-user fa-lg" aria-hidden="true"></i></div>
-                                    <p class="my-0 font-do-hyeon">My Account</p>
-                                </div>
+        {% block extra_css %} 
+        {% endblock %} 
+        
+        {% block corejs %}
+        <script src="https://kit.fontawesome.com/88ce2b0d97.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!--stripe.js library-->
+        <script src="https://js.stripe.com/v3/"></script>
+        {% endblock %} 
+        
+        {% block extra_js %} 
+        {% endblock %}
+        <title>Fitness Home {% block extra_title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class="container wrapper">
+            <header class="container-fluid fixed-top bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler nav-link rounded-0" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <ul class="list-inline">
+                        {% include 'includes/mobile-header.html' %}
+                    </ul>
+                    <div class="collapse navbar-collapse" id="main-nav">
+                        <div class="col-12 col-lg-1 pt-1 py-lg-0 text-center text-lg-left">
+                            <a href="{% url 'home' %}" class="nav-link text-blue text-left">
+                                <h2 class="my-0 main-logo">
+                                    <strong><span class="font-do-hyeon">Fitness</span></strong> <span class="font-ubunto">Home</span>
+                                </h2>
                             </a>
-                            <div class="dropdown-menu border-0 font-do-hyeon" aria-labelledby="user-options">
-                                {% if request.user.is_authenticated %} 
-                                    {% if request.user.is_superuser %}
+                        </div>
+                        <div class="col-12 col-lg-8 pb-1 py-lg-0 menu-items">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 list-inline">
+                                <li class="nav-item ml-1">
+                                    <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item" href="{% url 'products' %}">Merchandise</a>
+                                </li>
+                                <li class="nav-item ml-1">
+                                    <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item" href="{% url 'exercises' %}">Fitness</a>
+                                </li>
+                                <li class="nav-item ml-1">
+                                    <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item" href="{% url 'nutritions' %}"><p>Nutrition</p></a>
+                                </li>
+                                <li class="nav-item ml-1 d-none d-lg-block">
+                                    <form method="GET" action="{% url 'products' %}" class="font-do-hyeon nav-link text-blue mt-2 list-inline-item">
+                                        <div class="input-group">
+                                            <input class="form-control border rounded-0 border-blue" type="text" name="q" placeholder="Search" />
+                                            <div class="input-group-append">
+                                                <button class="form-control btn bg-light border text-blue rounded-0 border-blue" type="submit">
+                                                    <span class="icon">
+                                                        <i class="fas fa-search" aria-hidden="true"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 nav-link account-items d-none d-lg-block">
+                        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                            <li class="list-inline-item dropdown">
+                                <a class="nav-link text-blue" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="text-center">
+                                        <div><i class="far fa-user fa-lg" aria-hidden="true"></i></div>
+                                        <p class="my-0 font-do-hyeon">My Account</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu border-0 font-do-hyeon" aria-labelledby="user-options">
+                                    {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item text-blue">Merchandise Admin</a>
                                     <a href="{% url 'add_exercise' %}" class="dropdown-item text-blue">Exercise Admin</a>
                                     <a href="{% url 'add_nutrition' %}" class="dropdown-item text-blue">Nutrition Admin</a>
                                     {% endif %}
                                     <a href="{% url 'profile' %}" class="dropdown-item text-blue">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item text-blue">Logout</a>
-                                {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item text-blue">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item text-blue">Login</a>
-                                {% endif %}
-                            </div>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="{% if total %}text-info font-weight-bold{% else %}text-blue{% endif %} nav-link" href="{% url 'view_cart' %}">
-                                <div class="text-center">
-                                    <div><i class="fa fa-shopping-basket fa-lg" aria-hidden="true"></i></div>
-                                    <p class="my-0">
-                                        {% if total %} €{{ total|floatformat:2 }} {% else %} €0.00 {% endif %}
-                                    </p>
+                                    {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item text-blue">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item text-blue">Login</a>
+                                    {% endif %}
                                 </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="{% if total %}text-info font-weight-bold{% else %}text-blue{% endif %} nav-link" href="{% url 'view_cart' %}">
+                                    <div class="text-center">
+                                        <div><i class="fa fa-shopping-basket fa-lg" aria-hidden="true"></i></div>
+                                        <p class="my-0">
+                                            {% if total %} €{{ total|floatformat:2 }} {% else %} €0.00 {% endif %}
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
-            <div class="row">
-                <div class="col border-line"></div>
-            </div>
-        </header>
-        {% if messages %}
+                <div class="row">
+                    <div class="col border-line"></div>
+                </div>
+            </header>
+            {% if messages %}
             <div class="toasts-message-container">
                 {% for message in messages %} 
                     {% with message.level as level %} 
@@ -147,30 +140,31 @@
                     {% endwith %} 
                 {% endfor %}
             </div>
-        {% endif %} 
-        
-        {% block page_header %} 
-        {% endblock %} 
-        
-        {% block content %} 
-        {% endblock %}
-    </div>
+            {% endif %} 
 
-    <footer class="container-fluid bg-light">
-        <div class="row">
-            <div class="col border-line"></div>
+            {% block page_header %} 
+            {% endblock %} 
+            
+            {% block content %} 
+            {% endblock %}
+            
         </div>
-        {% include 'includes/footer.html' %}
-    </footer>
 
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-     AOS.init();
-    </script>
-    {% endblock %}
-</body>
+        <footer class="container-fluid bg-light">
+            <div class="row">
+                <div class="col border-line"></div>
+            </div>
+            {% include 'includes/footer.html' %}
+        </footer>
+
+        {% block postloadjs %}
+        <script type="text/javascript">
+            $(".toast").toast("show");
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        {% endblock %}
+    </body>
 </html>

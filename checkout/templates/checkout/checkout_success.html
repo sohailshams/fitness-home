@@ -2,8 +2,8 @@
 {% load static %} 
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
-{% endblock %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" />
+{% endblock %} 
 
 {% block page_header %}
 <div class="container header-container">
@@ -11,7 +11,7 @@
         <div class="col"></div>
     </div>
 </div>
-{% endblock %}
+{% endblock %} 
 
 {% block content %}
 <div class="overlay"></div>
@@ -19,13 +19,13 @@
     <div class="row">
         <div class="col text-center">
             <h2 class="font-do-hyeon text-blue"><i class="far fa-check-circle"></i> Thank You for your Purchase</h2>
-            <hr class="bg-light"/>
+            <hr class="bg-light" />
             <p class="text-blue">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
         </div>
     </div>
     <div class="offset-xs-0 offset-sm-3">
         <h4 class="text-blue text-left font-do-hyeon">Order Details</h4>
-        <hr class="w-25 bg-light ml-0">
+        <hr class="w-25 bg-light ml-0" />
         <div class="row">
             <div class="col-12 col-sm-4">
                 <p class="mb-0 text-blue font-weight-bold">Order Number</p>
@@ -39,9 +39,9 @@
             <div class="col-12 col-sm-8">
                 <p class="mb-0 text-blue">{{ order.date }}</p>
             </div>
-            <hr>
+            <hr />
             {{ productlineitem }}
-            <hr>
+            <hr />
             {% for item in order.productlineitem_set.all %}
             <div class="col-12 col-sm-4">
                 <p class="mb-0 text-blue pr-3 font-weight-bold">{{ item.product.name }}</p>
@@ -49,8 +49,14 @@
             <div class="col-12 col-sm-8">
                 <p class="mb-0 text-blue">{{ item.quantity }} x €{{ item.product.price }} / Item</p>
             </div>
-            {% endfor %}
-            {% for item in order.exerciselineitem_set.all %}
+            {% endfor %} {% for item in order.exerciselineitem_set.all %}
+            <div class="col-12 col-sm-4">
+                <p class="mb-0 text-blue pr-3 font-weight-bold">{{ item.product.name }}</p>
+            </div>
+            <div class="col-12 col-sm-8">
+                <p class="mb-0 text-blue">{{ item.quantity }} x €{{ item.product.price }} / Item</p>
+            </div>
+            {% endfor %} {% for item in order.nutritionlineitem_set.all %}
             <div class="col-12 col-sm-4">
                 <p class="mb-0 text-blue pr-3 font-weight-bold">{{ item.product.name }}</p>
             </div>
@@ -58,18 +64,9 @@
                 <p class="mb-0 text-blue">{{ item.quantity }} x €{{ item.product.price }} / Item</p>
             </div>
             {% endfor %}
-            {% for item in order.nutritionlineitem_set.all %}
-            <div class="col-12 col-sm-4">
-                <p class="mb-0 text-blue pr-3 font-weight-bold">{{ item.product.name }}</p>
-            </div>
-            <div class="col-12 col-sm-8">
-                <p class="mb-0 text-blue">{{ item.quantity }} x €{{ item.product.price }} / Item</p>
-            </div>
-            {% endfor %}
-            
         </div>
         <h4 class="text-blue text-left mt-3 font-do-hyeon">Shipping Details</h4>
-        <hr class="w-25 bg-light ml-0">
+        <hr class="w-25 bg-light ml-0" />
         <div class="row">
             <div class="col-12 col-sm-4">
                 <p class="mb-0 text-blue font-weight-bold">Full Name</p>
@@ -90,15 +87,14 @@
                 <p class="mb-0 text-blue">{{ order.town_or_city }}</p>
             </div>
             {% if order.county %}
-                <div class="col-12 col-sm-4">
+            <div class="col-12 col-sm-4">
                 <p class="mb-0 text-blue font-weight-bold">County</p>
             </div>
             <div class="col-12 col-sm-8">
                 <p class="mb-0 text-blue">{{ order.county }}</p>
             </div>
-            {% endif %}
-            {% if order.postcode %}
-                <div class="col-12 col-sm-4">
+            {% endif %} {% if order.postcode %}
+            <div class="col-12 col-sm-4">
                 <p class="mb-0 text-blue font-weight-bold">Post Code</p>
             </div>
             <div class="col-12 col-sm-8">
@@ -119,7 +115,7 @@
             </div>
         </div>
         <h4 class="text-blue text-left mt-3 font-do-hyeon">Billing Info</h4>
-        <hr class="w-25 bg-light ml-0">
+        <hr class="w-25 bg-light ml-0" />
         <div class="row">
             <div class="col-12 col-sm-4">
                 <p class="mb-0 text-blue font-weight-bold">Amount Paid</p>
@@ -128,10 +124,10 @@
                 <p class="mb-0 text-blue font-weight-bold">€{{ order.order_total }}</p>
             </div>
         </div>
-        <hr class="w-25 bg-light ml-0">
+        <hr class="w-25 bg-light ml-0" />
         <div class="row">
             <div class="col">
-            {% if from_profile %}
+                {% if from_profile %}
                 <a href="{% url 'home' %}" class="btn rounded-0 mt-1 mb-3 bg-blue text-white btn-small hover-red">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
@@ -144,21 +140,16 @@
                     </span>
                     <span>My Orders</span>
                 </a>
-            {% else %}          
+                {% else %}
                 <a href="{% url 'home' %}" class="btn rounded-0 mt-1 mb-3 bg-blue text-white btn-small hover-red">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
                     <span>Home</span>
                 </a>
-            {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
 {% endblock %}
-
-
-
-
-
