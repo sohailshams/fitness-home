@@ -154,6 +154,8 @@ are less in number. Thus as exercise plans and nutrition plans will grow in futu
 functionality for user to select different size will also be added in the website.
 - **Social Media Log In** - Log In through social media functionality will also be added in the future.
 - **Coaching Sessions** -  A system to book session with the coach/trainer will also be added in future.
+- **Merchandise Size** - At the moment the merchandise products have only one-size available. The option to purchase 
+different sizes of the merchandise products will also be added in the future.
 
 ## Technologies Used
 
