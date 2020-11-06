@@ -176,6 +176,7 @@ different sizes of the merchandise products will also be added in the future.
 - **[Stripe](https://stripe.com/en-dk)** - Used to add secure payment feature in this project.
 - **[HTML Formatter](https://webformatter.com/html)** - Used to format and beautify my code.
 - **[Animate On Scroll](https://michalsnik.github.io/aos/)** - Used to make website visually appealing.
+- **[AWS](https://aws.amazon.com/)** - Used to store static files.
 
 ## Testing
 
