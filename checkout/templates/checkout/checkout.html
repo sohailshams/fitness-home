@@ -31,8 +31,7 @@
                 </fieldset>
                 <fieldset class="pr-3 mb-3">
                     <legend class="fieldset-label w-auto text-blue"><h5>Delivery Details</h5></legend>
-                    {{ order_form.phone_number | as_crispy_field }} {{ order_form.street_address1 | as_crispy_field }} {{ order_form.street_address2 | as_crispy_field }} {{ order_form.town_or_city | as_crispy_field }} {{ order_form.county |
-                    as_crispy_field }} {{ order_form.postcode | as_crispy_field }} {{ order_form.country | as_crispy_field }}
+                    {{ order_form.phone_number | as_crispy_field }} {{ order_form.street_address1 | as_crispy_field }} {{ order_form.street_address2 | as_crispy_field }} {{ order_form.town_or_city | as_crispy_field }} {{ order_form.county | as_crispy_field }} {{ order_form.postcode | as_crispy_field }} {{ order_form.country | as_crispy_field }}
                     <div class="form-check pl-0">
                         {% if user.is_authenticated %}
                         <label class="form-check-label text-blue save-info-size" for="id-save-info">Save this delivery information to my profile</label>
