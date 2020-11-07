@@ -63,6 +63,9 @@ Source: Boutique ado project
     .save-info-size {
         font-size: 85%;
     }
+    .order-form-btn {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -75,7 +78,7 @@ Source: Boutique ado project
     .order-form-btn {
         padding-left: 6px !important;
         padding-right: 6px !important;
-        font-size: 75%;
+        font-size: 72%;
     }
     .order-font {
         font-size: 85%;
