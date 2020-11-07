@@ -75,7 +75,8 @@ def update_cart(request, item_id):
     if item_id in cart['merchandise_dic'].keys():
         if quantity > 0:
             cart['merchandise_dic'][item_id] = quantity
-            messages.success(request, f'Updated {product.name} Quantity: {cart["merchandise_dic"][item_id]}')
+            messages.success(request, f'Updated {product.name} \
+                Quantity: {cart["merchandise_dic"][item_id]}')
         else:
             cart['merchandise_dic'].pop(item_id)
             messages.success(request, f'Removed {product.name} from cart')
