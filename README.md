@@ -351,6 +351,74 @@ created till this point. So I created checkout success page and redirected to **
 5. **Total was not counted** - I encountered with this issue of total not being counted when I add, delete or save line item.
 The reason found that was causing this problem was I did not include **default_app_config = 'checkout.apps.CheckoutConfig'** in **checkout/__init__.py**.
 
+## Deployment to Heroku
+
+1. Login to **[Heroku](https://www.heroku.com/)** account.
+2. Click on **New** at the right top corner and click on **Create new app**.
+3. Choose **App name** and a **region**. Then click on **Create app**.
+4. Go to **Resources**, then to **Add-ons** and choose **Heroku Postgres**.
+5. Choose **Hobby Dev - Free** plan and click on **Submit Order Form**.
+6. Go to terminal and install **dj_database_url and psycopg2-binary** using commands **pip3 install dj_database_url** 
+and **pip3 install psycopg2-binary**.
+7. Then freeze the requirements with command **pip3 freeze > requirements.txt**.
+8. Import **dj_databse_url in settings.py**, setup the database, run migrations, loaddata and create **super user**.
+9. Install **gunicorn** with command **pip3 install gunicorn** and freeze the requirements with command **pip3 freeze > requirements.txt**.
+10. Create **Procfile** and tell **Heroku** to create web dyno with command **web: gunicorn fitness_home.wsgi:application**.
+11. Log In to **Heroku** and disable temporarily **collectstatic** with command **heroku config:set DISABLE_COLLECTSTATIC=1**.
+12. Add host name of heroku app in **allowed hosts** in settings.py. Then **git commit** and **git push heroku master**.
+13. For automatic deploys to **Heroku** go to **Deploy** tab and click on **Github**. Choose your app and connect then click 
+on **Enable Automatic Deploys**. 
+14. Login to **[AWS](https://aws.amazon.com/)** account, go to S3 - create a **bucket** and make it public.
+15. Open the bucket, go to **properties** and enable **Static website hosting**.
+16. Go to **Properties**, add **CORS configration**. Then go to **Bucket Policy** and **Generate Policy**.
+17. Go to **Access Control List** and set the list objects permission for everyone.
+18. Create a user to access S3 bucket. Go to **Services** menu and open **IAM**.
+19. Go to **Groups** and create a new group and then to **Policies** and create policy.
+20. Now go to the groups and click on the group created, click attach policy then seach for policy just created, select it 
+and click on **Attach Policy**
+21. Now create a user to put in the group. Go to **Users**, click on **Add User**, give a user name and check **Programatic Access** box.
+22. Then to add user to the group, check the group and attach policy box. Click next and click on **Create User**.
+23. Now connect **Django** to **S3 Bucket**. Install **boto3 and django-storages** with commands **pip3 install boto3** and 
+**pip3 install django-storages**.
+24. Freeze the requirements with command **pip3 freeze > requirements.txt** and add storages in installed apps in **settings.py**.
+25. Now add following **settings in settings.py** to tell **Django** which bucket it should be communicating with.
+    ```
+    AWS_STORAGE_BUCKET_NAME = 'mss-fitness-home'
+    AWS_S3_REGION_NAME = 'eu-north-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    ```
+27. To tell django where our static files will be coming from in production add following code line under above settings.
+    ```
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    ```
+28. Create a file called **custom_storages.py** and create custom classes called **StaticStorage** and **MediaStorage**.
+29. Go to **settings.py** and tell django that for static and media file storage we want to use following storage class.
+    ```
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    ```
+30. Now go to **Heroku** and add following **Config vars**.
+    ```
+    AWS_ACCESS_KEY_ID: <ID from CSV file downloaded from AWS>
+    AWS_SECRET_ACCESS_KEY: <Secret key from CSV file downloaded from AWS>
+    DATABASE_URL: <your database url>
+    EMAIL_HOST_PASS: <Your Password>
+    EMAIL_HOST_USER: <Your Email>
+    SECRET_KEY: <Your Secret Key>
+    STRIPE_PUBLIC_KEY: <Your Stripe Public Key>
+    STRIPE_SECRET_KEY: <Your Stripe Secret Key>
+    STRIPE_WH_SECRET_fitness: <Your Stripe Webhook Secret Key >
+    USE_AWS: <True>
+    ```
+31. Now issue a **git push** and go to **Heroku** then **Activity** menu and to **View build log**.
+32. It will take a little while and when build log has finished. A link will be released with message **Deployed to Heroku**
+33. Congratulations! Click on the link to launch your deployed app.
+34. Finally to add media files, go to **S3 Bucket** and click on **Create folder**.
+35. Name this folder **media** and add the images in this folder and you are done.
+
 ## Credits
 
 ### Media
