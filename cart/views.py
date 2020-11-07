@@ -35,11 +35,12 @@ def add_cart(request, item_id):
             messages.success(request, f'{product.name} added to cart')
     elif product_type == 'excercise_plan':
         exercise = get_object_or_404(ExercisePlans, pk=item_id)
-        if item_id in cart['excercise_plans_dic'].keys():
-            cart['excercise_plans_dic'][item_id] += quantity
+        if cart['excercise_plans_dic']:
             messages.success(
                 request,
-                f'{exercise.name} exercise plan added to cart')
+                'Exercise Plan is already added in the shopping cart please \
+                    proceed to the payment or update new Exercise Plan by \
+                        deleting one from shopping cart.')
         else:
             cart['excercise_plans_dic'][item_id] = quantity
             messages.success(
