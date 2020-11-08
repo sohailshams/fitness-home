@@ -370,15 +370,6 @@ footer {
     .main-logo {
         font-size: 99% !important;
     }
-    .input-group>.custom-file, 
-    .input-group>.custom-select, 
-    .input-group>.form-control, 
-    .input-group>.form-control-plaintext {
-        min-width: 50px !important;
-        height: 25px;
-        font-size: 12px;
-        padding: 5px 5px;
-    }
     .slogan-font-size {
         font-size: 1.8rem;
     }
