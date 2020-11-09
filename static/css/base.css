@@ -385,7 +385,13 @@ footer {
         padding-left: 8px;
     }
     .thanks-message {
-    padding-left: 45px;
+        padding-left: 45px;
+    }
+    .form-control, .input-quantity {
+        min-width: 50px !important;
+        height: 25px;
+        font-size: 12px;
+        padding: 5px 5px;
     }
 }
 
