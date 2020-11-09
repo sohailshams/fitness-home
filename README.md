@@ -6,7 +6,7 @@
 
 Fitness Home is designed and developed to create online presence of a fitness center, so that the fitness community
 can purchase exercise plans, nutrition plans and merchandise online. Users can create an account and save profile information.
-Users can also make secure payments and see their order history.
+Users can also make secure payments, write reviews and see their order history.
 
 # UX
 
@@ -353,6 +353,12 @@ The reason found that was causing this problem was I did not include **default_a
 
 ## Deployment to Heroku
 
+- **[Fitness Home Live Page](https://mss-fitness-home.herokuapp.com/)**
+
+- To test card payments use Stripe test payments card number **4242 4242 4242 4242**, expiry **0424**, CVC **424** and zip any five digits.
+
+- **[Fitness Home Github Repository](https://github.com/sohailshams/fitness-home)**
+
 1. Login to **[Heroku](https://www.heroku.com/)** account.
 2. Click on **New** at the right top corner and click on **Create new app**.
 3. Choose **App name** and a **region**. Then click on **Create app**.
@@ -410,7 +416,7 @@ and click on **Attach Policy**
     SECRET_KEY: <Your Secret Key>
     STRIPE_PUBLIC_KEY: <Your Stripe Public Key>
     STRIPE_SECRET_KEY: <Your Stripe Secret Key>
-    STRIPE_WH_SECRET_fitness: <Your Stripe Webhook Secret Key >
+    STRIPE_WH_SECRET_fitness: <Your Stripe Webhook Secret Key>
     USE_AWS: <True>
     ```
 31. Now issue a **git push** and go to **Heroku** then **Activity** menu and to **View build log**.
@@ -418,6 +424,54 @@ and click on **Attach Policy**
 33. Congratulations! Click on the link to launch your deployed app.
 34. Finally to add media files, go to **S3 Bucket** and click on **Create folder**.
 35. Name this folder **media** and add the images in this folder and you are done.
+
+## Local Deployment
+
+To run **Fitness Home** locally please install following:
+- [VS Code](https://code.visualstudio.com/)
+- [GIT](https://git-scm.com/)
+- [PIP](https://pypi.org/project/pip/)
+- [Python3](https://www.python.org/downloads/)
+You also need accounts on following:
+- [Stripe](https://stripe.com/en-dk)
+- [Gmail](https://mail.google.com/) - Enable two-step authentication.
+1. Go to [Fitness Home Github Repository](https://github.com/sohailshams/fitness-home)
+2. Click on **Code** beside **Gitpod**. 
+3. A drop down menu will open then copy the link as **HTTPS**.
+4. Open **VS Code** and in terminal enter command **git clone https://github.com/sohailshams/fitness-home.git** to clone the project.
+5. It is recommended to create a **virtual environment** to prevent dependencies from being installed globally on your system.
+6. To create **virtual environment**, go to the terminal and in the project's root directory enter command **python -m venv venv**. Here **venv** is virtual environment name.
+7. Then activate the **virtual environment** with command **venv\Scripts\activate**. After that environment appears on the left side in terminal,
+ and notice the **"(venv)"** indicator that tells you that you're using a virtual environment.
+8. Now install the required dependencies with command **pip3 install -r requirements.txt**.
+9. Next in the root directory of the project where the *manage.py* file is located, create a file named env.py.
+10. Now list this file **env.py** immediately in **.gitignore** file to prevent SECRET_KEYS and Passwords from being committed to **github**.
+11. Inside **env.py** file add following settings with your values:
+    ```
+    import os
+    os.environ["DEVELOPMENT"] = "True"
+    os.environ["LOCALHOST"] = "127.0.0.1"
+    os.environ["EMAIL_HOST_PASS"] = "<Your Password>"
+    os.environ["EMAIL_HOST_USER"] = "<Your Email>"
+    os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public Key>"
+    os.environ["SECRET_KEY"] = "<Your Stripe Secret Key>"
+    os.environ["STRIPE_WH_SECRET_fitness"] = "<Your Stripe Webhook Secret Key>"
+    ```
+12. I created this project using **[Gitpod](https://www.gitpod.io/)** so I had to adjust some settings in **settings.py** 
+when I was runnng project locally. Please add following settings if needed for you in **settings.py**.
+    ```
+    if os.path.exists("env.py"):
+    import env
+
+    localhost = os.environ.get("LOCALHOST")
+    ALLOWED_HOSTS = ['mss-fitness-home.herokuapp.com', localhost]
+    ```
+13. Go to terminal and run command **python manage.py makemigrations** to create the migrations for your Django database.
+14. Then run command **python manage.py migrate** to apply the migrations to the database.
+15. Now create **Super User** with command **python manage.py createsuperuser**.
+16. Add email, password and repeat password to create **Super User**.
+17. To run project use command **python manage.py runserver**.
+18. Congratulations your project is running locally.
 
 ## Credits
 
