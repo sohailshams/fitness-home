@@ -24,7 +24,8 @@ def contact(request):
 
             try:
                 send_mail(
-                    subject,
+                    # To respond user, the user's email is passed in subject
+                    f"{subject}, Reply on <{email}>",
                     message,
                     email,
                     [settings.DEFAULT_FROM_EMAIL],
