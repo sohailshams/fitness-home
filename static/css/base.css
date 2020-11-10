@@ -387,7 +387,7 @@ footer {
     .thanks-message {
         padding-left: 45px;
     }
-    .form-control, .input-quantity {
+    .input-quantity .form-control {
         min-width: 50px !important;
         height: 25px;
         font-size: 12px;
