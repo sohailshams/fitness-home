@@ -89,4 +89,8 @@ Source: Boutique ado project
     .save-info-size {
         font-size: 70%;
     }
+    .StripeElement, #card-element {
+        height: 30px;
+        padding: 8px 12px;
+    }
 }

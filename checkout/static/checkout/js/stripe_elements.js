@@ -14,7 +14,7 @@ var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 var style = {
     base: {
-        color: '#000',
+        color: '#495057',
         fontFamily: '"Ubunto", sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
@@ -31,6 +31,20 @@ var style = {
 var card = elements.create('card', {style: style});
 // Mounted card element to checkout.html div
 card.mount('#card-element');
+
+// Source: Taken from w3 school but changed to work accordingly
+// Dynamically change the font size of card element
+function fontFunction(size) {
+  if (size.matches) { // If media query matches
+   card.update({style: {base: {fontSize: '13px'}}});
+  } else {
+    card.update({style: {base: {fontSize: '16px'}}});
+  }
+}
+
+var size = window.matchMedia("(max-width: 320px)")
+fontFunction(size) // Call listener function at run time
+size.addListener(fontFunction) // Attach listener function on state changes
 
 // Handling realtime validation errors on the card element
 card.addEventListener('change', function (event) {
