@@ -36,7 +36,7 @@ def add_cart(request, item_id):
     elif product_type == 'excercise_plan':
         exercise = get_object_or_404(ExercisePlans, pk=item_id)
         if cart['excercise_plans_dic']:
-            messages.success(
+            messages.info(
                 request,
                 'Exercise Plan is already added in the shopping cart please \
                     proceed to the payment or update new Exercise Plan by \
