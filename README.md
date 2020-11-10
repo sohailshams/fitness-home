@@ -2,6 +2,31 @@
 
 ## Full Stack Frameworks with Django Milestone Project-4
 
+## Table of Contents  
+1. [Description](#description)  
+2. [UX](#ux)  
+    - [Target Audience](#target-audience) 
+    - [Target Audience Goals](#target-audience-goals) 
+    - [Site Owner's Goals](#site-owners-goals)
+    - [Project Suitability](#project-suitability)
+    - [User Stories](#user-stories)
+3. [Design](#design)
+4. [Wireframes](#wireframes)
+5. [Database & Data Models](#database--data-models)
+6. [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Features Left to Implement](#features-left-to-implement)
+7. [Technologies Used](#technologies-used)
+8. [Testing](#testing)
+9. [Deployment](#deployment)
+    - [Deployment to Heroku](#deployment-to-heroku)
+    - [Local Deployment](#local-deployment)
+10. [Credits](#credits)
+    - [Media](#media)
+    - [Acknowledgements](#acknowledgements)
+11. [Disclaimer](#disclaimer)
+    
+
 ## Description
 
 Fitness Home is designed and developed to create online presence of a fitness center, so that the fitness community
@@ -23,7 +48,7 @@ Users can also make secure payments, write reviews and see their order history.
  - Able to purchase anonymously.
  - Able to create account, save profile information and track order history.
 
- ### Site Owner's Goals:
+ ### Site Owner's Goals
 
  Site owner's main goal is to create online presence, create brand awareness and attract more customers to 
  sell them online through a secure payment method.
@@ -351,13 +376,16 @@ created till this point. So I created checkout success page and redirected to **
 5. **Total was not counted** - I encountered with this issue of total not being counted when I add, delete or save line item.
 The reason found that was causing this problem was I did not include **default_app_config = 'checkout.apps.CheckoutConfig'** in **checkout/__init__.py**.
 
-## Deployment to Heroku
+## Deployment
+
+The deployed project and project's **github repository** can be viewed on following links. To test card payments use 
+Stripe test payments card number *4242 4242 4242 4242*, expiry *0424*, CVC *424* and zip any five digits.
 
 - **[Fitness Home Live Page](https://mss-fitness-home.herokuapp.com/)**
 
-- To test card payments use Stripe test payments card number **4242 4242 4242 4242**, expiry **0424**, CVC **424** and zip any five digits.
-
 - **[Fitness Home Github Repository](https://github.com/sohailshams/fitness-home)**
+
+### Deployment to Heroku
 
 1. Login to **[Heroku](https://www.heroku.com/)** account.
 2. Click on **New** at the right top corner and click on **Create new app**.
@@ -425,7 +453,7 @@ and click on **Attach Policy**
 34. Finally to add media files, go to **S3 Bucket** and click on **Create folder**.
 35. Name this folder **media** and add the images in this folder and you are done.
 
-## Local Deployment
+### Local Deployment
 
 To run **Fitness Home** locally please install following:
 - [VS Code](https://code.visualstudio.com/)
@@ -494,4 +522,4 @@ from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 10. [Django Docs](https://docs.djangoproject.com/en/3.1/)
 
 ## Disclaimer
-This project is for educational purposes only..
+This project is for educational purposes only.
