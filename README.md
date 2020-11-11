@@ -134,7 +134,9 @@ tablet and mobile screen size.
 
 ## Database & Data Models
 
-**Sqlite3** databse is used in the development which is pre-installed by **Django**
+- **[SQLite3](https://www.sqlite.org/index.html)** databse is used in the development which is pre-installed by **Django**.
+
+- **[PostgreSQL](https://www.postgresql.org/)** databse is used in the production.
 
 - [Fitness Home Data Models in PDF](static/models/data-models.pdf)
 
@@ -191,6 +193,7 @@ different sizes of the merchandise products will also be added in the future.
 - **JavaScript/JQuery** - is used to make the website interactive. 
 - **[Bootstrap Framework](https://getbootstrap.com/)** - Front-end framework is used to make website responsive.
 - **[Python](https://www.python.org/)** - Python is used as the back-end programming language.
+- **[pip](https://pip.pypa.io/en/stable/)** - Used to install python packages.
 - **[Django](https://www.djangoproject.com/)** - Python Web framework that encourages rapid development is used to create this project.
 - **[Django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)** - Django crispy forms are used to control the rendering behavior of Django forms.
 - **[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)** - Jinja templating language is used with Django in the HTML5 code.
@@ -204,6 +207,11 @@ different sizes of the merchandise products will also be added in the future.
 - **[HTML Formatter](https://webformatter.com/html)** - Used to format and beautify my code.
 - **[Animate On Scroll](https://michalsnik.github.io/aos/)** - Used to make website visually appealing.
 - **[AWS](https://aws.amazon.com/)** - Used to store static files.
+- **[Am I Responsive](http://ami.responsivedesign.is/#)** - Used to create a responsive image on different screens.
+- **[Gunicorn](https://gunicorn.org/)** - It is a Python Web Server Gateway Interface HTTP server used in deploying the project to Heroku. 
+- **[Psycopg2](https://pypi.org/project/psycopg2/)** - Used to setup **PostgreSQL** database.
+- **[Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)** - Used to create, configure, and manage AWS services, such as S3.
+- **[Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)** - Used to create secret key.
 
 ## Testing
 
