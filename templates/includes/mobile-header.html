@@ -1,6 +1,6 @@
 <li class="list-inline-item font-do-hyeon">
     <a class="text-blue nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
+        <div class="text-center hover-links-red">
             <div><i class="fas fa-search" aria-hidden="true"></i></div>
             <p class="my-0 mobile-font-size">Search</p>
         </div>
@@ -10,7 +10,7 @@
             <div class="input-group w-100">
                 <input class="form-control border border-blue rounded-0" type="text" name="q" placeholder="Search">
                 <div class="input-group-append">
-                    <button class="form-control form-control btn border border-blue rounded-0" type="submit">
+                    <button class="form-control form-control btn bg-light border border-blue rounded-0 hover-links-red" type="submit">
                         <span class="icon">
                             <i class="fas fa-search" aria-hidden="true"></i>
                         </span>
@@ -22,7 +22,7 @@
 </li>
 <li class="list-inline-item dropdown font-do-hyeon">
     <a class="text-blue nav-link d-block d-lg-none" href="#" id="user-option" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div class="text-center">
+        <div class="text-center hover-links-red">
             <div><i class="far fa-user" aria-hidden="true"></i></div>
             <p class="my-0 mobile-font-size">My Account</p>
         </div>
@@ -30,21 +30,21 @@
     <div class="dropdown-menu border-0 bg-light mobile-font-size" aria-labelledby="user-option">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" class="dropdown-item text-blue">Merchandise Admin</a>
-                <a href="{% url 'add_exercise' %}" class="dropdown-item text-blue">Exercise Admin</a>
-                <a href="{% url 'add_nutrition' %}" class="dropdown-item text-blue">Nutrition Admin</a>
+                <a href="{% url 'add_product' %}" class="dropdown-item text-blue hover-links-red">Merchandise Admin</a>
+                <a href="{% url 'add_exercise' %}" class="dropdown-item text-blue hover-links-red">Exercise Admin</a>
+                <a href="{% url 'add_nutrition' %}" class="dropdown-item text-blue hover-links-red">Nutrition Admin</a>
             {% endif %}
-            <a href="{% url 'profile' %}" class="dropdown-item text-blue">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item text-blue">Logout</a>
+            <a href="{% url 'profile' %}" class="dropdown-item text-blue hover-links-red">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item text-blue hover-links-red">Logout</a>
         {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item text-blue">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item text-blue">Login</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item text-blue hover-links-red">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item text-blue hover-links-red">Login</a>
         {% endif %}
     </div>
 </li>
 <li class="list-inline-item">
     <a class="{% if total %}text-primary font-weight-bold{% else %}text-blue{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
-        <div class="text-center ">
+        <div class="text-center hover-links-red">
             <div><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
             <p class="my-0 mobile-font-size">
                 {% if total %}

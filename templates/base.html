@@ -41,8 +41,8 @@
         <div class="container wrapper">
             <header class="container-fluid fixed-top bg-light">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler nav-link rounded-0" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler nav-link border-0" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="hover-links-red"><i class="fas fa-bars fa-lg"></i></span>
                     </button>
                     <ul class="list-inline pt-3">
                         {% include 'includes/mobile-header.html' %}
@@ -58,20 +58,20 @@
                         <div class="col-12 col-lg-8 pb-1 py-lg-0 menu-items">
                             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 list-inline">
                                 <li class="nav-item ml-1">
-                                    <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item" href="{% url 'products' %}">Merchandise</a>
+                                    <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item hover-links-red" href="{% url 'products' %}">Merchandise</a>
                                 </li>
                                 <li class="nav-item ml-1">
-                                    <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item" href="{% url 'exercises' %}">Fitness</a>
+                                    <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item hover-links-red" href="{% url 'exercises' %}">Fitness</a>
                                 </li>
                                 <li class="nav-item ml-1">
-                                    <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item" href="{% url 'nutritions' %}"><p>Nutrition</p></a>
+                                    <a class="font-do-hyeon nav-link text-blue mt-lg-3 list-inline-item hover-links-red" href="{% url 'nutritions' %}"><p>Nutrition</p></a>
                                 </li>
                                 <li class="nav-item ml-1 d-none d-lg-block">
                                     <form method="GET" action="{% url 'products' %}" class="font-do-hyeon nav-link text-blue mt-2 list-inline-item">
                                         <div class="input-group">
                                             <input class="form-control border rounded-0 border-blue" type="text" name="q" placeholder="Search" />
                                             <div class="input-group-append">
-                                                <button class="form-control btn bg-light border text-blue rounded-0 border-blue" type="submit">
+                                                <button class="form-control btn bg-light border text-blue rounded-0 border-blue hover-links-red" type="submit">
                                                     <span class="icon">
                                                         <i class="fas fa-search" aria-hidden="true"></i>
                                                     </span>
@@ -87,28 +87,28 @@
                         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                             <li class="list-inline-item dropdown">
                                 <a class="nav-link text-blue" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <div class="text-center">
+                                    <div class="text-center hover-links-red">
                                         <div><i class="far fa-user fa-lg" aria-hidden="true"></i></div>
                                         <p class="my-0 font-do-hyeon">My Account</p>
                                     </div>
                                 </a>
                                 <div class="dropdown-menu border-0 font-do-hyeon" aria-labelledby="user-options">
                                     {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item text-blue">Merchandise Admin</a>
-                                    <a href="{% url 'add_exercise' %}" class="dropdown-item text-blue">Exercise Admin</a>
-                                    <a href="{% url 'add_nutrition' %}" class="dropdown-item text-blue">Nutrition Admin</a>
+                                    <a href="{% url 'add_product' %}" class="dropdown-item text-blue hover-links-red">Merchandise Admin</a>
+                                    <a href="{% url 'add_exercise' %}" class="dropdown-item text-blue hover-links-red">Exercise Admin</a>
+                                    <a href="{% url 'add_nutrition' %}" class="dropdown-item text-blue hover-links-red">Nutrition Admin</a>
                                     {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item text-blue">My Profile</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item text-blue">Logout</a>
+                                    <a href="{% url 'profile' %}" class="dropdown-item text-blue hover-links-red">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item text-blue hover-links-red">Logout</a>
                                     {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item text-blue">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item text-blue">Login</a>
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item text-blue hover-links-red">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item text-blue hover-links-red">Login</a>
                                     {% endif %}
                                 </div>
                             </li>
                             <li class="list-inline-item">
                                 <a class="{% if total %}text-info font-weight-bold{% else %}text-blue{% endif %} nav-link" href="{% url 'view_cart' %}">
-                                    <div class="text-center">
+                                    <div class="text-center hover-links-red">
                                         <div><i class="fa fa-shopping-basket fa-lg" aria-hidden="true"></i></div>
                                         <p class="my-0">
                                             {% if total %} €{{ total|floatformat:2 }} {% else %} €0.00 {% endif %}

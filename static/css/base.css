@@ -67,6 +67,10 @@ body {
     background-color: #e84610 !important;
 }
 
+.hover-links-red:hover {
+    color: #e84610 !important;
+}
+
 .font-do-hyeon {
     font-family: 'Do Hyeon', sans-serif
 }
@@ -76,12 +80,10 @@ body {
 }
 
 .text-blue {
-    /*color: #12375a !important;*/
-    color:  #12375a !important;;
+    color:  #12375a !important;
 }
 
 .bg-blue {
-    /*background-color: #12375a !important;*/
     background-color: #12375a !important;
 }
 
@@ -90,7 +92,6 @@ body {
 }
 
 .border-blue {
-    /*border: 1px solid black !important;*/
     border: 1px solid #12375a !important;
 }
 
@@ -107,6 +108,7 @@ body {
     width: 180px;
     background-color: #e84610;
     border-radius: 0; 
+    cursor: no-drop;
 }
 
 .reviews-btn {
