@@ -2,6 +2,8 @@
 
 ## Full Stack Frameworks with Django Milestone Project-4
 
+![Fitness Home](media/responsive-image.jpg)
+
 ## Table of Contents  
 1. [Description](#description)  
 2. [UX](#ux)  
