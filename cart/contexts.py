@@ -45,8 +45,8 @@ def cart_contents(request):
         elif product_type == 'excercise_plans_dic':
             for item_id, quantity in dic.items():
                 exercise = get_object_or_404(ExercisePlans, pk=item_id)
-                total_exercise += quantity * exercise.price
-                exercise_count += quantity
+                total_exercise = quantity * exercise.price
+                exercise_count = quantity
                 exercise_price = quantity * exercise.price
                 cart_items['exercise_items'].append({
                     'item_id': item_id,
