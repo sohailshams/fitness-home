@@ -49,7 +49,7 @@
             <div class="my-3">
                 <form action="{% url 'add_cart' exercise.id %}" method="POST">
                     {% csrf_token %}
-                    <button class="btn bg-blue text-white rounded-0 mt-3 hover-red" type="submit" name="quantity" value="1">
+                    <button class="btn bg-blue text-white rounded-0 mt-3 hover-red exercise-add" type="submit" name="quantity" value="1">
                         <span class="icon">
                             <i class="fas fa-plus-circle"></i>
                         </span>
@@ -81,4 +81,19 @@
         {% endfor %}
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    // A function to disable the add button if exercise plan is already in the shopping cart
+    // Kevin from tutor support helped to write this function
+    let toasts = document.getElementsByClassName("bg-info");
+    if (toasts.length > 0) {
+    let buttons = document.getElementsByClassName("exercise-add");
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = true;
+        }
+    }    
+</script>
 {% endblock %}
