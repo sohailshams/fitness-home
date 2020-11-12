@@ -158,6 +158,8 @@ a super user.
 - **Logout/Sign Out** - Logout allows a user to end the session but user has to confirm it by clicking on **Sign Out** which 
 will bring the user to the home page.
 - **Add to Cart** - User can add the merchandise, exercise plan or nutrition plan to the shopping cart with **Add to Cart** button.
+- **Disable Add to Cart Button** - If a user has already added an exercise plan in the shopping cart and try to add another exercise plan.
+Then user will see an **info toast message** and the **Add to cart** buttons will be disabled.
 - **Shopping Cart Adjustment** - User can update the quantity of merchandise or delete merchandise, exercise plan or nutrition plan
 from the shopping cart.
 - **Checkout** - User can checkout and pay by filling out the order form.
@@ -385,6 +387,17 @@ created till this point. So I created checkout success page and redirected to **
 **Chris Zielinski** who helped me to identify this issue.  
 5. **Total was not counted** - I encountered with this issue of total not being counted when I add, delete or save line item.
 The reason found that was causing this problem was I did not include **default_app_config = 'checkout.apps.CheckoutConfig'** in **checkout/__init__.py**.
+6. **User Sign UP Error** - To avoid the line too long error in **settings.py** in **AUTH_PASSWORD_VALIDATORS** section I added 
+a back slash (\) and moved the rest of the line to next page. It removed the line too long error but during user registration
+a new error occured. Later I found out the solution which is, instead of back slash I should use quotation makrks ('') to remove line too long error.
+7. **Exercise Plans** - The way **add_cart** function was written initially a user could add all the exercise plan in the 
+shopping cart whereas a user need only one exercise plan. Thus I updated **add_cart** function and also 
+contexts.py-**product_type == 'excercise_plans_dic'** section. Now user can add only on exercise plan in the shopping cart.
+8. **Disable Add to Cart Button** - Initially I did not had a function to disable the **Add to Cart** buttons in **Exercise Plans** page.
+I was just showing a toast message to the user if an exercise plan is already in the shopping cart and user try to 
+add another exercise plan. But then **Stephen Seagrave** suggested that I should also disable the **Add to Cart** buttons, as 
+it will enhance the user experience. Thus I added button disable function, now user will see a **info toast message** 
+and the **Add to cart** buttons will be disabled if user clicks on **Add to Cart** button.
 
 ## Deployment
 
@@ -530,6 +543,7 @@ when I was runnng project locally. Please add following settings if needed for y
 9. Used favicon Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> 
 from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 10. [Django Docs](https://docs.djangoproject.com/en/3.1/)
+11. Thanks to **Stephen Seagrave** for his valuable feedback.
 
 ## Disclaimer
 This project is for educational purposes only.
