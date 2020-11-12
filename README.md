@@ -176,6 +176,7 @@ can add new items, update existing items and delete the items from the website.
 - **Deletion Confirmation for super user**- If super user click on delete button, then a modal will pop up to confirm if super user is sure to delete the product/plan or not.
 - **Contact** - If user need any information, user has the possibility to contact the store owner by filling contact us form.
 - **Thank You** - If a user sends an enquiry, a thank you message will be shown to the user afterwards.
+- When a user clicks on social media links, user will be redirected to my social media profiles except *youtube*.
 
 ### Features Left to Implement
 
@@ -398,6 +399,10 @@ I was just showing a toast message to the user if an exercise plan is already in
 add another exercise plan. But then **Stephen Seagrave** suggested that I should also disable the **Add to Cart** buttons, as 
 it will enhance the user experience. Thus I added button disable function, now user will see a **info toast message** 
 and the **Add to cart** buttons will be disabled if user clicks on **Add to Cart** button.
+9. **JS/JQuery** which is related to the **Stripe** is kept in a separate file. But there is also some **JS/JQuery** 
+which is specific to these pages *shopping_cart.html*, *exercise_plans.html* and *products.html*, a separate file is not created 
+for it and is kept in these pages. Further the amout of **JS/JQuery** in *base.html* is not much that is why it is also 
+kept in *base.html* instead in a separate file.
 
 ## Deployment
 
