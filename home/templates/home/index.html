@@ -2,10 +2,10 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+<!--Pushes the content down-->
+<div class="container header-container">
     <div class="row">
-        <div class="col">
-        </div>
+        <div class="col"></div>
     </div>
 </div> 
 {% endblock %}
@@ -37,6 +37,7 @@
 {% block postloadjs %}
 {{ block.super }}
 <script>
+// Mekes slogan to blink
  setInterval(function() {
    $('.blink').fadeOut('slow', function () {
         $(this).fadeIn('slow', function () {

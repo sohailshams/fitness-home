@@ -1,4 +1,5 @@
 <li class="list-inline-item font-do-hyeon">
+    <!--Search bar-->
     <a class="text-blue nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center hover-links-red">
             <div><i class="fas fa-search" aria-hidden="true"></i></div>
@@ -20,6 +21,7 @@
         </form>
     </div>
 </li>
+<!--My Account and shopping cart-->
 <li class="list-inline-item dropdown font-do-hyeon">
     <a class="text-blue nav-link d-block d-lg-none" href="#" id="user-option" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center hover-links-red">
@@ -28,7 +30,9 @@
         </div>
     </a>
     <div class="dropdown-menu border-0 bg-light mobile-font-size" aria-labelledby="user-option">
+        <!--If statement to check if user is authenticated-->
         {% if request.user.is_authenticated %}
+            <!--If statement to render admin links to store owner-->
             {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item text-blue hover-links-red">Merchandise Admin</a>
                 <a href="{% url 'add_exercise' %}" class="dropdown-item text-blue hover-links-red">Exercise Admin</a>
