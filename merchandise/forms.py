@@ -5,9 +5,17 @@ from .models import Product, Category
 class ProductForm(forms.ModelForm):
 
     class Meta:
+        """
+        Telling django it is associated with Product model
+        """
         model = Product
+        """Render all fields"""
         fields = '__all__'
 
+    """
+    Override the default init method which allows the form
+    to be customized
+    """
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()

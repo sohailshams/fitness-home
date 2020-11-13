@@ -2,10 +2,12 @@
 {% load static %} 
 
 {% block extra_css %}
+<!--Link to the css file in profile app-->
 <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}" />
 {% endblock %} 
 
 {% block page_header %}
+<!--Pushes the content down-->
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -14,6 +16,7 @@
 {% endblock %} 
 
 {% block content %}
+<!--Hides the background image and makes background white-->
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
@@ -25,11 +28,13 @@
 </div>
 <div class="row">
     <div class="col-12 col-sm-12 col-md-5 text-blue pl-5 pr-5 pr-sm-0 my-profile-user">
+        <!--User info section-->
         <div class="card profile-order-card">
             <h5 class="card-header font-weight-bold"><i class="far fa-user" aria-hidden="true"></i> User Info</h5>
             <div class="card-body">
                 <p class="card-text user-info"><strong>User Name:</strong> {{ user.username }}</p>
                 <p class="card-text user-info"><strong>Email:</strong> {{ user.email }}</p>
+                <!--If statement to show My Orders and Add Review buttons-->
                 {% if orders %}
                 <a href="{% url 'order_history' %}" class="btn profile-order-btn border rounded-0 bg-blue text-white hover-red px-2 profile-btn"><i class="fa fa-shopping-basket" aria-hidden="true"></i> My Orders</a>
                 <a href="{% url 'add_review' %}" class="btn profile-order-btn border rounded-0 bg-blue text-white hover-red px-2 profile-btn"><i class="fas fa-plus-circle" aria-hidden="true"></i> Add Review</a>

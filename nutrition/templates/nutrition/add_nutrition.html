@@ -2,6 +2,7 @@
 {% load static %} 
 
 {% block page_header %}
+<!--Pushes the content down-->
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -10,6 +11,7 @@
 {% endblock %} 
 
 {% block content %}
+<!--Hides the background image and makes background white-->
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
@@ -21,6 +23,7 @@
     </div>
     <div class="row">
         <div class="col-12">
+            <!--Form to edit a nutrition plan-->
             <form method="POST" action="{% url 'add_nutrition' %}" class="form mb-2 text-blue product-add-form management-form" enctype="multipart/form-data">
                 {% csrf_token %} {{ form | crispy }}
                 <div class="mb-3">

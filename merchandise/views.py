@@ -7,8 +7,9 @@ from django.contrib.auth.decorators import login_required
 from .models import Product
 from .forms import ProductForm
 
+"""Code taken from Boutique Ado project and adjusted accordingly"""
 
-# Create your views here.
+
 def all_products(request):
     """ A view to show all products, seacch queries and sorting """
 

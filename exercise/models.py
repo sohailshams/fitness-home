@@ -1,9 +1,8 @@
 from django.db import models
 
-# Create your models here.
-
 
 class ExercisePlans(models.Model):
+    """Model used for exercise plans"""
 
     class Meta:
         verbose_name_plural = 'Exercise Plans'

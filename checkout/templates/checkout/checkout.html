@@ -2,8 +2,12 @@
 {% load static %} 
 
 {% block extra_css %}
+<!--Link to the CSS file in checkout app-->
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" />
-{% endblock %} {% block page_header %}
+{% endblock %} 
+
+{% block page_header %}
+<!--Pushes the content down-->
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -12,6 +16,7 @@
 {% endblock %} 
 
 {% block content %}
+<!--Hides the background image and makes background white-->
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
@@ -23,6 +28,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-6 order-2 order-md-1">
             <p class="font-ubunto order-form-text text-blue">Please fill out the form to complete the order</p>
+            <!--Checkout form-->
             <form action="{% url 'checkout' %}" method="POST" id="order-payment-form">
                 {% csrf_token %}
                 <fieldset class="pr-3 mb-3">
@@ -86,10 +92,12 @@
                         <p class="mt-1">Subtotal</p>
                     </div>
                 </div>
+                <!--For loop to render products from shopping cart-->
                 {% for item in cart_items.merchandise_items %}
                 <div class="row my-1">
                     <div class="col-3 mb-1">
                         <a href="{% url 'product_detail' item.product.id %}">
+                            <!--If statement to render product image-->
                             {% if item.product.image %}
                             <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}" />
                             {% else %}
@@ -105,9 +113,12 @@
                         <p>€{{ item.product_price }}</p>
                     </div>
                 </div>
-                {% endfor %} {% for item in cart_items.exercise_items %}
+                {% endfor %} 
+                <!--For loop to render exercise plan from shopping cart-->
+                {% for item in cart_items.exercise_items %}
                 <div class="row my-1">
                     <div class="col-3 mb-1">
+                        <!--If statement to render exercise plan image-->
                         {% if item.exercise.image %}
                         <img class="w-100" src="{{ item.exercise.image.url }}" alt="{{ item.exercise.name }}" />
                         {% else %}
@@ -122,9 +133,12 @@
                         <p>€{{ item.exercise_price }}</p>
                     </div>
                 </div>
-                {% endfor %} {% for item in cart_items.nutrition_items %}
+                {% endfor %} 
+                <!--For loop to render nutrition plan from shopping cart-->
+                {% for item in cart_items.nutrition_items %}
                 <div class="row my-1">
                     <div class="col-3 mb-1">
+                        <!--If statement to render nutrition plan image-->
                         {% if item.nutrition.image %}
                         <img class="w-100" src="{{ item.nutrition.image.url }}" alt="{{ item.nutrition.name }}" />
                         {% else %}
@@ -149,6 +163,7 @@
         </div>
     </div>
 </div>
+<!--Makes the backgroung dark grey and a spinner is shown-->
 <div id="loader-overlay">
     <h1 class="icon-spinner display-4">
         <span class="icon">

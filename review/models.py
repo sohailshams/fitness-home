@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Review(models.Model):
+    """Review Model used to add reviews"""
 
     user = models.ForeignKey(User, on_delete=models.CASCADE,
                              null=True, blank=True,

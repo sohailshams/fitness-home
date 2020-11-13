@@ -4,8 +4,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import ExerciseForm
 
-# Create your views here.
-
 
 def exercise_plans(request):
     """ A view to show exercise plans """

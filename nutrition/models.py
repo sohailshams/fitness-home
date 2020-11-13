@@ -4,6 +4,7 @@ from django.db import models
 
 
 class NutritionPlans(models.Model):
+    """Model used for nutrition plans"""
 
     class Meta:
         verbose_name_plural = 'Nutrition Plans'

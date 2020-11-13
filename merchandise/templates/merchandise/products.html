@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block page_header %}
+<!--Pushes the content down-->
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -10,10 +11,12 @@
 {% endblock %} 
 
 {% block content %}
+<!--Hides the background image and makes background white-->
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center">
+            <!--If statement to render Fitness & Nutrition button when is performed -->
             {% if 'q' in request.GET %}
                 <div class="text-blue font-weight-bold"><p>Please take a look at <a class="text-red" href="{% url 'exercises' %}">Fitness</a>  or 
                 <a class="text-red" href="{% url 'nutritions' %}">Nutrition</a> Plans</p></div>
@@ -23,6 +26,7 @@
         </div>
     </div>
     <div class="row">
+        <!--Categories-->
         <div class="col-12 col-sm-6 d-flex md-justify-content-end">
             <div class="my-3 ml-auto category-btn">
                 <a href="{% url 'products' %}?category=mens_wear" class="font-do-hyeon text-blue md-p-2 mx-2 text-decoration-none category-btn">
@@ -36,7 +40,7 @@
                 </a>
             </div>
         </div>
-        
+            <!--Sorting-->
             <div class="col-12 col-sm-6">   
                 <div class="w-50 my-3">
                     <select id="sort-select" class="custom-select custom-select-sm rounded-0 border border-{% if sorting != 'None_None' %}info{% else %}black{% endif %}">
@@ -50,10 +54,14 @@
             </div>       
     </div>
     <div class="row">
+        <!--For loop to render products-->
         {% for product in products %}
         <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
+            <!--Bootstrap card used to display product-->
             <div class="card h-100 border rounded-0">
+                <!--Added animate on scroll effect-->
                 <div data-aos="fade-up" data-aos-duration="3000">
+                    <!--If statement to render product image-->
                     {% if product.image %}
                     <a href="{% url 'product_detail' product.id %}">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}" />
@@ -62,14 +70,14 @@
                     <a href="{% url 'product_detail' product.id %}">
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
                     </a>
-                    {% endif %}
-                    
+                    {% endif %}             
                     <div class="card-body text-left pb-0 mb-0">
                         <p class="text-blue">{{ product.name }}</p>
                     </div>
                 </div>
                 <div class="row card-body py-0 my-0">
                 <div class="col">
+                    <!--If statement to render Edit & Delete buttons only for superuser-->
                     {% if request.user.is_superuser %}
                         <small class="">
                         <a class="text-blue text-decoration-none" href="{% url 'edit_product' product.id %}">Edit</a> <span class="text-blue">|</span> 
@@ -115,35 +123,29 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<!-- JS/JQ to make select sorting functional -->
+<!-- JS/JQ to make select sorting functional source Boutique Ado Project-->
 <script type="text/javascript">
         $('#sort-select').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
-
             var selectedVal = selector.val();
             if(selectedVal != "reset"){
                 var sort = selectedVal.split("_")[0];
                 var direction = selectedVal.split("_")[1];
-
                 currentUrl.searchParams.set("sort", sort);
                 currentUrl.searchParams.set("direction", direction);
-
                 window.location.replace(currentUrl);
             } else {
                 currentUrl.searchParams.delete("sort");
                 currentUrl.searchParams.delete("direction");
-
                 window.location.replace(currentUrl);
             }
         })
         
-// JS for bottom to top button
+// JS for bottom to top button source w3 school
 var buttonTop = document.getElementById("btn-top");
-
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     buttonTop.style.display = "block";

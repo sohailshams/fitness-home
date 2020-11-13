@@ -4,8 +4,6 @@ from merchandise.models import Product
 from exercise.models import ExercisePlans
 from nutrition.models import NutritionPlans
 
-# Create your views here.
-
 
 def view_cart(request):
     """ A view that renders the shopping cart page"""

@@ -2,10 +2,12 @@
 {% load static %} 
 
 {% block extra_css %}
+<!--Link to the css file in profile app-->
 <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}" />
 {% endblock %} 
 
 {% block page_header %}
+<!--Pushes the content down-->
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -14,6 +16,7 @@
 {% endblock %} 
 
 {% block content %}
+<!--Hides the background image and makes background white-->
 <div class="overlay"></div>
 <div class="container" id="order_history">
     <div class="row">
@@ -36,6 +39,7 @@
             <hr class="bg-light"/>
         </div>
     </div>
+    <!--For loop to loop through orders to render informarion-->
     {% for order in orders %}
     <div class="row text-center">
         <div class="col">
@@ -51,10 +55,12 @@
                         <p class="mt-1">Subtotal</p>
                     </div>
                 </div>
+                <!--For loop to loop through product line item to render merchadise-products-->
                 {% for item in order.productlineitem_set.all %}
                 <div class="row my-1">
                     <div class="col-3 mb-1">
                         <a href="{% url 'product_detail' item.product.id %}">
+                            <!--If statement to check if product has image-->
                             {% if item.product.image %}
                             <img class="order-history-image" src="{{ item.product.image.url }}" alt="{{ product.name }}" />
                             {% else %}
@@ -72,9 +78,12 @@
                         <p>€{{ item.product.price }}</p>
                     </div>
                 </div>
-                {% endfor %} {% for item in order.exerciselineitem_set.all %}
+                {% endfor %} 
+                <!--For loop to loop through exercise line item to render fitness-exercise plans-->
+                {% for item in order.exerciselineitem_set.all %}
                 <div class="row my-1">
                     <div class="col-3 mb-1">
+                        <!--If statement to check if product has image-->
                         {% if item.product.image %}
                         <img class="order-history-image" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />
                         {% else %}
@@ -90,9 +99,12 @@
                         <p>€{{ item.product.price }}</p>
                     </div>
                 </div>
-                {% endfor %} {% for item in order.nutritionlineitem_set.all %}
+                {% endfor %} 
+                <!--For loop to loop through nutrition line item to render nutrition-nutrition plans-->
+                {% for item in order.nutritionlineitem_set.all %}
                 <div class="row my-1">
                     <div class="col-3 mb-1">
+                        <!--If statement to check if product has image-->
                         {% if item.product.image %}
                         <img class="order-history-image" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />
                         {% else %}
