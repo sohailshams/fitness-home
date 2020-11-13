@@ -112,17 +112,19 @@ This project is suitable to make purchases online;
 The color scheme of the website is kept fairly simple to make it attractive and appealing for the users. 
 - Dark blue color **#12375a** is used for headings, text and button background in the website.
 - Light grey color **#f8f9fa** is used as a background color of navbar and footer to make navigation links and buttons prominenet. 
-- White color **fafafa** is used as a background color of the rest of the page so that products and the information can be displayed clearly.
+- White color **#fafafa** is used as a background color of the rest of the page so that products and the information can be displayed clearly.
 - Red color **#e84610** is used in the breadcrum on landing page, in the delete button and in hover effect.    
 
 #### Animation
 
-- Animate in scroll library is also used you give nice effect on merchandise, exercise plans and nutrition plans.
+- Animate in scroll library is also used to give nice effect on merchandise, exercise plans and nutrition plans.
 
 #### Hover Effect
 
 - Background color changes to red color **#e84610** when hover over the buttons.
+- The color of the nav links and social media links also changes to red color **#e84610** when hovering over them.
 - Cursor also changes to hand pointer when hover over buttons.
+- Hovering over the free membership breadcrum on landing page, cursor changes to **no-drop**.
 
 ## Wireframes
 
@@ -144,17 +146,19 @@ tablet and mobile screen size.
 ### Existing Features
 
 - **Navbar** - Navbar is fixed at the top all the time so user can easily navigate through the website. Logo is fixed 
-at the top left corner. Navbar also contains links to the merchandise, exercise plans and nutrition plans as well as search bar, 
-my account and shopping cart. On screen size less than 992 px navbar design changes as it appears a burger button on the top 
-left corner which contians the logo fitness home, merchandise, exercise plans and nutrition plans. Search bar input field will
+at the top left corner. Navbar also contains links, **Merchandise**, **Fitness** and **Nutrition** as well as search bar, 
+**My Account** and **Shopping Cart**. On screen size less than 992 px navbar design changes as it appears a burger button on the top 
+left corner which contians the logo **Fitness Home**, **Merchandise**, **Fitness** and **Nutrition** links. Search bar input field will
 disappear and rest will stay the same. By clicking on search bar the search bar input will appear at the bottom of the navbar.
+On large screens a gap appears between **Search bar** and **My Account**, this is by design.
 - **Log In/Sign Up** - User can easily log in if already have an account to access the extra features otherwise user has the
 option to create an accout. User will get an email to verify the account when an account is created on fitness home. User can 
 can also recover an account if user has forgotten the password.
 - **Admin** - For website management the store owner will have extra links in my account dropdown when owner is logged in as 
 a super user.
 - **Customer Reviews** - When a user land on the home page, user can read the customer reviews by clicking on **Customer Reviews** button.
-- **Search** - User can search for merchandise in the database either way, without logging in or after logging in the website.
+- **Search** - User can search for merchandise in the database either way, without logging in or after logging in the website. **Fitness**
+and **Nutrition** links will also appear when user performs search.
 - **Logout/Sign Out** - Logout allows a user to end the session but user has to confirm it by clicking on **Sign Out** which 
 will bring the user to the home page.
 - **Add to Cart** - User can add the merchandise, exercise plan or nutrition plan to the shopping cart with **Add to Cart** button.
@@ -181,9 +185,8 @@ can add new items, update existing items and delete the items from the website.
 ### Features Left to Implement
 
 - **Search** - At the moment search is performed only on the merchandise-product because the exercise plans and nutrition plans
-are less in number. Thus as exercise plans and nutrition plans will grow in future, the search functionality will also be added in these sections.
-- **Size** - Right now merchandise on sale has only one size. Thus in future different size will be added and also the 
-functionality for user to select different size will also be added in the website.
+are less in number. But for good user experience, when user performs seach **Fitness** and **Nutrition** links appear.
+Thus as exercise plans and nutrition plans will grow in future, the search functionality will also be added in these sections.
 - **Social Media Log In** - Log In through social media functionality will also be added in the future.
 - **Coaching Sessions** -  A system to book session with the coach/trainer will also be added in future.
 - **Merchandise Size** - At the moment the merchandise products have only one-size available. The option to purchase 
@@ -192,7 +195,7 @@ different sizes of the merchandise products will also be added in the future.
 ## Technologies Used
 
 - **HTML5** - HTML5 is used to create the the structure of the website.
-- **CSS3** - CSS3 is used for custome styling the HTML5 elements. 
+- **CSS3** - CSS3 is used for custom styling the HTML5 elements. 
 - **JavaScript/JQuery** - is used to make the website interactive. 
 - **[Bootstrap Framework](https://getbootstrap.com/)** - Front-end framework is used to make website responsive.
 - **[Python](https://www.python.org/)** - Python is used as the back-end programming language.
@@ -215,11 +218,12 @@ different sizes of the merchandise products will also be added in the future.
 - **[Psycopg2](https://pypi.org/project/psycopg2/)** - Used to setup **PostgreSQL** database.
 - **[Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)** - Used to create, configure, and manage AWS services, such as S3.
 - **[Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)** - Used to create secret key.
+- **[Temp Mail](https://temp-mail.org/en/)** - Used to get temporary mail address to test login functionality.
 
 ## Testing
 
-Google developers tool has been used form the  beginning to see the the result after adding a feature or after making
-any changes, how do they looks like on different screen sizes. Further I used **print statement** to debug the issues.
+Google developers tool has been used from the  beginning to see the the result after adding a feature or after making changes, how do they look
+like on different screen sizes. Further I used **print statement** to debug the issues.
 I created my own account and tested all the functions to make sure they work properly. In addition, I aslo asked my family and
 friends to test the project and give their feedback.
 
@@ -237,16 +241,16 @@ User stories from the UX section were tested to see if they all work as intended
 1. Go to the **Home** Page.
 2. Log In as a **super user** and click on **My Account**, a dropdown will open.
 3. Go to **Merchandise Admin**, **Exercise Admin** or **Nutrition Admin**.
-4. Fill out the relevant form and click on **Add**
+4. Fill out the relevant form and click on **Add**.
 5. Item will be added in the store.
 - *As a store owner, I want to update existing products/services in the store.*
 1. Go to the **Home** Page and log in as a **super user**.
-2. Go to **Merchandise, **Exercise** or **Nutrition**.
+2. Go to **Merchandise**, **Exercise** or **Nutrition**.
 3. Under each product/service **Edit** button will show up.
 4. Click on **Edit** button, make changes and click on **Update** button to make updates.
 - *As a store owner, I want to delete a product/service from the store.*
 1. Go to the **Home** Page and log in as a **super user**.
-2. Go to **Merchandise, **Exercise** or **Nutrition**.
+2. Go to **Merchandise**, **Exercise** or **Nutrition**.
 3. Under each product/service **Delete** button will show up.
 4. Click on **Delete** button, a modal will appear to confirm the deletion.
 5. Click on **Yes**, item will be deleted.
@@ -256,22 +260,23 @@ User stories from the UX section were tested to see if they all work as intended
 - *As a user, I expect the website is easy to navigate from one page to another page.*
 1. Go to the **Home** Page.
 2. Navbar stays at the top all the time and contains the main navigation links like **Merchandise**, **Exercise** and **Nutrition**
-as well as a search bar **My Account** button and **Shopping Cart**.
-3. **Home** button is also added in different placed in the website. Thus user can easily navigate through the website.
+as well as a **Search bar**, **My Account** button and **Shopping Cart**.
+3. **Home** button is also added in different placed in the website to bring user back to home page. Thus user can easily 
+navigate through the website.
 - *As a user, I expect the website to be responsive so I can use it form any device for example mobile, tablet or laptop.*
 1. Go to the **Home** right click and go to **inspect**.
 2. Choose mobile, tablet or desktop screen size you want to test the page responsiveness.
-- * As a user, I want to be able to search the items in the store.*
+- *As a user, I want to be able to search the items in the store.*
 1. Go to the **Search input box** in the navbar.
 2. Add any search key word and click on search icon.
 - *As a user, I want to be able to see the detailed information about the products and services.*
 1. Go to the **Home** Page.
 2. For **Merchandise** item's detail, go to **Merchandise** and click on **Detials** button.
 3. A new window will open which contains the item detail.
-4. For **Exercise Plns** detail, click on **Exercise**.
-5. A new window will open which contains the **Exercise Plns** and their detail.
-4. For **Nutrition Plns** detail, click on **Nutrition**.
-5. A new window will open which contains the **Nutrition Plns** and their detail.
+4. For **Exercise Plans** detail, click on **Exercise**.
+5. A new window will open which contains the **Exercise Plans** and their detail.
+4. For **Nutrition Plans** detail, click on **Nutrition**.
+5. A new window will open which contains the **Nutrition Plans** and their detail.
 - *As a user, I want to be able to create an account.*
 1. Go to the **Home** Page and click on **My Account**.
 2. From the dropdown select **Register**.
@@ -283,11 +288,11 @@ as well as a search bar **My Account** button and **Shopping Cart**.
 2. To add **Merchandise** items , go to **Merchandise** and click on **Detials** button.
 3. A new window will open which contains the item detail and **Add to Cart** button.
 4. Click on **Add to Cart** button to add item in the **Shopping Cart**.
-5. To add **Exercise Plns**, click on **Exercise**.
-6. A new window will open which contains the **Exercise Plns**.
+5. To add **Exercise Plans**, click on **Exercise**.
+6. A new window will open which contains the **Exercise Plans**.
 7. Click on **Add to Cart** button to add the **Exercise Plan** in the **Shopping Cart**.
-8. To add **Nutrition Plns**, click on **Nutrition**.
-9. A new window will open which contains the **Nutrition Plns**.
+8. To add **Nutrition Plans**, click on **Nutrition**.
+9. A new window will open which contains the **Nutrition Plans**.
 10. Click on **Add to Cart** button to add the **Nutrition Plan** in the **Shopping Cart**.
 11. To adjust the **Shopping Cart**, click on the **Shopping Cart**.
 12. A new window will open which contain the **Shopping Cart** items.
@@ -338,7 +343,7 @@ as well as a search bar **My Account** button and **Shopping Cart**.
 3. If user has already purchased something then in **User Info** section **Add Review** button will appear.
 4. Click on **Add Review** button, a new window will open which contains **Add Review** form.
 5. Fill in the form and click **Add** button.
-- *14. As a user, I want to be able edit or delete my review.*
+- *As a user, I want to be able edit or delete my review.*
 1. Go to the **Home** page and click on **Customer Reviews**.
 2. A new window will open which contains all the reviews.
 3. **Edit** and **Delete** buttons will appear under your added review.
@@ -369,13 +374,13 @@ The code has been validated by using;
 ### Interesting Bugs / Issue
 
 1. **Modal was not working properly** - I added a modal to make sure that super user really wants to delete the produsts / services, 
-it's not just accessdently **Delete** button is pressed. But I encountered a problem that when I was deleting an item, an other item
+it's not just accessdently **Delete** button got clicked. But I encountered a problem that when I was deleting an item, an other item
 was deleted from the store even though I was using {{ item.id }} as an id and data-target. Some how the it was not working with 
 numbers so with the help of tutor support, a solution was found. Used {{ item.sku }} as an id and data-target and it solved 
 the issue.
 2. **Modal stopped working** - To delete products / services from store super user has to confirm the deletion, as by clicking 
 on **Delete** button a modal pops up but I realized that this modal stopped working. I found out later that it happened after 
-I **added animate on scroll**. To over come this issue I excluded the **Delete** button from **AOS** div and everything start working fine. 
+I **added animate on scroll** feature. To over come this issue I excluded the **Delete** button from **AOS** div and everything start working fine. 
 3. **Image was not showing up** - If a product / service does not have an image associated with it, then a no image shall 
 show up but it was not happening. I made sure that media_url is added in the settings.py and urls.py but I was not getting the desired output. 
 Later I found out that I forgot to add noimage.png in the media folder that is why there was no image to show if an item 
@@ -383,14 +388,16 @@ did not have an image. So I added noimage.png in the media folder and it solved 
 4. **Local variable 'intent' referenced before assignment** - When I completed checkout/views.py and created an order I start
 getting this error. The initial thought was that it is happening because the **form is not valid** and it is triggering the else block.
 But I tested this with print statement and I could see the **intent** was created in the terminal. The issue was
-actually I was not returning anything if the **form was valid**. I was missing the redirect to **checkout_success** which I had not
-created till this point. So I created checkout success page and redirected to **checkout_success** and got rid of this error. Credit to
+actually I was not returning anything if the **form was valid**. I was missing the redirect to **checkout_success page** which I had not
+created till this point. So I created checkout success page and redirected to **checkout_success page** and got rid of this error. Credit to
 **Chris Zielinski** who helped me to identify this issue.  
 5. **Total was not counted** - I encountered with this issue of total not being counted when I add, delete or save line item.
-The reason found that was causing this problem was I did not include **default_app_config = 'checkout.apps.CheckoutConfig'** in **checkout/__init__.py**.
+The reason found, that was causing this problem was I did not include **default_app_config = 'checkout.apps.CheckoutConfig'** in **checkout/__init__.py**.
+adding this in **checkout/__init__.py** solved the problem.
 6. **User Sign UP Error** - To avoid the line too long error in **settings.py** in **AUTH_PASSWORD_VALIDATORS** section I added 
-a back slash (\) and moved the rest of the line to next page. It removed the line too long error but during user registration
-a new error occured. Later I found out the solution which is, instead of back slash I should use quotation makrks ('') to remove line too long error.
+a back slash and moved the rest of the line to next page. It removed the line too long error but during user registration
+a new error occured. The reason was back slash.Later I found out the solution which is, instead of back slash I should use quotation makrks 
+to break the line to get rid of line too long error.
 7. **Exercise Plans** - The way **add_cart** function was written initially a user could add all the exercise plan in the 
 shopping cart whereas a user need only one exercise plan. Thus I updated **add_cart** function and also 
 contexts.py-**product_type == 'excercise_plans_dic'** section. Now user can add only on exercise plan in the shopping cart.
@@ -398,7 +405,8 @@ contexts.py-**product_type == 'excercise_plans_dic'** section. Now user can add 
 I was just showing a toast message to the user if an exercise plan is already in the shopping cart and user try to 
 add another exercise plan. But then **Stephen Seagrave** suggested that I should also disable the **Add to Cart** buttons, as 
 it will enhance the user experience. Thus I added button disable function, now user will see a **info toast message** 
-and the **Add to cart** buttons will be disabled if user clicks on **Add to Cart** button.
+and the **Add to cart** buttons will be disabled if user clicks on **Add to Cart** button if an exercise plan is already in the 
+shopping cart.
 9. **JS/JQuery** which is related to the **Stripe** is kept in a separate file. But there is also some **JS/JQuery** 
 which is specific to these pages *shopping_cart.html*, *exercise_plans.html* and *products.html*, a separate file is not created 
 for it and is kept in these pages. Further the amout of **JS/JQuery** in *base.html* is not much that is why it is also 
@@ -544,7 +552,7 @@ when I was runnng project locally. Please add following settings if needed for y
 5. A very special thanks to **Chris Zielinski** for his support and help to accomplish this project.
 6. I would like to thank my mentor **Owonikoko Oluwaseun** for his valuable feedback during mentoring sessions. 
 7. **[Stack overflow](https://stackoverflow.com/)** was great source of help.
-8. I would like thank my lovely wife Ayesha, my sons Ibrahim and Ismail for their support and motivation.
+8. I would like thank my lovely wife **Ayesha**, my sons **Ibrahim** and **Ismail** for their support and motivation.
 9. Used favicon Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> 
 from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 10. [Django Docs](https://docs.djangoproject.com/en/3.1/)
