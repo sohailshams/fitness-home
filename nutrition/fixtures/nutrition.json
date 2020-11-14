@@ -20,7 +20,7 @@
       "model": "nutrition.nutritionplans",
       "fields": {
         "sku": "np20201235",
-        "name": "Motapa",
+        "name": "Amaya",
         "purpose": "30 Days Weight Gain Plan",
         "meal_plan": "Customized Meal Plans",
         "grocery_list": "Complete Grocery List",
