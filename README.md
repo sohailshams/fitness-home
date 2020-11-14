@@ -408,9 +408,25 @@ it will enhance the user experience. Thus I added button disable function, now u
 and the **Add to cart** buttons will be disabled if user clicks on **Add to Cart** button if an exercise plan is already in the 
 shopping cart.
 9. **JS/JQuery** which is related to the **Stripe** is kept in a separate file. But there is also some **JS/JQuery** 
-which is specific to these pages *shopping_cart.html*, *exercise_plans.html* and *products.html*, a separate file is not created 
+which is specific to these pages *shopping_cart.html*, *exercise_plans.html*, *index.html* and *products.html*, a separate file is not created 
 for it and is kept in these pages. Further the amout of **JS/JQuery** in *base.html* is not much that is why it is also 
 kept in *base.html* instead in a separate file.
+10. **Test webhook error: 500** - A very interesting issue is when I send a **payment_intent.succeeded** test webhook from 
+**Strip** I get **Response Test webhook error: 500** on **Strip** and in terminal I get **AttributeError: cart**. But when I 
+create real order and complete payment then there is no issue in payment and on **Strip** I get **Response Webhook received: payment_intent.succeeded**
+as well as **HTTP status code 200 (OK)**. Further I can also see in **metadata** cart is added ; 
+    ```
+    "metadata": {"cart": "{\"merchandise_dic\": {\"7\": 1}, 
+                           \"excercise_plans_dic\": {\"2\": 1}, 
+                           \"nutrition_plans_dic\": {\"3\": 1}}"
+    ```
+    If remove the code logic from **def handle_payment_intent_succeeded(self, event):** then **payment_intent.succeeded** test webhook
+    works fine. I discussed this issue with tutor support and been advised that I should not worry about this issue as in craeting 
+    order and payment process everything works fine as intented.
+11. **Email Address not showing** - Another very interesting issue is when user send a query using **Contact Us** form,  I (Store Owner)
+does not get user's email address. When I check my emails, I can see *from* and *to* both contains my email address. To get user's email 
+address I have added user's email address in the subject so store owner can answer user's query. I am using **gmail** 
+to accomplish this functionality and according to the tutor support this issue is because of **gmail's** strict security policy. 
 
 ## Deployment
 
