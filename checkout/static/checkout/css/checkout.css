@@ -58,6 +58,10 @@ Source: Boutique ado project
     margin: 0;
 }
 
+.item-img-size {
+        width: 120% !important;
+    }
+
 /*-------------------------media queries*/
 
 @media (max-width: 768px) {
@@ -93,5 +97,8 @@ Source: Boutique ado project
     .StripeElement, #card-element {
         height: 30px;
         padding: 8px 12px;
+    }
+    .item-img-size {
+        width: 145% !important;
     }
 }

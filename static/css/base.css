@@ -127,6 +127,12 @@ select:not(:first-child), .input-group>.form-control:not(:first-child) {
     border-bottom-right-radius: 0;
 }
 
+/*---------------------------images font size*/
+
+.img-size {
+    max-width: 152px;
+}
+
 /*---------------------------bottom to top button*/
 
 #btn-top {
@@ -300,8 +306,7 @@ footer {
     }
     .header-container{
         padding-top: 110px;
-    }
-    
+    }    
 }
 
 @media (max-width: 768px) {
@@ -395,15 +400,21 @@ footer {
         font-size: 12px;
         padding: 5px 5px;
     }
+    .merchandise-img-size {
+            height: 82%;
+    }
+}
+
+@media (max-width: 375px) {
+    .size-on-small {
+        font-size: 60%;
+    }
 }
 
 @media (max-width: 320px) {
     .update-item {
         padding-left: 0px !important;
         margin-left: 0px !important;
-    }
-    .size-on-small {
-        font-size: 60%;
     }
     .review-heading {
         font-size: 20px;
@@ -413,5 +424,11 @@ footer {
     }
     .empty-cart {
         padding-left: 10px;
+    }
+    .img-size {
+        height: 27%;
+    }
+    .merchandise-img-size {
+        height: 49%;
     }
 }
