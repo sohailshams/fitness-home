@@ -7,8 +7,8 @@
         "name": "Basic",
         "timing": "07:00 til 14:00",
         "access": "Access to Steam Sauna",
-        "free_offer": "Free Kit Bag",
-        "accompanied_guest": "1 times per month a guest is allowed for training.",
+        "free_offer": "Free Kit Bag & T-Shirt",
+        "accompanied_guest": "1 times per month a guest is allowed for training",
         "price": 15,
         "product_type": "exercise_plan",
         "image": "basic.jpg"
@@ -22,8 +22,8 @@
         "name": "Standard",
         "timing": "05:00 til 17:00",
         "access": "Access to Steam Sauna",
-        "free_offer": "Free Kit Bag & Personal coaching",
-        "accompanied_guest": "2 times per month a guest is allowed for training.",
+        "free_offer": "Free Kit Bag & Coaching",
+        "accompanied_guest": "2 times per month a guest is allowed for training",
         "price": 20,
         "product_type": "exercise_plan",
         "image": "standard.jpg"
@@ -37,8 +37,8 @@
         "name": "Premium",
         "timing": "24/7 Access",
         "access": "Access to Steam Sauna & Yoga",
-        "free_offer": "Youga Personal coaching & Diet Plans.",
-        "accompanied_guest": "4 times per month a guest is allowed for training.",
+        "free_offer": "Personal Coaching & Diet Plans",
+        "accompanied_guest": "4 times per month a guest is allowed for training",
         "price": 25,
         "product_type": "exercise_plan",
         "image": "premium.jpg"
