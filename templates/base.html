@@ -97,7 +97,7 @@
                     <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 nav-link account-items d-none d-lg-block">
                         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                             <li class="list-inline-item dropdown">
-                                <a class="nav-link text-blue" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link d-inline text-blue" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="text-center hover-links-red">
                                         <div><i class="far fa-user fa-lg" aria-hidden="true"></i></div>
                                         <p class="my-0 font-do-hyeon">My Account</p>
@@ -121,7 +121,7 @@
                                 </div>
                             </li>
                             <li class="list-inline-item">
-                                <a class="{% if total %}text-info font-weight-bold{% else %}text-blue{% endif %} nav-link" href="{% url 'view_cart' %}">
+                                <a class="{% if total %}text-info font-weight-bold{% else %}text-blue{% endif %} nav-link d-inline" href="{% url 'view_cart' %}">
                                     <div class="text-center hover-links-red">
                                         <div><i class="fa fa-shopping-basket fa-lg" aria-hidden="true"></i></div>
                                         <p class="my-0">
